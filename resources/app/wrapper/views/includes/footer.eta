@@ -1,0 +1,17 @@
+<footer>
+	<nav id="foot-left">
+		<a>v2.3.0</a>
+	        <a href="/history">Who We Are</a> 
+		<a href="/settings">Settings</a>
+		<a href="https://github.com/Wrapper-Offline/Wrapper-Offline/wiki">FAQ</a>
+                <a href="https://discord.gg/yhGAetN">Wrapper Offline Discord</a>
+                <a href="https://goexport.lexian.dev/">GoExport</a>          
+                <a href="https://dominicjennings.github.io/caillou.html">Caillou</a>  
+                <a href="https://discord.gg/9BfKsJbj3">Websim</a>  
+                <a href="https://fish.audio/">Fish Audio</a>
+	        <a href="/term">Term of Use</a>   
+	        <a href="https://discord.com/invite/2xQ6PZV">GoAnimate City Discord</a>                    
+	</nav>
+
+	<nav id="foot-right"></nav>
+</footer>

@@ -1,0 +1,30 @@
+<header>
+	<a href="/">
+		<h1 style="margin:0"><img id="logo" src="/pages/img/logo.png" alt="Wrapper: Offline Remastered 2.3.0"/></h1>
+	</a>
+	<nav id="headbuttons">
+		<div class="dropdown_contain button_small">
+			<div class="dropdown_button">UPLOAD</div>
+			<nav class="dropdown_menu">
+			<a onclick="document.getElementById('is-starter').checked = false;document.getElementById('file').click()">Upload as Movie</a>
+		        <a class="button_small" onclick="document.getElementById('file').click()">Upload a Char</a>
+			</nav>
+		</div>
+	<div class="dropdown_contain button_small">
+			<div class="dropdown_button">EXPLORE</div>
+			<nav class="dropdown_menu">
+				<a href="https://www.youtube.com/watch?v=JdflXAYaUjE">Tutorial</a>
+				<a href="https://wrappertube.org/">Collab Videos</a>
+				<a href="/raid">Raid</a>
+      			</nav>
+		</div>
+		<a href="/videolist" class="button_big">YOUR VIDEOS</a>
+		<a href="/create" class="button_big">CREATE</a>
+	</nav>
+</header>
+<form enctype='multipart/form-data' action='/api/char/upload' method='post'>
+	<input id='file' type="file" onchange="this.form.submit()" name='import' />
+<form id="movie-form" class="hide" enctype='multipart/form-data' action='#' method='post'>
+	<input id='file' type="file" name='import' accept=".zip" />
+	<input id="is-starter" type="checkbox" value="false" />
+</form>
