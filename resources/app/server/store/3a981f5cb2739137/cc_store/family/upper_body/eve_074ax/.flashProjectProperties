@@ -1,0 +1,22 @@
+﻿<projectDescription>
+	<id>1238637846607</id>
+	<name>walk</name>
+	<asVersion>0</asVersion>
+	<boundTemplate>file:///C|/Users/sirje/AppData/Local/Adobe/Flash CS4/en/Configuration/Project/templates/boundClass_as3.as</boundTemplate>
+	<classTemplate>file:///C|/Users/sirje/AppData/Local/Adobe/Flash CS4/en/Configuration/Project/templates/standardClass_as3.as</classTemplate>
+	<classPath>.</classPath>
+	<rootURI>C:\Users\sirje\AppData\Local\Temp\12</rootURI>
+	<flexSDK/>
+	<sources editable="false"/>
+	<libraries editable="false"/>
+	<externalLibraries editable="false"/>
+	<compileList editable="false">
+		<uri label="walk.fla">file:///C|/Users/sirje/AppData/Local/Temp/12/walk.fla</uri>
+	</compileList>
+	<defaultApp>file:///C|/Users/sirje/AppData/Local/Temp/12/walk.fla</defaultApp>
+	<recentFiles editable="false">
+		<uri label="MainTimeline.as">file:///C|/Users/sirje/AppData/Local/Temp/12/walk_fla/MainTimeline.as</uri>
+		<uri label="theUpper_1.as">file:///C|/Users/sirje/AppData/Local/Temp/12/walk_fla/theUpper_1.as</uri>
+	</recentFiles>
+	<locations editable="false"/>
+</projectDescription>

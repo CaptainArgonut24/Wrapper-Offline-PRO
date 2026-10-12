@@ -1,0 +1,22 @@
+﻿<projectDescription>
+	<id>1238637846607</id>
+	<name>eve_kawaii_neko_2default</name>
+	<asVersion>0</asVersion>
+	<boundTemplate>file:///C|/Users/ahmed/AppData/Local/Adobe/Flash CS4/en/Configuration/Project/templates/boundClass_as3.as</boundTemplate>
+	<classTemplate>file:///C|/Users/ahmed/AppData/Local/Adobe/Flash CS4/en/Configuration/Project/templates/standardClass_as3.as</classTemplate>
+	<classPath>.</classPath>
+	<rootURI>C:\Users\ahmed\AppData\Local\Temp\4</rootURI>
+	<flexSDK/>
+	<sources editable="false"/>
+	<libraries editable="false"/>
+	<externalLibraries editable="false"/>
+	<compileList editable="false">
+		<uri label="eve_kawaii_neko_2default.fla">file:///C|/Users/ahmed/AppData/Local/Temp/4/eve_kawaii_neko_2default.fla</uri>
+	</compileList>
+	<defaultApp>file:///C|/Users/ahmed/AppData/Local/Temp/4/eve_kawaii_neko_2default.fla</defaultApp>
+	<recentFiles editable="false">
+		<uri label="MainTimeline.as">file:///C|/Users/ahmed/AppData/Local/Temp/4/default_fla/MainTimeline.as</uri>
+		<uri label="theUpper_1.as">file:///C|/Users/ahmed/AppData/Local/Temp/4/default_fla/theUpper_1.as</uri>
+	</recentFiles>
+	<locations editable="false"/>
+</projectDescription>
