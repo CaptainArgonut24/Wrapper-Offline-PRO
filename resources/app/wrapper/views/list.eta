@@ -30,6 +30,16 @@
 					</select>
 				</label>
 			</div>
+			<div class="video-library-controls">
+				<label for="video-scope">View</label>
+				<select id="video-scope">
+					<option value="library">My Videos</option>
+					<option value="archive">Archive</option>
+				</select>
+				<label for="video-search">Search</label>
+				<input id="video-search" type="search" placeholder="Search by video name or ID..." autocomplete="off"/>
+			</div>
+			<p id="video-action-status" class="video-action-status" aria-live="polite" hidden></p>
 			<table class="full_screen">
 				<thead>
 					<tr>
@@ -57,14 +67,32 @@
 		const loadMore = $("#load_more");
 		const sortControl = document.getElementById("video-sort");
 		const videoTable = document.querySelector("table.full_screen");
+		const scopeControl = document.getElementById("video-scope");
+		const searchControl = document.getElementById("video-search");
+		const statusMessage = document.getElementById("video-action-status");
+		const rememberFilters = localStorage.getItem("REMEMBER_VIDEO_FILTERS") != "false";
 		const savedSort = localStorage.getItem("VIDEO_SORT_ORDER") || "newest";
 		const validSorts = ["newest", "oldest", "title-asc", "title-desc"];
 		sortControl.value = validSorts.includes(savedSort) ? savedSort : "newest";
 		videoTable.classList.toggle("compact", localStorage.getItem("COMPACT_VIDEO_LIST") == "true");
+		const savedLayout = localStorage.getItem("VIDEO_LAYOUT");
+		videoTable.classList.toggle("layout-horizontal", savedLayout == "horizontal");
+		if (rememberFilters) {
+			const savedScope = localStorage.getItem("VIDEO_SCOPE");
+			if (["library", "archive"].includes(savedScope)) scopeControl.value = savedScope;
+		}
 
 		let C = 0;
 		function loadRows() {
-			const sortedMovies = movies.slice().sort((a, b) => {
+			const query = searchControl.value.trim().toLocaleLowerCase();
+			const filtered = movies.filter(movie => {
+				if (scopeControl.value == "library" && movie.archived === true) return false;
+				if (scopeControl.value == "archive" && movie.archived !== true) return false;
+				return !query ||
+					String(movie.title || "").toLocaleLowerCase().includes(query) ||
+					String(movie.id || "").toLocaleLowerCase().includes(query);
+			});
+			const sortedMovies = filtered.sort((a, b) => {
 				if (sortControl.value.startsWith("title")) {
 					const compare = String(a.title || "").localeCompare(String(b.title || ""));
 					return sortControl.value == "title-desc" ? -compare : compare;
@@ -73,13 +101,11 @@
 				const dateB = Date.parse(b.date) || 0;
 				return sortControl.value == "oldest" ? dateA - dateB : dateB - dateA;
 			});
-			// load only 69 rows
 			let c = C;
 			C += 69;
 			for (; c < C; c++) {
-				// we reached the end
 				if (c > sortedMovies.length - 1) {
-					loadMore.remove();
+					loadMore.hide();
 					break;
 				}
 
@@ -91,6 +117,7 @@
 				const title = escapeHtml(tbl.title);
 				const duration = escapeHtml(tbl.duration);
 				const encodedId = encodeURIComponent(tbl.id);
+				const archived = tbl.archived === true;
 
 				tbody.append(
 					`<tr id="${id}">
@@ -98,7 +125,7 @@
 							<img src="/file/movie/thumb/${encodedId}" alt="Video thumbnail"/>
 						</td>
 						<td>
-							<div>${title}</div>
+							<div>${title} <span class="video-id">ID: ${id}<button class="copy-video-id" type="button" data-video-id="${id}" aria-label="Copy video ID">Copy</button></span></div>
 							<div>${duration}</div>
 						</td>
 						<td>
@@ -110,9 +137,40 @@
 							<a href="/file/movie/file/${encodedId}" download="${escapeHtml(tbl.title)}.zip" aria-label="Download video"></a>
 							<a href="#" data-action="repair" aria-label="Repair video"></a>
 							<a href="#" data-action="delete" aria-label="Delete video"></a>
+							<a href="#" data-action="export" aria-label="Export with GoExport"></a>
+							<a href="#" data-action="archive" aria-label="${archived ? "Move to My Videos" : "Move to archive"}"></a>
 						</td>
 					</tr>`.trim()
 				);
+			}
+			if (filtered.length == 0) {
+				showStatus(query ? "No videos match your search." : "No videos found for this view.");
+			} else if (!statusMessage.dataset.exporting) {
+				statusMessage.hidden = true;
+			}
+		}
+
+		function resetRows() {
+			C = 0;
+			tbody.empty();
+			loadMore.show();
+			loadRows();
+		}
+
+		function showStatus(message, isError = false) {
+			statusMessage.textContent = message;
+			statusMessage.classList.toggle("is-error", isError);
+			statusMessage.hidden = false;
+		}
+
+		function requestError(xhr, fallback) {
+			const response = xhr.responseJSON;
+			return response && response.message ? response.message : fallback;
+		}
+
+		function saveFilters() {
+			if (rememberFilters) {
+				localStorage.setItem("VIDEO_SCOPE", scopeControl.value);
 			}
 		}
 
@@ -128,23 +186,117 @@
 		loadMore.onclick = loadRows;
 
 		$.get("/api/movies/list", data => {
-			movies = data;
-			loadRows();
-		});
+			movies = data.map(movie => ({ ...movie, archived: movie.archived === true }));
+			resetRows();
+		}).fail(() => showStatus("Unable to load your videos. Please try again.", true));
 		sortControl.addEventListener("change", () => {
 			localStorage.setItem("VIDEO_SORT_ORDER", sortControl.value);
-			C = 0;
-			tbody.empty();
-			loadMore.show();
-			loadRows();
+			resetRows();
+		});
+		scopeControl.addEventListener("change", () => {
+			saveFilters();
+			resetRows();
+		});
+		searchControl.addEventListener("input", () => {
+			resetRows();
+		});
+		tbody.on("click", ".copy-video-id", async event => {
+			event.preventDefault();
+			event.stopPropagation();
+			const id = event.currentTarget.dataset.videoId;
+			try {
+				if (navigator.clipboard && window.isSecureContext) {
+					await navigator.clipboard.writeText(id);
+				} else {
+					const input = document.createElement("textarea");
+					input.value = id;
+					input.style.position = "fixed";
+					input.style.opacity = "0";
+					document.body.append(input);
+					input.select();
+					const copied = document.execCommand("copy");
+					input.remove();
+					if (!copied) throw new Error("Clipboard access is unavailable.");
+				}
+				showStatus(`Copied video ID: ${id}`);
+			} catch (error) {
+				showStatus(`Unable to copy video ID: ${error.message}`, true);
+			}
 		});
 		tbody.on("click", "a[data-action]", event => {
 			event.preventDefault();
 			const action = $(event.target).closest("a").attr("data-action");
 			const id = $(event.target).closest("tr").attr("id");
 			if (action == "preview") popup(id);
+			else if (action == "archive") toggleArchive(id);
+			else if (action == "export") startGoExport(id);
 			else destructive(id, action);
 		});
+		function updateOrganization(id, archived) {
+			const movie = movies.find(item => item.id == id);
+			if (!movie) return;
+			$.post("/api/movies/organize", {
+				id,
+				archived: String(typeof archived == "boolean" ? archived : movie.archived === true)
+			}).done(data => {
+				if (data.status != "ok") return showStatus(data.message || "Unable to update this video.", true);
+				if (typeof archived == "boolean") movie.archived = archived;
+				resetRows();
+			}).fail(xhr => showStatus(requestError(xhr, "Unable to update this video."), true));
+		}
+
+		function toggleArchive(id) {
+			const movie = movies.find(item => item.id == id);
+			if (!movie) return;
+			updateOrganization(id, movie.archived !== true);
+		}
+
+		function startGoExport(id) {
+			const movie = movies.find(item => item.id == id);
+			if (!movie) return;
+			statusMessage.dataset.exporting = "true";
+			showStatus(`Starting GoExport for "${movie.title}"...`);
+			$.post("/api/export/goexport", { id })
+				.done(data => {
+					if (data.status != "ok") {
+						delete statusMessage.dataset.exporting;
+						return showStatus(data.message || "Unable to start GoExport.", true);
+					}
+					pollGoExport(data.jobId, movie.title);
+				})
+				.fail(xhr => {
+					delete statusMessage.dataset.exporting;
+					showStatus(requestError(xhr, "Unable to start GoExport. Check the configured installation path in Settings."), true);
+				});
+		}
+
+		function pollGoExport(jobId, title) {
+			$.getJSON(`/api/export/goexport/${encodeURIComponent(jobId)}`)
+				.done(data => {
+					const job = data.job;
+					if (job.state == "running") {
+						showStatus(`GoExport is exporting "${title}"...`);
+						setTimeout(() => pollGoExport(jobId, title), 1500);
+					} else {
+						delete statusMessage.dataset.exporting;
+						if (job.state == "complete") {
+							showStatus(`Export complete: ${job.outputPath}`);
+							const download = document.createElement("a");
+							download.className = "video-export-download";
+							download.href = `/api/export/goexport/${encodeURIComponent(jobId)}/file`;
+							download.textContent = "Download MP4";
+							statusMessage.append(document.createTextNode(" "), download);
+						} else {
+							const details = job.output.trim().split("\n").slice(-4).join(" ");
+							showStatus(`GoExport failed: ${job.error || details || "Check the GoExport installation and runtime setup."}`, true);
+						}
+					}
+				})
+				.fail(() => {
+					delete statusMessage.dataset.exporting;
+					showStatus("Unable to read GoExport status. The export process may still be running.", true);
+				});
+		}
 
 		function destructive(mId, act) {
 			const yesno = confirm(`Are you sure you want to ${act} movie #${mId}?`);

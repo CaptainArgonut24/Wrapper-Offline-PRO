@@ -243,6 +243,23 @@
 		const savedDefaultTheme = localStorage.getItem("DEFAULT_THEME") || "custom";
 		const defaultTheme = themeIds.has(savedDefaultTheme) ? savedDefaultTheme : "custom";
 		$("#default-theme-start").attr("href", `./go_full?tray=${encodeURIComponent(defaultTheme)}`);
+		let themeVisibility = {};
+		try {
+			themeVisibility = JSON.parse(localStorage.getItem("THEME_VISIBILITY") || "{}");
+			if (!themeVisibility || typeof themeVisibility != "object" || Array.isArray(themeVisibility)) {
+				themeVisibility = {};
+			}
+		} catch (error) {
+			themeVisibility = {};
+		}
+		for (const card of document.querySelectorAll(".theme")) {
+			const link = card.querySelector("a[onclick]");
+			const match = link && link.getAttribute("onclick").match(/redirect\('([^']+)'/);
+			if (match) {
+				card.dataset.themeId = match[1];
+				if (themeVisibility[match[1]] === false) card.hidden = true;
+			}
+		}
 		if (filter == "cc") {
 			$(".theme").not("[data-has-cc]").hide();
 			$("#default-theme-start").hide();

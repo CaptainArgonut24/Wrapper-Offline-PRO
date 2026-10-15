@@ -69,10 +69,6 @@ const createWindow = () => {
 	mainWindow.loadURL("http://localhost:4343");
 	mainWindow.on("closed", () => mainWindow = null);
 
-	// debug stuff
-	if (env.NODE_ENV == "development") {
-		mainWindow.webContents.openDevTools();
-	}
 };
 
 app.whenReady().then(() => {
