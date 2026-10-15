@@ -1,4 +1,4 @@
-<html>
+<html class="studio-dark">
 	<head>
 		<meta charset="UTF-8" />
 		<link rel="icon" href="/favicon.ico" type="image/png" />
@@ -7,12 +7,6 @@
 		<link rel="stylesheet" type="text/css" href="/pages/css/global.css">
 		<link rel="stylesheet" type="text/css" href="/pages/css/flash.css">
 		<link rel="stylesheet" type="text/css" href="/pages/css/importer.css">
-		<style>
-			body {
-				background: #eee;
-			}
-
-		</style>
 		<script src="/pages/js/jquery.js"></script>
 		<script src="/pages/js/filesize.js"></script>
 		<script src="/pages/js/global.js"></script>
@@ -24,7 +18,7 @@
 		</script>
 	</head>
 
-	<body style="margin:0px">
+	<body style="margin:0">
 		<main>
 			<nav id="importer">
 				<nav id="import_head">

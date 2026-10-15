@@ -5,31 +5,55 @@ this css has the general header/footer layout stuff
 @import url("./modern-normalize.css");
 
 :root {
-	--primary: #d85e27;
-	--transition: .15s ease;
+	--primary: #596fe7;
+	--primary-hover: #485ed0;
+	--transition: .18s ease;
+	--page: #f4f6fa;
+	--surface: #fff;
+	--surface-raised: #fff;
+	--surface-muted: #eef1f7;
+	--text: #202838;
+	--muted: #657185;
+	--border: #dfe4ec;
+	--header: #20283a;
+	--shadow: 0 8px 28px rgba(27, 39, 61, .08);
+}
+html.dark {
+	--page: #111722;
+	--surface: #1a2230;
+	--surface-raised: #202a3a;
+	--surface-muted: #252f40;
+	--text: #e8edf5;
+	--muted: #a0adbf;
+	--border: #303b4d;
+	--header: #171e2b;
+	--shadow: 0 8px 28px rgba(0, 0, 0, .22);
 }
 
 /**
 general
 **/
 html, body {
-	background: #eee;
-	color: #505969;
+	background: var(--page);
+	color: var(--text);
 	font: 16px/1.5 'Sailec', Arial, sans-serif;
 	width: 100%;
 	height: 100%;
 }
-html.dark, html.dark>body {
-	background: #222;
-	color: #eee;
+html {
+	color-scheme: light;
+}
+html.dark {
+	color-scheme: dark;
 }
 body {
 	display: flex; 
 	flex-direction: column;
 	overflow: hidden;
+	transition: background-color var(--transition), color var(--transition);
 }
 main {
-	padding: 20px 40px;
+	padding: 28px clamp(18px, 4vw, 56px);
 	height: 100%;
 	overflow: auto;
 }
@@ -40,27 +64,28 @@ header
 **/
 header {
 	/* style */
-	background: linear-gradient(90deg, rgba(0,181,255,1) 0%, rgba(255,0,155,1) 100%);
+	background: var(--header);
 	color: #fff;
-	text-align: center;
+	text-align: left;
 	/* layout */
-	padding-bottom: 13px;
-	padding: 0 15px;
+	padding: 0 clamp(16px, 3vw, 40px);
 	z-index: 1;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	flex-shrink: 0;
+	box-shadow: 0 2px 12px rgba(16, 24, 40, .12);
 }
 /* makes the header a set height when the window is 887px wide */
 @media (min-width: 735px) {
 	header {
 		padding-bottom: auto;
-		height: 44px;
+		height: 60px;
 	}
 }
 #logo {
-	margin-top: 4px;
-	height: 35px;
+	display: block;
+	height: 38px;
 }
 /* buttons */
 .button_big,
@@ -69,12 +94,13 @@ header {
 	font-size: 14px;
 	text-decoration: none;
 	color: #fff;
-	border-radius: 4px;
+	border-radius: 8px;
 	transition: var(--transition);
 	/* layout */
 	display: inline-block;
-	padding: 5px 10px;
-	margin: 6px 5px;
+	padding: 8px 14px;
+	margin: 6px 4px;
+	font-weight: 600;
 }
 .button_big:hover,
 .button_small:hover {
@@ -87,15 +113,17 @@ header .btn:hover {
     background: #2f3e75;
 }
 /* small buttons */
-.button_small       { background: #08a0cb }
-.button_small:hover { background: #dd6522; color: var(--primary) }
+.button_small       { background: #354158 }
+.button_small:hover { background: #46536b; color: #fff }
 /* big buttons */
 .button_big {
 	background: var(--primary);
-	width: 160px;
+	min-width: 145px;
+	text-align: center;
 }
 .button_big:hover {
-	text-decoration: underline;
+	background: var(--primary-hover);
+	text-decoration: none;
 }
 
 
@@ -114,8 +142,10 @@ header dropdowns
 /* the dropdown itself */
 .dropdown_menu {
 	/* style */
-	background-color: #333;
-	border-radius: 4px;
+	background-color: var(--surface-raised);
+	border: 1px solid var(--border);
+	border-radius: 10px;
+	box-shadow: var(--shadow);
 	/* layout */
 	width: 100%;
 	padding: 10px 0;
@@ -129,7 +159,7 @@ header dropdowns
 /* dropdown links */
 .dropdown_menu>a {
 	/* style */
-	color: #ddd;
+	color: var(--text);
 	text-decoration: none;
 	transition: var(--transition);
 	/* layout */
@@ -137,21 +167,22 @@ header dropdowns
 	padding: 2px 20px;
 }
 .dropdown_menu>a:hover {
-	background: #2a2a2a;
+	background: var(--surface-muted);
 	color: var(--primary);
 	cursor: pointer;
 }
 /* dropdown header and separation */
 .dropdown_menu>h2 {
 	/* style */
-	color: #fff;
+	color: var(--text);
 	font-size: 15px;
 	/* layout */
 	margin:0;
 	padding:2px 20px;
 }
 .dropdown_menu>hr {
-	border: 1px solid #222;
+	border: 0;
+	border-top: 1px solid var(--border);
 	margin: 10px 0;
 }
 /* character upload */
@@ -161,34 +192,69 @@ form[action="/api/char/upload"] { display: none }
 tabs
 **/
 .tabs_contain {
-    border-radius: 6px;
+    border-radius: 14px;
     display: flex;
-    margin: auto auto;
+    margin: 12px auto;
+    max-width: 1180px;
+    width: 100%;
+    gap: 24px;
+    align-items: flex-start;
 }
 .tab_buttons {
-	padding: 8px 0;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    padding: 16px;
     display: flex;
     flex-direction: column;
-    min-width: 180px;
+    min-width: 210px;
 }
 .tabs_contain h1 {
-    font-size: 20px;
-    margin: 0 0 10px;
+    font-size: 22px;
+    margin: 0 0 12px;
+    color: var(--text);
 }
 .tab_buttons a {
-	/* style */
-	background: #353535;
-	color: #fff;
-	text-decoration: none;
-	border-radius: 5px;
-	transition: var(--transition);
+    /* style */
+    background: transparent;
+    color: var(--muted);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: var(--transition);
 	/* layout */
-	padding: 8px 18px;
+	padding: 10px 12px;
 	margin: 2px 0;
+	font-weight: 600;
 }
-.tab_buttons a:hover    { background: #2a2a3a; color: var(--primary) }
+.tab_buttons a:hover    { background: var(--surface-muted); color: var(--text) }
 .tab_buttons a.selected { background: var(--primary); color: #fff }
-.tab { padding: 0 20px; display: none }
+.tab {
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: 14px;
+	box-shadow: var(--shadow);
+	padding: 24px;
+	display: none;
+	flex: 1;
+	min-width: 0;
+}
+.tab h2 {
+	font-size: 22px;
+	line-height: 1.3;
+	margin: 0 0 20px;
+	color: var(--text);
+}
+.tab h3 {
+	color: var(--text);
+	font-size: 15px;
+	margin: 0 0 5px;
+}
+.tab p {
+	color: var(--muted);
+	font-size: 13px;
+	margin: 0;
+}
 #shortthemelist:hover,
 #darkmode:hover {
 	cursor: pointer;
@@ -198,22 +264,130 @@ tabs
 footer
 **/
 footer {
-	background: #cfe0e8;
+	background: var(--surface);
+	border-top: 1px solid var(--border);
 	margin-top: auto; /* footer at the foot */
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	flex-shrink: 0;
 }
-footer nav { margin:5px 10px}
+footer nav { margin: 8px 10px }
 /* links */
 footer a {
-	color: #000000;
+	color: var(--muted);
 	text-decoration:none;
 	margin: 0 10px;
-	font-weight: bold;
+	font-weight: 600;
+	font-size: 12px;
 }
 footer a:hover {
-	text-decoration: underline;
+	color: var(--primary);
+	text-decoration: none;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+	background: var(--surface-raised);
+	border: 1px solid var(--border);
+	border-radius: 8px;
+	color: var(--text);
+	font: inherit;
+	padding: 9px 11px;
+}
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+	border-color: var(--primary);
+	outline: 3px solid rgba(89, 111, 231, .18);
+}
+.setting-list {
+	display: grid;
+	gap: 10px;
+}
+.setting-card {
+	align-items: center;
+	background: var(--surface-raised);
+	border: 1px solid var(--border);
+	border-radius: 10px;
+	display: flex;
+	gap: 20px;
+	justify-content: space-between;
+	padding: 16px;
+}
+.setting-card > div {
+	min-width: 0;
+}
+.setting-card h3 {
+	font-size: 14px;
+	margin: 0 0 4px;
+}
+.setting-card p {
+	font-size: 12px;
+	line-height: 1.5;
+	margin: 0;
+}
+.setting-card input[type="checkbox"] {
+	accent-color: var(--primary);
+	flex: 0 0 auto;
+	height: 18px;
+	width: 18px;
+}
+.setting-card select {
+	max-width: 230px;
+	min-width: 160px;
+}
+.library_group {
+	margin: 18px 0 22px;
+}
+.library_group_title {
+	border-bottom: 1px solid var(--border);
+	color: var(--text);
+	font-size: 14px;
+	margin: 0 0 8px;
+	padding: 0 0 7px;
+	text-transform: capitalize;
+}
+.library_group_items {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+	gap: 8px;
+}
+
+@media (max-width: 760px) {
+	header {
+		align-items: flex-start;
+		flex-direction: column;
+		padding: 10px 16px;
+	}
+	#headbuttons {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.button_big,
+	.button_small {
+		font-size: 12px;
+		margin: 3px 4px 3px 0;
+		padding: 7px 9px;
+	}
+	.tabs_contain {
+		flex-direction: column;
+		gap: 12px;
+	}
+	.tab_buttons {
+		min-width: 0;
+		width: 100%;
+	}
+	.tab {
+		padding: 18px;
+		width: 100%;
+	}
+	.setting-card {
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 10px;
+	}
 }
 
 /**

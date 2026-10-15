@@ -15,7 +15,13 @@
 		<%~ includeFile("./includes/header", { env: it.env }) %>
 
 		<main>
-			<h1>Select a theme</h1>
+			<div class="create-intro">
+				<div>
+					<h1>Select a theme</h1>
+					<p>Start with a theme or browse all available styles below.</p>
+				</div>
+				<a class="default-theme-start" id="default-theme-start" href="/go_full?tray=custom">Start with your default theme</a>
+			</div>
 
 			<div class="theme" data-has-cc>
 				<a href="#" onclick="redirect('custom', 'family')">
@@ -227,10 +233,22 @@
 		const params = new URLSearchParams(window.location.search);
 		// default to all themes
 		const filter = params.get("filter") || "vl";
-		if (filter == "cc")
+		const themeIds = new Set([
+			"custom", "action", "business", "retro", "politics2", "stick", "anime",
+			"ninjaanime", "spacecitizen", "chibi", "ninja", "animal", "space",
+			"fullenergy", "politic", "bizmodels", "sticklybiz", "christmas",
+			"monstermsh", "akon", "ben10", "botdf", "bunny", "chowder", "domo",
+			"monkeytalk", "sf", "startrek", "toonadv", "underdog", "willie", "street"
+		]);
+		const savedDefaultTheme = localStorage.getItem("DEFAULT_THEME") || "custom";
+		const defaultTheme = themeIds.has(savedDefaultTheme) ? savedDefaultTheme : "custom";
+		$("#default-theme-start").attr("href", `./go_full?tray=${encodeURIComponent(defaultTheme)}`);
+		if (filter == "cc") {
 			$(".theme").not("[data-has-cc]").hide();
-		else
+			$("#default-theme-start").hide();
+		} else {
 			$("#char-copy").hide();
+		}
 
 		function redirect(tId, ccId = false) {
 			if (filter == "cc") {

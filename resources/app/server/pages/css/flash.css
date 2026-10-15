@@ -9,6 +9,22 @@ html, body { /* disable dark mode */
 	background-color: #eee;
 	color: #474747 !important;
 }
+html.studio-dark,
+html.studio-dark body {
+	--page: #111722;
+	--surface: #1a2230;
+	--surface-raised: #202a3a;
+	--surface-muted: #252f40;
+	--text: #e8edf5;
+	--muted: #a0adbf;
+	--border: #303b4d;
+	--header: #171e2b;
+	--primary: #7484ff;
+	--primary-hover: #6575ec;
+	background-color: var(--page);
+	color: var(--text) !important;
+	color-scheme: dark;
+}
 main { display: flex; padding: 0 }
 .close-button:hover { 
 	cursor: pointer; 

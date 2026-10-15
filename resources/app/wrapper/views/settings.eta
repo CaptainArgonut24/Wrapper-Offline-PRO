@@ -15,73 +15,152 @@
 	<body>
 		<%~ includeFile("./includes/header", { env: it.env }) %>
 
-		<main>			
+		<main>
+			<div class="settings-intro">
+				<h1>Settings</h1>
+				<p>Adjust how Wrapper: Offline looks and works on this device.</p>
+			</div>
 			<nav class="tabs_contain">
 				<div class="tab_buttons">
-					<h1 id="settings">Settings</h1>
-					<a href="#" class="selected" data-triggers="0">Features</a>
-					<a href="#" data-triggers="1">Appearance</a>
-					<a href="#" data-triggers="2">Your Library</a>
+					<h2>Preferences</h2>
+					<a href="#features" class="selected" data-triggers="0">Features</a>
+					<a href="#appearance" data-triggers="1">Appearance</a>
+					<a href="#library" data-triggers="2">Your Library</a>
 				</div>
 				<nav class="tab" style="display:block">
 					<h2>Features</h2>
-
-					<h3>Discord rich presence</h3>
-					<p>It's used to show when you're using Wrapper: Offline in your "Playing A Game" status on Discord,<br/>
-					much like how lots of modern computer games will show on your Discord status when you're playing<br/>
-					them. Turning this off will make Offline stop saying when you're using it on Discord.</p>
-					<input class="setting" type="checkbox" id="DISCORD_RPC"></input>
-
-					<h3>Truncated themelist</h3>
-					<p>Cuts down the amount of themes that clog up the themelist in the videomaker.<br/>
-					Keeping this off is highly suggested.<br/>
-					However, if you want to see everything the program has to offer, turn this on.</p>
-					<input class="setting" type="checkbox" id="TRUNCATED_THEMELIST"></input>
-
-					<h3>Show waveforms</h3>
-					<p>By default, waveforms for audio are generated in the video editor.<br/>
-					While useful, the editor freezes while it generates, which could be too annoying or slow for some.<br/>
-					Turning this off will simply add a repeating pre-made pattern in place of true waveforms.</p>
-					<input class="setting" type="checkbox" id="SHOW_WAVEFORMS"></input>
-					
-					<h3>Default watermark</h3>
-					<p>The Video Player has 4 choices for default watermarks.<br/>
-					Default watermarks are shown when you choose a Go!Animate watermark.</p>
-					<select class="setting" id="DEFAULT_WATERMARK">
-						<option value="default">GoAnimate</option>
-						<option value="twoLines">Go Make Your Own</option>
-						<option value="g4s">GoAnimate For Schools</option>
-						<option value="freeTrial">Free Trial</option>
-					</select>
-
-					<h3>14:9 or 16:9 aspect ratio</h3>
-					<p>By default, the Video Player uses the 16:9 aspect ratio<br/>
-					However, you can toggle this setting to make it 14:9, like a video<br/>
-					made with Vyond before 2014.</p>
-					<select class="setting" id="IS_WIDE">
-						<option value="0">14:9</option>
-						<option value="1">16:9</option>
-					</select>
+					<div class="setting-list">
+						<section class="setting-card">
+							<div>
+								<h3>Discord rich presence</h3>
+								<p>Show Wrapper: Offline as your current activity in Discord.</p>
+							</div>
+							<input class="setting" type="checkbox" id="DISCORD_RPC"/>
+						</section>
+						<section class="setting-card">
+							<div>
+								<h3>Truncated theme list</h3>
+								<p>Show a shorter list of themes in the video maker.</p>
+							</div>
+							<input class="setting" type="checkbox" id="TRUNCATED_THEMELIST"/>
+						</section>
+						<section class="setting-card">
+							<div>
+								<h3>Show audio waveforms</h3>
+								<p>Generate detailed audio waveforms in the editor. Disabling this can improve responsiveness.</p>
+							</div>
+							<input class="setting" type="checkbox" id="SHOW_WAVEFORMS"/>
+						</section>
+						<section class="setting-card">
+							<div>
+								<h3>Default watermark</h3>
+								<p>Choose which watermark appears when using the Go!Animate watermark.</p>
+							</div>
+							<select class="setting" id="DEFAULT_WATERMARK">
+								<option value="default">GoAnimate</option>
+								<option value="twoLines">Go Make Your Own</option>
+								<option value="g4s">GoAnimate For Schools</option>
+								<option value="freeTrial">Free Trial</option>
+							</select>
+						</section>
+						<section class="setting-card">
+							<div>
+								<h3>Video aspect ratio</h3>
+								<p>Set the default player aspect ratio.</p>
+							</div>
+							<select class="setting" id="IS_WIDE">
+								<option value="0">14:9</option>
+								<option value="1">16:9</option>
+							</select>
+						</section>
+						<section class="setting-card">
+							<div>
+								<h3>Default theme</h3>
+								<p>Choose the theme used by “Start with your default theme” on the video creation page.</p>
+							</div>
+							<select class="setting" id="DEFAULT_THEME" data-local="true" data-default="custom">
+								<option value="custom">Comedy World</option>
+								<option value="action">Lil' Peepz</option>
+								<option value="business">Business Friendly</option>
+								<option value="retro">Cartoon Classics</option>
+								<option value="politics2">White Houserz</option>
+								<option value="stick">Stick Figure</option>
+								<option value="anime">Anime</option>
+								<option value="ninjaanime">Ninja Anime</option>
+								<option value="spacecitizen">Space Citizens</option>
+								<option value="chibi">Chibi Peepz</option>
+								<option value="ninja">Chibi Ninjas</option>
+								<option value="animal">Lil' Petz World</option>
+								<option value="space">Space Peepz</option>
+								<option value="fullenergy">Full Energy</option>
+								<option value="politic">Politics &amp; Celebrity</option>
+								<option value="bizmodels">Business Models</option>
+								<option value="sticklybiz">Stickly Business</option>
+								<option value="christmas">Holiday &amp; Seasonal</option>
+								<option value="monstermsh">Monsters Mayhem</option>
+								<option value="akon">AKON</option>
+								<option value="ben10">Ben 10</option>
+								<option value="botdf">Blood on the Dance Floor</option>
+								<option value="bunny">It's Happy Bunny</option>
+								<option value="chowder">Chowder</option>
+								<option value="domo">Domo</option>
+								<option value="monkeytalk">SuperRica &amp; Rashy</option>
+								<option value="sf">Street Fighter</option>
+								<option value="startrek">Star Trek Quogs</option>
+								<option value="toonadv">Toon Adventure</option>
+								<option value="underdog">Underdog</option>
+								<option value="willie">Willie Nelson</option>
+								<option value="street">Street</option>
+							</select>
+						</section>
+						<section class="setting-card">
+							<div>
+								<h3>Video list sort order</h3>
+								<p>Choose the default order for videos on the home page.</p>
+							</div>
+							<select class="setting" id="VIDEO_SORT_ORDER" data-local="true" data-default="newest">
+								<option value="newest">Recently modified</option>
+								<option value="oldest">Oldest modified</option>
+								<option value="title-asc">Title (A-Z)</option>
+								<option value="title-desc">Title (Z-A)</option>
+							</select>
+						</section>
+						<section class="setting-card">
+							<div>
+								<h3>Compact video cards</h3>
+								<p>Show smaller thumbnails and fit more videos on screen.</p>
+							</div>
+							<input class="setting" type="checkbox" id="COMPACT_VIDEO_LIST" data-local="true" data-default="false"/>
+						</section>
+					</div>
 				</nav>
 				<nav class="tab">
 					<h2>Appearance</h2>
-
-					<h3>Dark mode</h3>
-					<p>Self-explanatory. Makes the Video List dark.</p>
-					<input class="setting" type="checkbox" id="DARK_MODE" data-local="true"></input>
+					<div class="setting-list">
+						<section class="setting-card">
+							<div>
+								<h3>Dark mode</h3>
+								<p>Use a dark color scheme across Wrapper: Offline pages.</p>
+							</div>
+							<input class="setting" type="checkbox" id="DARK_MODE" data-local="true" data-default="false"/>
+						</section>
+					</div>
 				</nav>
 				<nav class="tab">
 					<h2>Your Library</h2>
-
 					<nav id="importer">
 						<nav id="import_head">
-							<button id="import-toggle" onclick="document.getElementById('importer-files').click()" class="import-button">UPLOAD FILES</button>
+							<button id="import-toggle" onclick="document.getElementById('importer-files').click()" class="import-button">Upload files</button>
 							<form>
 								<input id="importer-files" type="file" name="file" title="Upload Files" accept=".mp3,.wav,.ogg,.wma,.swf,.gif,.png,.jpg,.mp4" style="display:none" />
 							</form>
 						</nav>
 						<div id="importer-queue"></div>
 					</nav>
+					<section class="library-assets" aria-live="polite">
+						<h3>Your uploaded assets</h3>
+						<div id="library-asset-list"></div>
+					</section>
 				</nav>
 			</nav>
 		</main>
@@ -112,49 +191,60 @@
 			}
 			// get local settings
 			list.forEach((key) => {
-				show(key, localStorage.getItem(key) == "true");
+				const elem = $(`#${key}`);
+				const saved = localStorage.getItem(key);
+				const value = saved === null ? elem.attr("data-default") : saved;
+				show(key, elem.prop("tagName") == "SELECT" ? value : value == "true");
 			});
-		});
+		}).fail(() => alert("Unable to load settings. Please restart the app and try again."));
 		$.getJSON("/api/assets/list", (d) => {
-			for (const info of d) {
-				switch (info.type) {
-					case "bg":
-					case "prop": {
-						$(`
-							<div class="importer_asset">
-								<div class="asset_metadata">
-									<img class="asset_preview" src="${
-										info.id.includes("swf") ? 
-											"/pages/img/importer/image.png" : 
-											info.subtype == "video" ? 
-												"/pages/img/importer/video.png" :
-												`/assets/${info.id}`
-									}" />
-									<div>
-										<h4 class="asset_name">${info.title}</h4>
-										<p class="asset_subtype">${info.type} | ${info.subtype}</p>
-									</div>
-								</div>
-							</div>
-						`).appendTo($("#importer-queue"));
-						break;
-					}
-					case "sound": {
-						$(`
-							<div class="importer_asset">
-								<div class="asset_metadata">
-									<img class="asset_preview" src="/pages/img/importer/sound.png" />
-									<div>
-										<h4 class="asset_name">${info.title}</h4>
-										<p class="asset_subtype">${info.type} | ${info.subtype}</p>
-									</div>
-								</div>
-							</div>
-						`).appendTo($("#importer-queue"));
-						break;
-					}
-				}
+			const typeNames = { bg: "Backgrounds", prop: "Props", sound: "Audio" };
+			const typeOrder = { bg: 0, prop: 1, sound: 2 };
+			const assets = d.filter(info => Object.prototype.hasOwnProperty.call(typeOrder, info.type))
+				.slice()
+				.sort((a, b) =>
+					typeOrder[a.type] - typeOrder[b.type] ||
+					String(a.subtype || "").localeCompare(String(b.subtype || "")) ||
+					String(a.title || "").localeCompare(String(b.title || ""))
+				);
+			const typeCounts = assets.reduce((counts, info) => {
+				counts[info.type] = (counts[info.type] || 0) + 1;
+				return counts;
+			}, {});
+			const library = $("#library-asset-list");
+			let currentType;
+			let currentGroup;
+
+			if (assets.length == 0) {
+				$("<p>").addClass("library-empty").text("No uploaded assets yet. Upload a file above to add it to your library.").appendTo(library);
+				return;
 			}
+
+			for (const info of assets) {
+				if (info.type != currentType) {
+					currentType = info.type;
+					currentGroup = $("<section>").addClass("library_group").appendTo(library);
+					$("<h4>").addClass("library_group_title").text(`${typeNames[info.type]} (${typeCounts[info.type]})`).appendTo(currentGroup);
+					currentGroup = $("<div>").addClass("library_group_items").appendTo(currentGroup);
+				}
+
+				const preview = info.type == "sound" ?
+					"/pages/img/importer/sound.png" :
+					String(info.id || "").includes("swf") ?
+						"/pages/img/importer/image.png" :
+						info.subtype == "video" ?
+							"/pages/img/importer/video.png" :
+							`/assets/${encodeURIComponent(info.id)}`;
+				const item = $("<div>").addClass("importer_asset");
+				const metadata = $("<div>").addClass("asset_metadata").appendTo(item);
+				$("<img>").addClass("asset_preview").attr({ src: preview, alt: "" }).appendTo(metadata);
+				const details = $("<div>").appendTo(metadata);
+				$("<h4>").addClass("asset_name").text(info.title).appendTo(details);
+				$("<p>").addClass("asset_subtype").text(`${info.type} | ${info.subtype || "asset"}`).appendTo(details);
+				currentGroup.append(item);
+			}
+		}).fail(() => {
+			$("#library-asset-list").text("Unable to load uploaded assets. Please try again.");
 		});
 
 		/**
@@ -167,7 +257,7 @@
 				elem.val() : elem.prop("checked");
 
 			if (elem.attr("data-local") == "true") {
-				if (elem.attr("id") == "DARK_MODE") toggleDarkMode();
+				if (elem.attr("id") == "DARK_MODE") toggleDarkMode(value);
 				localStorage.setItem(setting, value);
 			} else {
 				$.post("/api/settings/update", { setting, value })
@@ -176,7 +266,8 @@
 							alert("That didn't work.");
 							return;
 						}
-					});
+					})
+					.fail(() => alert("Could not save this setting. Please try again."));
 			}
 			show(setting, value);
 		});

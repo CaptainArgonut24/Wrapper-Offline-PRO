@@ -15,6 +15,21 @@
 		<%~ includeFile("./includes/header", { env: it.env }) %>
 
 		<main>
+			<div class="list-heading">
+				<div>
+					<h1>My Videos</h1>
+					<p>Pick up where you left off or start something new.</p>
+				</div>
+				<label class="list-sort" for="video-sort">
+					<span>Sort by</span>
+					<select id="video-sort">
+						<option value="newest">Recently modified</option>
+						<option value="oldest">Oldest modified</option>
+						<option value="title-asc">Title (A-Z)</option>
+						<option value="title-desc">Title (Z-A)</option>
+					</select>
+				</label>
+			</div>
 			<table class="full_screen">
 				<thead>
 					<tr>
@@ -37,60 +52,98 @@
 	</body>
 
 	<script>
-		let json;
+		let movies = [];
 		const tbody = $("tbody");
 		const loadMore = $("#load_more");
+		const sortControl = document.getElementById("video-sort");
+		const videoTable = document.querySelector("table.full_screen");
+		const savedSort = localStorage.getItem("VIDEO_SORT_ORDER") || "newest";
+		const validSorts = ["newest", "oldest", "title-asc", "title-desc"];
+		sortControl.value = validSorts.includes(savedSort) ? savedSort : "newest";
+		videoTable.classList.toggle("compact", localStorage.getItem("COMPACT_VIDEO_LIST") == "true");
 
 		let C = 0;
 		function loadRows() {
+			const sortedMovies = movies.slice().sort((a, b) => {
+				if (sortControl.value.startsWith("title")) {
+					const compare = String(a.title || "").localeCompare(String(b.title || ""));
+					return sortControl.value == "title-desc" ? -compare : compare;
+				}
+				const dateA = Date.parse(a.date) || 0;
+				const dateB = Date.parse(b.date) || 0;
+				return sortControl.value == "oldest" ? dateA - dateB : dateB - dateA;
+			});
 			// load only 69 rows
 			let c = C;
 			C += 69;
 			for (; c < C; c++) {
 				// we reached the end
-				if (c > json.length - 1) {
+				if (c > sortedMovies.length - 1) {
 					loadMore.remove();
 					break;
 				}
 
-				const tbl = json[c];
+				const tbl = sortedMovies[c];
 				// make the date and time less confusing to read
 				const date = tbl.date.split("T")[0];
 				const time = tbl.date.split("T")[1].substring(0, 8);
-				// escape the title
-				const title = tbl.title.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+				const id = escapeHtml(tbl.id);
+				const title = escapeHtml(tbl.title);
+				const duration = escapeHtml(tbl.duration);
+				const encodedId = encodeURIComponent(tbl.id);
 
 				tbody.append(
-					`<tr id="${tbl.id}">
+					`<tr id="${id}">
 						<td>
-							<img src="/file/movie/thumb/${tbl.id}" alt="thumbnail"/>
+							<img src="/file/movie/thumb/${encodedId}" alt="Video thumbnail"/>
 						</td>
 						<td>
 							<div>${title}</div>
-							<div>${tbl.duration}</div>
+							<div>${duration}</div>
 						</td>
 						<td>
-							<span>${date}, ${time}</span>
+							<span>${escapeHtml(date)}, ${escapeHtml(time)}</span>
 						</td>
 						<td>
-							<a href="javascript:;" onclick="popup('${tbl.id}')"></a>
-							<a href="/go_full?movieId=${tbl.id}"></a>
-							<a href="/file/movie/file/${tbl.id}" download="${tbl.title}.zip"></a>
-							<a href="#" onclick="destructive('${tbl.id}', 'repair')"></a>
-							<a href="#" onclick="destructive('${tbl.id}', 'delete')"></a>
+							<a href="#" data-action="preview" aria-label="Preview video"></a>
+							<a href="/go_full?movieId=${encodedId}" aria-label="Edit video"></a>
+							<a href="/file/movie/file/${encodedId}" download="${escapeHtml(tbl.title)}.zip" aria-label="Download video"></a>
+							<a href="#" data-action="repair" aria-label="Repair video"></a>
+							<a href="#" data-action="delete" aria-label="Delete video"></a>
 						</td>
 					</tr>`.trim()
 				);
 			}
 		}
 
-		// i want more movies
+		function escapeHtml(value) {
+			return String(value == null ? "" : value)
+				.replace(/&/g, "&amp;")
+				.replace(/</g, "&lt;")
+				.replace(/>/g, "&gt;")
+				.replace(/"/g, "&quot;")
+				.replace(/'/g, "&#39;");
+		}
+
 		loadMore.onclick = loadRows;
 
-
 		$.get("/api/movies/list", data => {
-			json = data;
+			movies = data;
 			loadRows();
+		});
+		sortControl.addEventListener("change", () => {
+			localStorage.setItem("VIDEO_SORT_ORDER", sortControl.value);
+			C = 0;
+			tbody.empty();
+			loadMore.show();
+			loadRows();
+		});
+		tbody.on("click", "a[data-action]", event => {
+			event.preventDefault();
+			const action = $(event.target).closest("a").attr("data-action");
+			const id = $(event.target).closest("tr").attr("id");
+			if (action == "preview") popup(id);
+			else destructive(id, action);
 		});
 
 		function destructive(mId, act) {
@@ -104,7 +157,7 @@
 								window.location = `/player?movieId=${mId}`;
 								break;
 							case "delete":
-								$(`#${mId}`).fadeOut(() => $(`#${mId}`).remove());
+								$(document.getElementById(mId)).fadeOut(() => $(document.getElementById(mId)).remove());
 								break;
 						}
 					} else alert("Guess you're stuck with your movie.");

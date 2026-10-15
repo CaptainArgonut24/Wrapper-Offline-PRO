@@ -6,14 +6,11 @@
  * set dark mode
  */
 if (localStorage.getItem("DARK_MODE") == "true") {
-	toggleDarkMode();
+	toggleDarkMode(true);
 }
 
-function toggleDarkMode() {
-	if ($("html").hasClass("dark")) 
-		$("html").removeClass("dark");
-	else
-		$("html").addClass("dark");
+function toggleDarkMode(enabled = !$("html").hasClass("dark")) {
+	$("html").toggleClass("dark", enabled);
 }
 
 
