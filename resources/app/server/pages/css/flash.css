@@ -57,6 +57,12 @@ previewer
 	width: 700px;
 	height: 488px;
 }
+html.studio-dark #preview_window {
+	background: var(--surface);
+	border: 1px solid var(--border);
+	box-shadow: 0 20px 60px rgba(0, 0, 0, .48);
+	color: var(--text);
+}
 .preview_head {
 	background: #f0f0f0;
 	border-bottom: 1px solid #c0c0c0;
@@ -65,6 +71,12 @@ previewer
 	justify-content: space-between;
 	margin-bottom: 12px;
 	padding: 14px 30px 10px;
+}
+html.studio-dark .preview_head,
+html.studio-dark .preview_foot {
+	background: var(--surface-raised);
+	border-color: var(--border);
+	color: var(--text);
 }
 .preview_head h2 {
 	font-size: 20px;
@@ -77,6 +89,12 @@ previewer
 .preview_head #preview_close:hover {
 	color: #d85e27;
 	cursor: pointer;
+}
+html.studio-dark .preview_head #preview_close {
+	color: var(--muted);
+}
+html.studio-dark .preview_head #preview_close:hover {
+	color: var(--primary);
 }
 #preview_player {
 	outline: 0!important;

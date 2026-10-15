@@ -338,23 +338,6 @@ select:focus {
 	max-width: 230px;
 	min-width: 160px;
 }
-.library_group {
-	margin: 18px 0 22px;
-}
-.library_group_title {
-	border-bottom: 1px solid var(--border);
-	color: var(--text);
-	font-size: 14px;
-	margin: 0 0 8px;
-	padding: 0 0 7px;
-	text-transform: capitalize;
-}
-.library_group_items {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-	gap: 8px;
-}
-
 @media (max-width: 760px) {
 	header {
 		align-items: flex-start;

@@ -159,17 +159,39 @@
 					</nav>
 					<section class="library-assets" aria-live="polite">
 						<h3>Your uploaded assets</h3>
-						<div id="library-asset-list"></div>
+						<div class="library-controls">
+							<label for="library-search">Search</label>
+							<input id="library-search" type="search" placeholder="Search uploaded content..." autocomplete="off"/>
+							<label for="library-category">Category</label>
+							<select id="library-category"></select>
+						</div>
+						<div id="library-asset-list" class="library-list"></div>
+						<div class="library-pagination" aria-label="Uploaded content pages">
+							<button id="library-previous" type="button">Previous</button>
+							<span id="library-page" aria-live="polite"></span>
+							<button id="library-next" type="button">Next</button>
+						</div>
 					</section>
 				</nav>
 			</nav>
 		</main>
+
+		<div id="library-preview" class="library-preview" role="dialog" aria-modal="true" aria-labelledby="library-preview-title" hidden>
+			<div class="library-preview-panel">
+				<div class="library-preview-heading">
+					<h3 id="library-preview-title"></h3>
+					<button id="library-preview-close" type="button" aria-label="Close preview">×</button>
+				</div>
+				<div id="library-preview-content" class="library-preview-content"></div>
+			</div>
+		</div>
 
 		<%~ includeFile("./includes/footer", { env: it.env }) %>
 	</body>
 
 	<script src="/pages/js/importer.js"></script>
 	<script src="/pages/js/filesize.js"></script>
+	<script src="/pages/js/library.js"></script>
 	<script>
 		new AssetImporter(importer);
 		// this is a mess of type conversion
@@ -197,56 +219,6 @@
 				show(key, elem.prop("tagName") == "SELECT" ? value : value == "true");
 			});
 		}).fail(() => alert("Unable to load settings. Please restart the app and try again."));
-		$.getJSON("/api/assets/list", (d) => {
-			const typeNames = { bg: "Backgrounds", prop: "Props", sound: "Audio" };
-			const typeOrder = { bg: 0, prop: 1, sound: 2 };
-			const assets = d.filter(info => Object.prototype.hasOwnProperty.call(typeOrder, info.type))
-				.slice()
-				.sort((a, b) =>
-					typeOrder[a.type] - typeOrder[b.type] ||
-					String(a.subtype || "").localeCompare(String(b.subtype || "")) ||
-					String(a.title || "").localeCompare(String(b.title || ""))
-				);
-			const typeCounts = assets.reduce((counts, info) => {
-				counts[info.type] = (counts[info.type] || 0) + 1;
-				return counts;
-			}, {});
-			const library = $("#library-asset-list");
-			let currentType;
-			let currentGroup;
-
-			if (assets.length == 0) {
-				$("<p>").addClass("library-empty").text("No uploaded assets yet. Upload a file above to add it to your library.").appendTo(library);
-				return;
-			}
-
-			for (const info of assets) {
-				if (info.type != currentType) {
-					currentType = info.type;
-					currentGroup = $("<section>").addClass("library_group").appendTo(library);
-					$("<h4>").addClass("library_group_title").text(`${typeNames[info.type]} (${typeCounts[info.type]})`).appendTo(currentGroup);
-					currentGroup = $("<div>").addClass("library_group_items").appendTo(currentGroup);
-				}
-
-				const preview = info.type == "sound" ?
-					"/pages/img/importer/sound.png" :
-					String(info.id || "").includes("swf") ?
-						"/pages/img/importer/image.png" :
-						info.subtype == "video" ?
-							"/pages/img/importer/video.png" :
-							`/assets/${encodeURIComponent(info.id)}`;
-				const item = $("<div>").addClass("importer_asset");
-				const metadata = $("<div>").addClass("asset_metadata").appendTo(item);
-				$("<img>").addClass("asset_preview").attr({ src: preview, alt: "" }).appendTo(metadata);
-				const details = $("<div>").appendTo(metadata);
-				$("<h4>").addClass("asset_name").text(info.title).appendTo(details);
-				$("<p>").addClass("asset_subtype").text(`${info.type} | ${info.subtype || "asset"}`).appendTo(details);
-				currentGroup.append(item);
-			}
-		}).fail(() => {
-			$("#library-asset-list").text("Unable to load uploaded assets. Please try again.");
-		});
-
 		/**
 		 * toggle
 		 */
