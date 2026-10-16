@@ -3,7 +3,8 @@
 		<h1 style="margin:0"><img id="logo" src="/pages/img/logo.svg" alt="Wrapper: Offline"/></h1>
 	</a>
 	<nav id="headbuttons">
-		<a class="button_small" onclick="document.getElementById('file').click()">UPLOAD A CHAR</a>
+		<a class="button_small" onclick="document.getElementById('file').click()">UPLOAD A CHARACTER</a>
+		<a class="button_small" onclick="document.getElementById('movie-file').click()">UPLOAD A MOVIE</a>
 		<a href="/create?filter=cc" class="button_small">CREATE A CHARACTER</a>
 		<a href="/create" class="button_big">MAKE A VIDEO</a>
 	</nav>
@@ -11,4 +12,8 @@
 
 <form enctype='multipart/form-data' action='/api/char/upload' method='post'>
 	<input id='file' type="file" onchange="this.form.submit()" name='import' />
+</form>
+
+<form enctype="multipart/form-data" action="/api/movie/upload" method="post">
+	<input id="movie-file" type="file" name="import" accept=".zip,application/zip" onchange="this.form.submit()" />
 </form>

@@ -12,6 +12,7 @@ const Settings = new database(true);
 const Movie = require("../models/movie");
 const exportJobs = new Map();
 const savedFolder = path.join(__dirname, "../../", process.env.SAVED_FOLDER);
+const uploadThumbnail = path.join(__dirname, "../../server/pages/img/importer/video.png");
 const MAX_EXPORT_JOBS = 30;
 
 function addExportJob(job) {
@@ -36,6 +37,36 @@ function updateExportOutput(job, chunk) {
 const group = new httpz.Group();
 
 group
+	.route("POST", "/api/movie/upload", async (req, res) => {
+		const file = req.files && req.files.import;
+		res.assert(file && file.filepath, 400, { status: "error", message: "Choose a Wrapper movie ZIP file to upload." });
+		if (path.extname(file.originalFilename || "").toLowerCase() != ".zip") {
+			try {
+				fs.unlinkSync(file.filepath);
+			} catch (error) {
+				console.error("Unable to remove rejected movie upload:", error);
+			}
+			res.status(400);
+			res.json({ status: "error", message: "Movie uploads must be ZIP files." });
+			return;
+		}
+
+		try {
+			const movieZip = fs.readFileSync(file.filepath);
+			await Movie.save(movieZip, fs.readFileSync(uploadThumbnail));
+			res.redirect("/");
+		} catch (error) {
+			console.error("Error uploading movie:", error);
+			res.status(400);
+			res.json({ status: "error", message: "Unable to import this movie. Make sure it is a valid Wrapper movie ZIP containing movie.xml." });
+		} finally {
+			try {
+				if (fs.existsSync(file.filepath)) fs.unlinkSync(file.filepath);
+			} catch (error) {
+				console.error("Unable to remove temporary movie upload:", error);
+			}
+		}
+	})
 	.route("POST", "/api/movies/organize", (req, res) => {
 		const { id } = req.body;
 		const archived = req.body.archived;

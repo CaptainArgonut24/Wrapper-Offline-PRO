@@ -40,6 +40,9 @@ group
 		discord("Settings");
 		res.render("settings", {});
 	})
+	.route("GET", "/FAQ", (req, res) => {
+		res.render("faq", {});
+	})
 	// themelist page
 	.route("GET", "/create", (req, res) => {
 		discord("Choosing a Theme");

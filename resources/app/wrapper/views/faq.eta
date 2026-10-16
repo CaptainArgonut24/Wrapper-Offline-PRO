@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<link rel="icon" href="/favicon.ico" type="image/png"/>
+		<title>FAQ - Wrapper: Offline</title>
+		<meta name="description" content="Frequently asked questions about Wrapper: Offline"/>
+		<link rel="stylesheet" type="text/css" href="/pages/css/global.css">
+		<link rel="stylesheet" type="text/css" href="/pages/css/faq.css">
+		<script src="/pages/js/global.js"></script>
+	</head>
+
+	<body>
+		<%~ includeFile("./includes/header", { env: it.env }) %>
+
+		<main class="faq-page">
+			<div class="faq-intro">
+				<h1>Frequently Asked Questions</h1>
+				<p>Quick answers about creating videos, managing your projects, and using Wrapper: Offline.</p>
+			</div>
+
+			<section class="faq-section" aria-labelledby="faq-projects">
+				<h2 id="faq-projects">Videos and projects</h2>
+				<details>
+					<summary>How do I create a video?</summary>
+					<p>Select <strong>Make a Video</strong> in the header, choose a theme, and create your project in the video maker. Your saved videos appear in <strong>My Videos</strong>.</p>
+				</details>
+				<details>
+					<summary>How do I upload an existing movie?</summary>
+					<p>Choose <strong>Upload a Movie</strong> in the header and select a Wrapper movie ZIP containing <code>movie.xml</code>. The imported project is added to My Videos.</p>
+				</details>
+				<details>
+					<summary>What is the Archive?</summary>
+					<p>The Archive keeps videos separate from My Videos without deleting them. Use the archive/restore action on a video to move it between the two views.</p>
+				</details>
+				<details>
+					<summary>How do I find one of my videos?</summary>
+					<p>Use the search box on the video list to search by part or all of a video's name or ID. Search applies to the selected view: My Videos or Archive.</p>
+				</details>
+				<details>
+					<summary>Can I copy a video's ID?</summary>
+					<p>Yes. Select <strong>Copy</strong> beside the ID on its video card. The ID is copied to your clipboard.</p>
+				</details>
+			</section>
+
+			<section class="faq-section" aria-labelledby="faq-assets">
+				<h2 id="faq-assets">Assets and characters</h2>
+				<details>
+					<summary>Where are my uploaded assets?</summary>
+					<p>Open <strong>Settings</strong> and select <strong>Your Library</strong>. You can search, filter by category, preview, and download your uploaded content there.</p>
+				</details>
+				<details>
+					<summary>How do I upload a character?</summary>
+					<p>Select <strong>Upload a Char</strong> in the header and choose a supported character file. To upload audio, images, or other supported assets, use the uploader in Settings.</p>
+				</details>
+				<details>
+					<summary>Can I hide themes I don't use?</summary>
+					<p>Yes. In <strong>Settings → Video Workspace</strong>, use Theme Visibility to choose which themes appear on the creation page. All themes are enabled by default.</p>
+				</details>
+			</section>
+
+			<section class="faq-section" aria-labelledby="faq-settings">
+				<h2 id="faq-settings">Settings and exporting</h2>
+				<details>
+					<summary>What does Video Layout change?</summary>
+					<p>Video Layout changes how projects are arranged in My Videos. Choose vertical cards or horizontal rows in Settings.</p>
+				</details>
+				<details>
+					<summary>How do I export a video with GoExport?</summary>
+					<p>Install and configure GoExport, then set its executable or <code>main.py</code> path under <strong>Settings → Export</strong>. Select the GoExport action on a video to start an export. GoExport and its required runtime components must be installed separately.</p>
+				</details>
+				<details>
+					<summary>Where are my projects and exports stored?</summary>
+					<p>Wrapper stores project data in its configured local save folder. GoExported MP4 files are placed in the <code>Exports</code> subfolder there.</p>
+				</details>
+			</section>
+		</main>
+
+		<%~ includeFile("./includes/footer", { env: it.env }) %>
+	</body>
+</html>

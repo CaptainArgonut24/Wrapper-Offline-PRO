@@ -10438,168 +10438,9 @@
 	<prop id="g4b_3490.swf" name="Shield" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31749" money="0" sharing="0" />
 	<prop id="g4b_3491.swf" name="Screen" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31750" money="0" sharing="0" />
 	<prop id="g4b_3492.swf" name="Tooth" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31751" money="0" sharing="0" />
-	<prop id="g4b_3493.swf" name="Book" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31752" money="0" sharing="0" />                                                              	<prop id="g4b_3495.swf" name="Pistol" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31753" money="0" sharing="0" />
-	<prop id="g4b_3515.swf" name="Knife" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31754" money="0" sharing="0" />
-	<prop id="g4b_3537.swf" name="Sushi" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31755" money="0" sharing="0" />
-	<prop id="g4b_3547.swf" name="Donations" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31756" money="0" sharing="0" />
-	<prop id="g4b_3555.swf" name="Flashlight" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31757" money="0" sharing="0" />
-	<prop id="g4b_3560.swf" name="Magazine" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31758" money="0" sharing="0" />
-	<prop id="g4b_3561.swf" name="Newspaper" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31759" money="0" sharing="0" />
-	<prop id="g4b_3576.swf" name="Boombox" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31760" money="0" sharing="0" />
-	<prop id="g4b_3578.swf" name="Microphone" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31761" money="0" sharing="0" />
-	<prop id="g4b_3595.swf" name="Ice Cream" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31762" money="0" sharing="0" />
-	<prop id="g4b_3615.swf" name="JackHammer" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31763" money="0" sharing="0" />
-	<prop id="g4b_3619.swf" name="Trashbag" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31764" money="0" sharing="0" />
-	<prop id="g4b_3620.swf" name="Tape Measure" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31765" money="0" sharing="0" />
-	<prop id="g4b_3634.swf" name="Paint" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31766" money="0" sharing="0" />
-	<prop id="g4b_3649.swf" name="Broadcast Microphone" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31767" money="0" sharing="0" />
-	<prop id="g4b_3651.swf" name="Devil Emoji" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31768" money="0" sharing="0" />
-	<prop id="g4b_3652.swf" name="Heaven Emoji" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31769" money="0" sharing="0" />
-	<prop id="g4b_3659.swf" name="Many Money" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31770" money="0" sharing="0" />
-	<prop id="g4b_3691.swf" name="Molotov cocktail" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31771" money="0" sharing="0" />
-	<prop id="g4b_3700.swf" name="Nitestick" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31772" money="0" sharing="0" />
-	<prop id="g4b_3701.swf" name="Walkie Talkie" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31773" money="0" sharing="0" />
-	<prop id="g4b_3738.swf" name="Weight Training" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31774" money="0" sharing="0" />
-	<prop id="g4b_4109.swf" name="Eraser" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31776" money="0" sharing="0" />
-	<prop id="g4b_4155.swf" name="Glue" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31777" money="0" sharing="0" />
-	<prop id="g4b_4208.swf" name="Crowd" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31778" money="0" sharing="0" />
-	<prop id="g4b_4250.swf" name="Spray Bottle" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31779" money="0" sharing="0" />
-	<prop id="g4b_4254.swf" name="Ironboard" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31780" money="0" sharing="0" />
-	<prop id="g4b_4296.swf" name="Strawberry" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31781" money="0" sharing="0" />
-	<prop id="g4b_4297.swf" name="Blueberry" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31782" money="0" sharing="0" />
-	<prop id="g4b_4307.swf" name="Banana" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31783" money="0" sharing="0" />
-	<prop id="g4b_4309.swf" name="Pepper" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31784" money="0" sharing="0" />
-	<prop id="g4b_4343.swf" name="Cheese" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31785" money="0" sharing="0" />
-	<prop id="g4b_4351.swf" name="Breakfast" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31786" money="0" sharing="0" />
-	<prop id="g4b_4357.swf" name="Honey" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31787" money="0" sharing="0" />
-	<prop id="g4b_4373.swf" name="Pancake" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31788" money="0" sharing="0" />
-	<prop id="g4b_4377.swf" name="Cookie" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31789" money="0" sharing="0" />
-	<prop id="g4b_4397.swf" name="Kimbap" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31790" money="0" sharing="0" />
-	<prop id="g4b_4413.swf" name="Ice Cream Truck" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31791" money="0" sharing="0" />
-	<prop id="g4b_4415.swf" name="Water Heater" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31792" money="0" sharing="0" />
-	<prop id="g4b_4446.swf" name="Couch" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31793" money="0" sharing="0" />
-	<prop id="g4b_4463.swf" name="Boba" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31794" money="0" sharing="0" />
-	<prop id="g4b_4466.swf" name="Mango" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31795" money="0" sharing="0" />
-	<prop id="g4b_4487.swf" name="Restaurant" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31796" money="0" sharing="0" />
-	<prop id="g4b_4488.swf" name="Building" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31797" money="0" sharing="0" />
-	<prop id="g4b_4513.swf" name="Football Soccer" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31798" money="0" sharing="0" />
-	<prop id="g4b_4520.swf" name="Poker Chips" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31799" money="0" sharing="0" />
-	<prop id="g4b_4527.swf" name="Chessboard" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31800" money="0" sharing="0" />
-	<prop id="g4b_4561.swf" name="Virus" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31801" money="0" sharing="0" />
-	<prop id="g4b_4614.swf" name="Glowing Globe" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31802" money="0" sharing="0" />
-	<prop id="g4b_4697.swf" name="Magic Wond" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31803" money="0" sharing="0" />
-	<prop id="g4b_4713.swf" name="Aircon" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31804" money="0" sharing="0" />
-	<prop id="g4b_4779.swf" name="Soap" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31805" money="0" sharing="0" />
-	<prop id="g4b_4787.swf" name="Thermometer" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31806" money="0" sharing="0" />
-	<prop id="g4b_4791.swf" name="Ciggerate" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31807" money="0" sharing="0" />
-	<prop id="g4b_4804.swf" name="Mosquito" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31808" money="0" sharing="0" />
-	<prop id="g4b_4806.swf" name="Mosquito Coil" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31809" money="0" sharing="0" />
-	<prop id="g4b_4825.swf" name="Snack Shelfs" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31810" money="0" sharing="0" />
-	<prop id="g4b_4848.swf" name="Building" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31811" money="0" sharing="0" />
-	<prop id="g4b_4887.swf" name="Toilet Paper Pack" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31812" money="0" sharing="0" />
-	<prop id="g4b_4976.swf" name="Reed Diffuser" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31813" money="0" sharing="0" />
-	<prop id="g4b_4999.swf" name="Candle" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31814" money="0" sharing="0" />
-	<prop id="g4b_5142.swf" name="Mountain Coin" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31815" money="0" sharing="0" />
-	<prop id="g4b_5144.swf" name="Axe" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31816" money="0" sharing="0" />
-	<prop id="g4b_5146.swf" name="Wood" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31817" money="0" sharing="0" />
-	<prop id="g4b_5147.swf" name="Turkey" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31818" money="0" sharing="0" />
-	<prop id="g4b_5163.swf" name="Baby" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31819" money="0" sharing="0" />
-	<prop id="g4b_5176.swf" name="Delivery Truck" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31820" money="0" sharing="0" />
-	<prop id="g4b_5304.swf" name="Medicine" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31821" money="0" sharing="0" />
-	<prop id="g4b_5310.swf" name="Capsule" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31822" money="0" sharing="0" />
-	<prop id="g4b_5494.swf" name="Garbage Truck" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31823" money="0" sharing="0" />
-	<prop id="g4b_5510.swf" name="Convinence Store" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31824" money="0" sharing="0" />
-	<prop id="g4b_5524.swf" name="Bike" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31825" money="0" sharing="0" />
-	<prop id="g4b_5672.swf" name="House" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31826" money="0" sharing="0" />
-	<prop id="g4b_5928.swf" name="Year of the Goat" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31828" money="0" sharing="0" />
-	<prop id="g4b_5958.swf" name="Frog" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31829" money="0" sharing="0" />
-	<prop id="g4b_6018.swf" name="Monkey" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31830" money="0" sharing="0" />
-	<prop id="g4b_6063.swf" name="Soiled" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31832" money="0" sharing="0" />
-	<prop id="g4b_6094.swf" name="Clothes" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31833" money="0" sharing="0" />
-	<prop id="g4b_6098.swf" name="School or Office Supplies" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31834" money="0" sharing="0" />
-	<prop id="g4b_6099.swf" name="Sewing Needle" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31835" money="0" sharing="0" />
-	<prop id="g4b_6105.swf" name="Scissors" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31836" money="0" sharing="0" />
-	<prop id="g4b_6109.swf" name="Easter Egg" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31837" money="0" sharing="0" />
-	<prop id="g4b_6151.swf" name="Bird" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31838" money="0" sharing="0" />
-	<prop id="g4b_6154.swf" name="Zebra" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31839" money="0" sharing="0" />
-	<prop id="g4b_6195.swf" name="Lion" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31840" money="0" sharing="0" />
-	<prop id="g4b_6251.swf" name="Picnic Basket" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31841" money="0" sharing="0" />
-	<prop id="g4b_6258.swf" name="Trekking Backpack" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31842" money="0" sharing="0" />
-	<prop id="g4b_6263.swf" name="Sleeping Bag" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31843" money="0" sharing="0" />
-	<prop id="g4b_6338.swf" name="Yarn" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31844" money="0" sharing="0" />
-	<prop id="g4b_6381.swf" name="Duck" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31845" money="0" sharing="0" />
-	<prop id="g4b_6447.swf" name="Monster" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31846" money="0" sharing="0" />
-	<prop id="g4b_6337.swf" name="Power Socket" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31847" money="0" sharing="0" />
-	<prop id="g4b_6663.swf" name="Pen Holder" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31848" money="0" sharing="0" />
-	<prop id="g4b_6669.swf" name="Files Shelf" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31849" money="0" sharing="0" />
-	<prop id="g4b_6695.swf" name="Building" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31850" money="0" sharing="0" />
-	<prop id="g4b_6773.swf" name="Cloth Stand" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31851" money="0" sharing="0" />
-	<prop id="g4b_6800.swf" name="Concrete Mixer" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31852" money="0" sharing="0" />
-	<prop id="g4b_6892.swf" name="Dessert Sale" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31853" money="0" sharing="0" />
-	<prop id="g4b_7088.swf" name="RV Van" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31854" money="0" sharing="0" />
-          <prop id="g4b_3512.swf" name="Spatula" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31855" money="0" sharing="0"/>
-<prop id="g4b_3568.swf" name="Drum" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31856" money="0" sharing="0"/>
-<prop id="g4b_3569.swf" name="Electric Guitar" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31857" money="0" sharing="0"/>
-<prop id="g4b_3572.swf" name="Saxophone" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31858" money="0" sharing="0"/>
-<prop id="g4b_3611.swf" name="Music Book" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31859" money="0" sharing="0"/>
-<prop id="g4b_3624.swf" name="Hammer" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31860" money="0" sharing="0"/>
-<prop id="g4b_3702.swf" name="Metal Detector" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31861" money="0" sharing="0"/>
-<prop id="g4b_3739.swf" name="Baseball Bat" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31862" money="0" sharing="0"/>
-<prop id="g4b_3742.swf" name="Whistle" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31864" money="0" sharing="0"/>
-<prop id="g4b_3909.swf" name="Pipe" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31865" money="0" sharing="0"/>
-<prop id="g4b_4039.swf" name="Chair" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31866" money="0" sharing="0"/>
-<prop id="g4b_4058.swf" name="CCTV" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31867" money="0" sharing="0"/>
-<prop id="g4b_4066.swf" name="Paper" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31868" money="0" sharing="0"/>
-<prop id="g4b_4075.swf" name="Pencil" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31869" money="0" sharing="0"/>
-<prop id="g4b_4076.swf" name="Ballpen" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31870" money="0" sharing="0"/>
-<prop id="g4b_4104.swf" name="Tape" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31871" money="0" sharing="0"/>
-<prop id="g4b_4148.swf" name="Stacks of Newspaper" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31872" money="0" sharing="0"/>
-<prop id="g4b_4259.swf" name="Iron Bars" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31873" money="0" sharing="0"/>
-<prop id="g4b_4321.swf" name="Water Can" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31874" money="0" sharing="0"/>
-<prop id="g4b_4331.swf" name="Fries" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31875" money="0" sharing="0"/>
-<prop id="g4b_4340.swf" name="Sausage" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31876" money="0" sharing="0"/>
-<prop id="g4b_4345.swf" name="Steak" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31877" money="0" sharing="0"/>
-<prop id="g4b_4361.swf" name="Soda" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31878" money="0" sharing="0"/>
-<prop id="g4b_4551.swf" name="Riot" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31879" money="0" sharing="0"/>
-<prop id="g4b_4639.swf" name="Another Car" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31880" money="0" sharing="0"/>
-<prop id="g4b_4698.swf" name="Hat" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31881" money="0" sharing="0"/>
-<prop id="g4b_4808.swf" name="Trash Can" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31882" money="0" sharing="0"/>
-<prop id="g4b_4850.swf" name="Building" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31883" money="0" sharing="0"/>
-<prop id="g4b_4882.swf" name="Beer" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31884" money="0" sharing="0"/>
-<prop id="g4b_4893.swf" name="Tent" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31885" money="0" sharing="0"/>
-<prop id="g4b_4947.swf" name="Razor" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31886" money="0" sharing="0"/>
-<prop id="g4b_4987.swf" name="Clothes" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31887" money="0" sharing="0"/>
-<prop id="g4b_5000.swf" name="Kitchen" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31888" money="0" sharing="0"/>
-<prop id="g4b_5058.swf" name="Wooden Laying Chair" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31889" money="0" sharing="0"/>
-<prop id="g4b_5133.swf" name="Water Fountain" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31890" money="0" sharing="0"/>
-<prop id="g4b_5587.swf" name="Umbrella Can" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31892" money="0" sharing="0"/>
-<prop id="g4b_6032.swf" name="Shamrock Beer" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31893" money="0" sharing="0"/>
-<prop id="g4b_6061.swf" name="Soda" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31894" money="0" sharing="0"/>
-<prop id="g4b_6231.swf" name="Guitar" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31895" money="0" sharing="0"/>
-<prop id="g4b_6284.swf" name="Beach Chair" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31896" money="0" sharing="0"/>
-<prop id="g4b_6298.swf" name="Paddle" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31897" money="0" sharing="0"/>
-<prop id="g4b_6650.swf" name="Cushion" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31898" money="0" sharing="0"/>
-<prop id="g4b_6651.swf" name="Pillow" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31899" money="0" sharing="0"/>
-<prop id="g4b_6655.swf" name="Hexagon Chair" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31900" money="0" sharing="0"/>
-<prop id="g4b_6761.swf" name="Bathtub" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31901" money="0" sharing="0"/>
-<prop id="g4b_6902.swf" name="Coffee Despenser" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31902" money="0" sharing="0"/>
-<prop id="g4b_6903.swf" name="Drink Despenser" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31903" money="0" sharing="0"/>
-<prop id="g4b_6909.swf" name="Table Umbrella" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31904" money="0" sharing="0"/>
-<prop id="g4b_6943.swf" name="Sign" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31905" money="0" sharing="0"/>
-<prop id="g4b_7009.swf" name="Handcuffs" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31906" money="0" sharing="0"/>
- <prop id="g4b_4393.swf" name="Asian food box" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31905" money="0" sharing="0"/>
-<prop id="g4b_4394.swf" name="Cup Noodles" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31906" money="0" sharing="0"/>
-<prop id="g4b_4663.swf" name="Shampoo" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31907" money="0" sharing="0"/>
-<prop id="g4b_5504.swf" name="Billboard" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31908" money="0" sharing="0"/>
-<prop id="g4b_5562.swf" name="Takeout Delivery" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31909" money="0" sharing="0"/>
-<prop id="g4b_5713.swf" name="Tennis Ball" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31911" money="0" sharing="0"/>
-<prop id="g4b_5714.swf" name="Tennis Racket" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31912" money="0" sharing="0"/>
-<prop id="g4b_6467.swf" name="Energy Blast" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31913" money="0" sharing="0"/>
-<prop id="g4b_6968.swf" name="Soda Vending Machine" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31914" money="0" sharing="0"/>
-<prop id="g4b_6500.swf" name="Hourglass" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31915" money="0" sharing="0"/>
-<prop id="g4b_6710.swf" name="Table" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31916" money="0" sharing="0"/>
-          <prop id="g4b_1177.swf" name="Sleigh" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="25308" money="0" sharing="0">
-	<tag>20141117xmas</tag>
+	<prop id="g4b_3493.swf" name="Book" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="31752" money="0" sharing="0" />
+	<prop id="g4b_1177.swf" name="Sleigh" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="25308" money="0" sharing="0">
+		<tag>20141117xmas</tag>
 		<tag>christmas</tag>
 		<tag>sled</tag>
 	</prop>
@@ -12799,6 +12640,10 @@
 		<display_name><![CDATA[Travel]]></display_name>
 		<description><![CDATA[Foreign place, Hotel]]></description>
 	</category>
+	<category key="starters" type="template" theme="business" thumbnail="http://localhost:4343/static/ad44370a650793d9/go/img/category/cat_WTF.png">
+		<display_name><![CDATA[Starters]]></display_name>
+		<description><![CDATA[Uncategorized Starters]]></description>
+	</category>
 	<category key="pirate" type="template" theme="business" thumbnail="http://localhost:4343/static/ad44370a650793d9/go/img/category/cat_pirate.png">
 		<display_name><![CDATA[Pirate]]></display_name>
 		<description><![CDATA[Aye, Captain!]]></description>
@@ -13256,7 +13101,9 @@
 				</effectAsset>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0X0eyWNnukX4" numScene="1" title="At The Office - At Desk" thumbnail="/stock_thumbs/269574881.jpg" enc_asset_id="0baKUZSgkCn8tNdXDmM8OWQ" itemRef="/go-prod/asset/269574881">
 		<film copyable="0" duration="65.9" published="0" pshare="0" isWide="1">
@@ -13606,7 +13453,9 @@
 				</effectAsset>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0EGGB7ptElD8" numScene="1" title="At The Office - At Desk - Chat" thumbnail="/stock_thumbs/269574895.jpg" enc_asset_id="0vPba9SeLCrXGbLd1u6tbAw" itemRef="/go-prod/asset/269574895">
 		<film copyable="0" duration="2.5" published="0" pshare="0" isWide="1">
@@ -13947,7 +13796,9 @@
 				</effectAsset>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="008DA4bmdNRc" numScene="1" title="At The Office - At Desk - Title" thumbnail="/stock_thumbs/290231348.jpg" enc_asset_id="0_W7yA5OHLiFrwxStLYRCSg" itemRef="/alvin-dev/asset/65519">
 		<film copyable="0" duration="65.9" published="0" pshare="0" isWide="1">
@@ -14143,7 +13994,9 @@
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0EMkoSuznvOo" numScene="1" title="At The Office - At Desk - Working Late" thumbnail="/stock_thumbs/269574919.jpg" enc_asset_id="0G4bWP0i1IVQiuQ0JDOFAuw" itemRef="/go-prod/asset/269574919">
 		<film copyable="0" duration="2.5" published="0" pshare="0" isWide="1">
@@ -14480,7 +14333,9 @@
 				</effectAsset>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0xHgMHu0ytuk" numScene="1" title="At The Office - Boss Office" thumbnail="/stock_thumbs/265524141.jpg" enc_asset_id="0k2qjDpK_hKgtNdXDmM8OWQ" itemRef="/go-prod/asset/265524141">
 		<film copyable="0" duration="65.9" published="0" pshare="0" isWide="1">
@@ -14607,7 +14462,9 @@
 				</effectAsset>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0H1v1tB9YaOY" numScene="1" title="At The Office - Call center" thumbnail="/stock_thumbs/269574939.jpg" enc_asset_id="0EvTiDF7v0FAiuQ0JDOFAuw" itemRef="/go-prod/asset/269574939">
 		<film copyable="0" duration="2.5" published="0" pshare="0" isWide="1">
@@ -14762,7 +14619,9 @@
 				</effectAsset>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0tDKaHSzMkVc" numScene="1" title="At The Office - Car Park" thumbnail="/stock_thumbs/265524120.jpg" enc_asset_id="0MbFJLCxLXr_MS39-jgv7mQ" itemRef="/go-prod/asset/265524120" notut="1">
 		<film copyable="0" duration="2.5" published="0" pshare="0" isWide="1">
@@ -14817,7 +14676,9 @@
 				</effectAsset>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0cm-KlUgc_Fk" numScene="1" title="At The Office - Coffee Break" thumbnail="/stock_thumbs/265524312.jpg" enc_asset_id="0YNZl_x-e1gu5Z_k8TyB-CA" itemRef="/go-prod/asset/265524312">
 		<film copyable="0" duration="2.5" published="0" pshare="0" isWide="1">
@@ -15015,7 +14876,9 @@
 				</effectAsset>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="04J-4sZghLvA" numScene="1" title="At The Office - Elevator Lobby" thumbnail="/stock_thumbs/265523926.jpg" enc_asset_id="0VTw5WtaT8sPZBgS1od14mg" itemRef="/go-prod/asset/265523926">
 		<film copyable="0" duration="2.5" published="0" pshare="0" isWide="1">
@@ -15098,7 +14961,9 @@
 				</effectAsset>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0_PEG-YxaWWE" numScene="1" title="At The Office - Inside Elevator" thumbnail="/stock_thumbs/265523942.jpg" enc_asset_id="0tSxqOuHROSG5Z_k8TyB-CA" itemRef="/go-prod/asset/265523942">
 		<film copyable="0" duration="65.9" published="0" pshare="0" isWide="1">
@@ -15185,7 +15050,9 @@
 				</effectAsset>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0RZWhHvT9d0I" numScene="1" title="At The Office - Main Entrance" thumbnail="/stock_thumbs/265524110.jpg" enc_asset_id="0OTOtbqcqXDrMS39-jgv7mQ" itemRef="/go-prod/asset/265524110">
 		<film copyable="0" duration="2.5" published="0" pshare="0" isWide="1">
@@ -15295,7 +15162,9 @@
 				</effectAsset>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0-QtVOpCzO84" numScene="1" title="At The Office - Main Entrance" thumbnail="/stock_thumbs/265523911.jpg" enc_asset_id="0yweCizsEyKItNdXDmM8OWQ" itemRef="/go-prod/asset/265523911">
 		<film copyable="0" duration="65.9" published="0" pshare="0" isWide="1">
@@ -15383,7 +15252,9 @@
 				</effectAsset>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0xjVDpeiFoY8" numScene="1" title="At The Office - Office Building" thumbnail="/stock_thumbs/265524082.jpg" enc_asset_id="0KWt--CQQsMa5Z_k8TyB-CA" itemRef="/go-prod/asset/265524082" notut="1">
 		<film copyable="0" duration="2.5" published="0" pshare="0" isWide="1">
@@ -15537,7 +15408,9 @@
 				</effectAsset>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0DIPY8-XUSIQ" numScene="1" title="At The Office - Office Space" thumbnail="/stock_thumbs/269568393.jpg" enc_asset_id="0eU1-jw99-TXTEEJSpuZAGA" itemRef="/go-prod/asset/269568393">
 		<film copyable="0" duration="65.9" published="0" pshare="0" isWide="1">
@@ -15841,7 +15714,9 @@
 				</effectAsset>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0pVWut6yBsSQ" numScene="1" title="At The Office - Office Tower" thumbnail="/stock_thumbs/265523845.jpg" enc_asset_id="0p9meKBLcElrGbLd1u6tbAw" itemRef="/go-prod/asset/265523845" notut="1">
 		<film copyable="0" duration="2.5" published="0" pshare="0" isWide="1">
@@ -15932,7 +15807,9 @@
 				</effectAsset>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0urVMBGjfx54" numScene="1" title="At The Office - Partnership Deal" thumbnail="/stock_thumbs/272697408.jpg" enc_asset_id="0cLhW0UlB5PtrwxStLYRCSg" itemRef="/go-prod/asset/272697408">
 		<film copyable="0" duration="2.5" published="0" pshare="0" isWide="1">
@@ -16085,7 +15962,9 @@
 				</effectAsset>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0Gmp9MRyRloE" numScene="1" title="At The Office - Presentation" thumbnail="/stock_thumbs/265836901.jpg" enc_asset_id="0G_NucUnhY10tNdXDmM8OWQ" itemRef="/go-prod/asset/265836901">
 		<film copyable="0" duration="2.5" published="0" pshare="0" isWide="1">
@@ -16238,7 +16117,9 @@
 				</effectAsset>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="07hhpaaEACok" numScene="1" title="At The Office - Reception" thumbnail="/stock_thumbs/265524151.jpg" enc_asset_id="0Nib14lH-2BgtNdXDmM8OWQ" itemRef="/go-prod/asset/265524151">
 		<film copyable="0" duration="65.9" published="0" pshare="0" isWide="1">
@@ -16405,7 +16286,9 @@
 				</effectAsset>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0e5aja2tvvSE" numScene="1" title="At The Office - Sign Contract" thumbnail="/stock_thumbs/289334829.jpg" enc_asset_id="0YpHTcJ6YICMiuQ0JDOFAuw" itemRef="/alvin-dev/asset/65257">
 		<film copyable="0" duration="2.5" published="0" pshare="0" isWide="1">
@@ -16543,7 +16426,9 @@
 				</effectAsset>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0ZTmd4e40lbQ" numScene="1" title="At the Office - Video Conference" thumbnail="/stock_thumbs/295843283.jpg" enc_asset_id="0exemdPaPPXbTEEJSpuZAGA" itemRef="/alvin-dev/asset/67363">
 		<film copyable="0" duration="3.0" published="0" pshare="0" isWide="1">
@@ -16805,7 +16690,9 @@
 				</trans>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="05TgSxPZU6kc" numScene="1" title="At The Office - Whiteboard presentation" thumbnail="/stock_thumbs/288148660.jpg" enc_asset_id="0DoBXnAoc0nXMS39-jgv7mQ" itemRef="/alvin-dev/asset/64917">
 		<film copyable="0" duration="4.6" published="0" pshare="0" isWide="1">
@@ -16961,7 +16848,9 @@
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0-UpRpsVvW_c" numScene="1" title="At The Office - Whiteboard presentation" thumbnail="/stock_thumbs/288148658.jpg" enc_asset_id="0A586m4jSUkBrwxStLYRCSg" itemRef="/alvin-dev/asset/64915">
 		<film copyable="0" duration="65.9" published="0" pshare="0" isWide="1">
@@ -17096,7 +16985,9 @@
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0NqDdPL9AZEc" numScene="1" title="At The Office - Whiteboard presentation" thumbnail="/stock_thumbs/288148659.jpg" enc_asset_id="0A586m4jSUkAiuQ0JDOFAuw" itemRef="/alvin-dev/asset/64916">
 		<film copyable="0" duration="9.5" published="0" pshare="0" isWide="1">
@@ -17362,7 +17253,9 @@
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0fJWzu_lBehQ" numScene="1" title="At The Office - Working Late" thumbnail="/stock_thumbs/265524345.jpg" enc_asset_id="0oLXNprfE8Z7GbLd1u6tbAw" itemRef="/go-prod/asset/265524345">
 		<film copyable="0" duration="2.5" published="0" pshare="0" isWide="1">
@@ -17561,7 +17454,9 @@
 				</effectAsset>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="01-8C4gN-7KE" numScene="1" title="At The Supermarket - Between Aisles" thumbnail="/stock_thumbs/285747880.jpg" enc_asset_id="0gPtyxEB9ZOnMS39-jgv7mQ" itemRef="/alvin-dev/asset/64473">
 		<film copyable="0" duration="54.8" published="0" pshare="0" isWide="1">
@@ -25975,7 +25870,9 @@
 				</effectAsset>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0kxLr1q_viYw" numScene="1" title="Baseball - Homerun" thumbnail="/stock_thumbs/298071846.jpg" enc_asset_id="0h7C3pzfgT33ZBgS1od14mg" itemRef="/alvin-dev/asset/68297">
 		<film copyable="0" duration="71.8" published="0" pshare="0" isWide="1">
@@ -26048,7 +25945,9 @@
 				</effectAsset>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0uLXpxn4pdEI" numScene="1" title="Baseball - Homerun" thumbnail="/stock_thumbs/298071843.jpg" enc_asset_id="0h7C3pzfgT33TEEJSpuZAGA" itemRef="/alvin-dev/asset/68292">
 		<film copyable="0" duration="14.9" published="0" pshare="0" isWide="1">
@@ -26115,7 +26014,9 @@
 				</effectAsset>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0u7Z6Ul4PTyE" numScene="1" title="Baseball - Line out" thumbnail="/stock_thumbs/298071845.jpg" enc_asset_id="0h7C3pzfgT33GbLd1u6tbAw" itemRef="/alvin-dev/asset/68295">
 		<film copyable="0" duration="2.5" published="0" pshare="0" isWide="1">
@@ -26201,7 +26102,9 @@
 				</effectAsset>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0vyZQvGbElKM" numScene="1" title="Baseball - Pitcher mound" thumbnail="/stock_thumbs/298071841.jpg" enc_asset_id="0h7C3pzfgT30tNdXDmM8OWQ" itemRef="/alvin-dev/asset/68289">
 		<film copyable="0" duration="2.5" published="0" pshare="0" isWide="1">
@@ -26297,7 +26200,9 @@
 				</effectAsset>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0yjqIS__TMgg" numScene="1" title="Baseball - Scoreboard" thumbnail="/stock_thumbs/298071847.jpg" enc_asset_id="0h7C3pzfgT32ybOqn9az0aQ" itemRef="/alvin-dev/asset/68298">
 		<film copyable="0" duration="71.8" published="0" pshare="0" isWide="1">
@@ -26361,7 +26266,9 @@
 				</effectAsset>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0FWD4NOZWau4" numScene="1" title="Baseball - Steal base" thumbnail="/stock_thumbs/298071849.jpg" enc_asset_id="0h7C3pzfgT30iuQ0JDOFAuw" itemRef="/alvin-dev/asset/68304">
 		<film copyable="0" duration="2.5" published="0" pshare="0" isWide="1">
@@ -26445,7 +26352,9 @@
 				</effectAsset>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0x8gGG4ZHG2s" numScene="1" title="Battle plan" thumbnail="/stock_thumbs/297380700.jpg" enc_asset_id="0K9Lqf-skqezMS39-jgv7mQ" itemRef="/alvin-dev/asset/68137">
 		<film copyable="0" duration="7.0" published="0" pshare="0" isWide="1">
@@ -26629,7 +26538,9 @@
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0gdHTMnsVYpU" numScene="1" title="Battle plan - Bullet points" thumbnail="/stock_thumbs/296516491.jpg" enc_asset_id="0rkxmmHz_qDMtNdXDmM8OWQ" itemRef="/alvin-dev/asset/67760">
 		<film copyable="0" duration="32.0" published="0" pshare="0" isWide="1">
@@ -26918,7 +26829,7 @@
 			</scene>
 		</film>
 		<category-list>
-			<subcat>2</subcat>
+			<category>starters</category>
 		</category-list>
 	</starter>
 	<starter id="0fjJizCTOxJo" numScene="1" title="Battle plan - Clear" thumbnail="/stock_thumbs/296516496.jpg" enc_asset_id="0rkxmmHz_qDPZBgS1od14mg" itemRef="/alvin-dev/asset/67796">
@@ -29605,7 +29516,9 @@ HANDBAGS</text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0JLUtNVQEops" numScene="1" title="Broken down car" thumbnail="/stock_thumbs/274512249.jpg" enc_asset_id="0AqFnHyM_91EiuQ0JDOFAuw" itemRef="/go-prod/asset/274512249">
 		<film copyable="0" duration="4.3" published="0" pshare="0" isWide="1">
@@ -36123,7 +36036,7 @@ Happy New year</text>
 			</scene>
 		</film>
 		<category-list>
-			<category>screens</category>
+			<category>travel</category>
 		</category-list>
 	</starter>
 	<starter id="0tqKW7X_EJow" numScene="1" title="Cloud Services" thumbnail="/stock_thumbs/262080213.jpg" enc_asset_id="09sA4VMbV7gHTEEJSpuZAGA" itemRef="/go-prod/asset/262080213">
@@ -39221,7 +39134,7 @@ Happy New year</text>
 			</scene>
 		</film>
 		<category-list>
-			<subcat>2b</subcat>
+			<category>starters</category>
 		</category-list>
 	</starter>
 	<starter id="0vtRtYq9nl4s" numScene="1" title="CS - Best Practices - Accuracy" thumbnail="/stock_thumbs/292997947.jpg" enc_asset_id="02cysN2A1M1-ybOqn9az0aQ" itemRef="/alvin-dev/asset/66451">
@@ -39388,7 +39301,9 @@ Happy New year</text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0V0rT-B_80jo" numScene="1" title="CS - Best Practices - Empathy" thumbnail="/stock_thumbs/292997945.jpg" enc_asset_id="02cysN2A1M1_GbLd1u6tbAw" itemRef="/alvin-dev/asset/66449">
 		<film copyable="0" duration="4.6" published="0" pshare="0" isWide="1">
@@ -39496,7 +39411,9 @@ Happy New year</text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0VeMyHLpcnd8" numScene="1" title="CS - Best Practices - Humanity" thumbnail="/stock_thumbs/292997941.jpg" enc_asset_id="02cysN2A1M18tNdXDmM8OWQ" itemRef="/alvin-dev/asset/66446">
 		<film copyable="0" duration="5.0" published="0" pshare="0" isWide="1">
@@ -39757,7 +39674,9 @@ Happy New year</text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0hxWrvJzjxgI" numScene="1" title="CS - Best Practices - Options" thumbnail="/stock_thumbs/292997942.jpg" enc_asset_id="02cysN2A1M1-5Z_k8TyB-CA" itemRef="/alvin-dev/asset/66447">
 		<film copyable="0" duration="5.0" published="0" pshare="0" isWide="1">
@@ -39939,7 +39858,9 @@ Happy New year</text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="08c4wMMmO3BA" numScene="1" title="CS - Best Practices - Ownership" thumbnail="/stock_thumbs/292997946.jpg" enc_asset_id="02cysN2A1M1_ZBgS1od14mg" itemRef="/alvin-dev/asset/66450">
 		<film copyable="0" duration="6.1" published="0" pshare="0" isWide="1">
@@ -40067,7 +39988,9 @@ Happy New year</text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0J5adpf1qNuY" numScene="1" title="CS - Best Practices - Speed" thumbnail="/stock_thumbs/292997944.jpg" enc_asset_id="02cysN2A1M19qxVOBTmUCag" itemRef="/alvin-dev/asset/66448">
 		<film copyable="0" duration="5.0" published="0" pshare="0" isWide="1">
@@ -40201,7 +40124,9 @@ Happy New year</text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0KU5BgE3wJG4" numScene="1" title="CS - Bullet points" thumbnail="/stock_thumbs/292997937.jpg" enc_asset_id="0RTNM9rEeTs6ybOqn9az0aQ" itemRef="/alvin-dev/asset/66443">
 		<film copyable="0" duration="5.0" published="0" pshare="0" isWide="1">
@@ -40387,7 +40312,9 @@ Happy New year</text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0Br-PeSzb3TI" numScene="1" title="CS - Bullet points" thumbnail="/stock_thumbs/292997936.jpg" enc_asset_id="0RTNM9rEeTs7ZBgS1od14mg" itemRef="/alvin-dev/asset/66442">
 		<film copyable="0" duration="5.0" published="0" pshare="0" isWide="1">
@@ -40570,7 +40497,9 @@ Happy New year</text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0uuVTi85VGgw" numScene="1" title="CS - Comparsion" thumbnail="/stock_thumbs/292997934.jpg" enc_asset_id="0RTNM9rEeTs5qxVOBTmUCag" itemRef="/alvin-dev/asset/66440">
 		<film copyable="0" duration="5.0" published="0" pshare="0" isWide="1">
@@ -40856,7 +40785,9 @@ Happy New year</text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0yqmuDIzS0os" numScene="1" title="CS - Contact Us" thumbnail="/stock_thumbs/292997949.jpg" enc_asset_id="02cysN2A1M18iuQ0JDOFAuw" itemRef="/alvin-dev/asset/66453">
 		<film copyable="0" duration="5.0" published="0" pshare="0" isWide="1">
@@ -41037,7 +40968,9 @@ Happy New year</text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0zcrKvHMsE7Y" numScene="1" title="CS - Contact Us" thumbnail="/stock_thumbs/292997948.jpg" enc_asset_id="02cysN2A1M19rwxStLYRCSg" itemRef="/alvin-dev/asset/66452">
 		<film copyable="0" duration="5.0" published="0" pshare="0" isWide="1">
@@ -41252,7 +41185,9 @@ Happy New year</text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0J39nxvB01zA" numScene="1" title="CS - Introduction" thumbnail="/stock_thumbs/292997933.jpg" enc_asset_id="0RTNM9rEeTs7TEEJSpuZAGA" itemRef="/alvin-dev/asset/66439">
 		<film copyable="0" duration="66.3" published="0" pshare="0" isWide="1">
@@ -41512,7 +41447,7 @@ Happy New year</text>
 			</scene>
 		</film>
 		<category-list>
-			<subcat>1b</subcat>
+			<category>starters</category>
 		</category-list>
 	</starter>
 	<starter id="0h3JX01EYQcI" numScene="1" title="CS - Introduction" thumbnail="/stock_thumbs/292997932.jpg" enc_asset_id="0RTNM9rEeTs65Z_k8TyB-CA" itemRef="/alvin-dev/asset/66438">
@@ -41813,7 +41748,7 @@ Happy New year</text>
 			</scene>
 		</film>
 		<category-list>
-			<subcat>1a</subcat>
+			<category>starters</category>
 		</category-list>
 	</starter>
 	<starter id="036L3oxocy3Y" numScene="1" title="CS - Process" thumbnail="/stock_thumbs/292997935.jpg" enc_asset_id="0RTNM9rEeTs7GbLd1u6tbAw" itemRef="/alvin-dev/asset/66441">
@@ -42173,7 +42108,9 @@ Happy New year</text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0uAGpVD_btAk" numScene="1" title="CS - Scenario" thumbnail="/stock_thumbs/292997938.jpg" enc_asset_id="0RTNM9rEeTs5rwxStLYRCSg" itemRef="/alvin-dev/asset/66444">
 		<film copyable="0" duration="5.0" published="0" pshare="0" isWide="1">
@@ -42386,7 +42323,9 @@ Happy New year</text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="08ewnbbogpEs" numScene="1" title="Currency exchange counter" thumbnail="/stock_thumbs/281487418.jpg" enc_asset_id="00QsyA-tU9e9rwxStLYRCSg" itemRef="/alvin-dev/asset/63624">
 		<film copyable="0" duration="3.1" published="0" pshare="0" isWide="1">
@@ -70846,7 +70785,7 @@ handbags</text>
 			</scene>
 		</film>
 		<category-list>
-			<subcat>1c</subcat>
+			<category>starters</category>
 		</category-list>
 	</starter>
 	<starter id="03kv5V1VGVjs" numScene="1" title="Marketing - Blue Ocean Strategy" thumbnail="/stock_thumbs/289334813.jpg" enc_asset_id="00xQ5jhrWhkrTEEJSpuZAGA" itemRef="/alvin-dev/asset/65239">
@@ -70967,7 +70906,7 @@ handbags</text>
 			</scene>
 		</film>
 		<category-list>
-			<subcat>1c</subcat>
+			<category>starters</category>
 		</category-list>
 	</starter>
 	<starter id="0srvtQnJVLHg" numScene="1" title="Marketing - Customer Churn" thumbnail="/stock_thumbs/289334792.jpg" enc_asset_id="0_JoYf_-szZm5Z_k8TyB-CA" itemRef="/alvin-dev/asset/65217">
@@ -71070,7 +71009,7 @@ handbags</text>
 			</scene>
 		</film>
 		<category-list>
-			<subcat>1c</subcat>
+			<category>starters</category>
 		</category-list>
 	</starter>
 	<starter id="0LXDfaiv8c8U" numScene="1" title="Marketing - Drip Campaign" thumbnail="/stock_thumbs/289334825.jpg" enc_asset_id="0YpHTcJ6YICPGbLd1u6tbAw" itemRef="/alvin-dev/asset/65253">
@@ -71654,7 +71593,7 @@ overview]]></text>
 			</scene>
 		</film>
 		<category-list>
-			<subcat>1c</subcat>
+			<category>starters</category>
 		</category-list>
 	</starter>
 	<starter id="0EogGV_AeYRM" numScene="1" title="Marketing - Funnel" thumbnail="/stock_thumbs/289334823.jpg" enc_asset_id="0YpHTcJ6YICPTEEJSpuZAGA" itemRef="/alvin-dev/asset/65252">
@@ -71883,7 +71822,7 @@ overview]]></text>
 			</scene>
 		</film>
 		<category-list>
-			<subcat>1c</subcat>
+			<category>starters</category>
 		</category-list>
 	</starter>
 	<starter id="0X8wpwFf_bqs" numScene="1" title="Marketing Call to Action" thumbnail="/stock_thumbs/289334819.jpg" enc_asset_id="00xQ5jhrWhkoiuQ0JDOFAuw" itemRef="/alvin-dev/asset/65248">
@@ -72014,7 +71953,9 @@ overview]]></text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0RFd8gBgzLjE" numScene="1" title="Marketing Call to Action" thumbnail="/stock_thumbs/289334816.jpg" enc_asset_id="00xQ5jhrWhkrZBgS1od14mg" itemRef="/alvin-dev/asset/65245">
 		<film copyable="0" duration="146.4" published="0" pshare="0" isWide="1">
@@ -72470,7 +72411,9 @@ overview]]></text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0SjiEKifmAj8" numScene="1" title="Marketing Call to Action" thumbnail="/stock_thumbs/289334821.jpg" enc_asset_id="0YpHTcJ6YICMtNdXDmM8OWQ" itemRef="/alvin-dev/asset/65250">
 		<film copyable="0" duration="146.4" published="0" pshare="0" isWide="1">
@@ -72677,7 +72620,9 @@ overview]]></text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0bWsnifJ38jY" numScene="1" title="Marketing Counter" thumbnail="/stock_thumbs/289334812.jpg" enc_asset_id="00xQ5jhrWhkq5Z_k8TyB-CA" itemRef="/alvin-dev/asset/65237">
 		<film copyable="0" duration="4.0" published="0" pshare="0" isWide="1">
@@ -72802,7 +72747,7 @@ overview]]></text>
 			</scene>
 		</film>
 		<category-list>
-			<subcat>1c</subcat>
+			<category>starters</category>
 		</category-list>
 	</starter>
 	<starter id="0PAgLifXduAI" numScene="1" title="Marketing Counter" thumbnail="/stock_thumbs/289334811.jpg" enc_asset_id="00xQ5jhrWhkotNdXDmM8OWQ" itemRef="/alvin-dev/asset/65236">
@@ -72910,7 +72855,7 @@ overview]]></text>
 			</scene>
 		</film>
 		<category-list>
-			<subcat>1c</subcat>
+			<category>starters</category>
 		</category-list>
 	</starter>
 	<starter id="0iPKYE-j25pA" numScene="1" title="Marketing Statistic" thumbnail="/stock_thumbs/289334790.jpg" enc_asset_id="0_JoYf_-szZnMS39-jgv7mQ" itemRef="/alvin-dev/asset/65214">
@@ -73137,7 +73082,7 @@ overview]]></text>
 			</scene>
 		</film>
 		<category-list>
-			<subcat>1c</subcat>
+			<category>starters</category>
 		</category-list>
 	</starter>
 	<starter id="00nL_WdvLozs" numScene="1" title="Marketing Statistic" thumbnail="/stock_thumbs/289334788.jpg" enc_asset_id="0PigsYof5PJdrwxStLYRCSg" itemRef="/alvin-dev/asset/65211">
@@ -73320,7 +73265,7 @@ overview]]></text>
 			</scene>
 		</film>
 		<category-list>
-			<subcat>1c</subcat>
+			<category>starters</category>
 		</category-list>
 	</starter>
 	<starter id="0zhOyi3nhqTQ" numScene="1" title="Marketing Statistic" thumbnail="/stock_thumbs/289334789.jpg" enc_asset_id="0PigsYof5PJciuQ0JDOFAuw" itemRef="/alvin-dev/asset/65213">
@@ -73542,7 +73487,7 @@ overview]]></text>
 			</scene>
 		</film>
 		<category-list>
-			<subcat>1c</subcat>
+			<category>starters</category>
 		</category-list>
 	</starter>
 	<starter id="0MT18sM35SDk" numScene="1" title="Marketing Statistic" thumbnail="/stock_thumbs/289334810.jpg" enc_asset_id="00xQ5jhrWhkrMS39-jgv7mQ" itemRef="/alvin-dev/asset/65235">
@@ -73754,7 +73699,7 @@ overview]]></text>
 			</scene>
 		</film>
 		<category-list>
-			<subcat>1c</subcat>
+			<category>starters</category>
 		</category-list>
 	</starter>
 	<starter id="03Tyb8Wb9xxw" numScene="1" title="Marketing Statistics" thumbnail="/stock_thumbs/289334826.jpg" enc_asset_id="0YpHTcJ6YICPZBgS1od14mg" itemRef="/alvin-dev/asset/65254">
@@ -73994,7 +73939,7 @@ overview]]></text>
 			</scene>
 		</film>
 		<category-list>
-			<subcat>1c</subcat>
+			<category>starters</category>
 		</category-list>
 	</starter>
 	<starter id="0fHMgjREksxI" numScene="1" title="Marketing Title" thumbnail="/stock_thumbs/290231333.jpg" enc_asset_id="085aGjd5EtZDTEEJSpuZAGA" itemRef="/alvin-dev/asset/65453">
@@ -74125,7 +74070,7 @@ overview]]></text>
 			</scene>
 		</film>
 		<category-list>
-			<subcat>1a</subcat>
+			<category>starters</category>
 		</category-list>
 	</starter>
 	<starter id="0Nwr2oq5t7NA" numScene="1" title="Marketing Title" thumbnail="/stock_thumbs/289334791.jpg" enc_asset_id="0_JoYf_-szZktNdXDmM8OWQ" itemRef="/alvin-dev/asset/65215">
@@ -74279,7 +74224,7 @@ overview]]></text>
 			</scene>
 		</film>
 		<category-list>
-			<subcat>1b</subcat>
+			<category>starters</category>
 		</category-list>
 	</starter>
 	<starter id="0lHISu_3mk3U" numScene="1" title="Marketing Title" thumbnail="/stock_thumbs/289334786.jpg" enc_asset_id="0PigsYof5PJfZBgS1od14mg" itemRef="/alvin-dev/asset/65207">
@@ -74469,7 +74414,7 @@ overview]]></text>
 			</scene>
 		</film>
 		<category-list>
-			<subcat>1b</subcat>
+			<category>starters</category>
 		</category-list>
 	</starter>
 	<starter id="0difahViHTFU" numScene="1" title="Marketing Title" thumbnail="/stock_thumbs/289334787.jpg" enc_asset_id="0PigsYof5PJeybOqn9az0aQ" itemRef="/alvin-dev/asset/65208">
@@ -74646,7 +74591,7 @@ overview]]></text>
 			</scene>
 		</film>
 		<category-list>
-			<subcat>1b</subcat>
+			<category>starters</category>
 		</category-list>
 	</starter>
 	<starter id="0ad-IfzHmYFU" numScene="1" title="Medical expense coverage" thumbnail="/stock_thumbs/292137892.jpg" enc_asset_id="0uax2vwwFZP65Z_k8TyB-CA" itemRef="/alvin-dev/asset/66175">
@@ -77599,7 +77544,9 @@ overview]]></text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0DTTlfEUx5Xc" numScene="1" title="Office Safety - Lifting" thumbnail="/stock_thumbs/300863886.jpg" enc_asset_id="0FIrEn2OIfZzZBgS1od14mg" itemRef="/alvin-dev/asset/68650">
 		<film copyable="0" duration="34.0" published="0" pshare="0" isWide="1">
@@ -77731,7 +77678,9 @@ overview]]></text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0303qVrvcIx0" numScene="1" title="Office Safety - Socket safety" thumbnail="/stock_thumbs/300863885.jpg" enc_asset_id="0FIrEn2OIfZzGbLd1u6tbAw" itemRef="/alvin-dev/asset/68649">
 		<film copyable="0" duration="5.8" published="0" pshare="0" isWide="1">
@@ -77857,7 +77806,9 @@ overview]]></text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0G33rHZkZ3sQ" numScene="1" title="Office Safety - Stand up every 20 mins" thumbnail="/stock_thumbs/300863883.jpg" enc_asset_id="0FIrEn2OIfZzTEEJSpuZAGA" itemRef="/alvin-dev/asset/68647">
 		<film copyable="0" duration="4.5" published="0" pshare="0" isWide="1">
@@ -78116,7 +78067,9 @@ overview]]></text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0Pi0bKG7HMAs" numScene="1" title="Office Safety - Use Ladder" thumbnail="/stock_thumbs/300863884.jpg" enc_asset_id="0FIrEn2OIfZxqxVOBTmUCag" itemRef="/alvin-dev/asset/68648">
 		<film copyable="0" duration="34.0" published="0" pshare="0" isWide="1">
@@ -78305,7 +78258,9 @@ overview]]></text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0vn5QL40o_Mc" numScene="1" title="On Air - No Signal " thumbnail="/stock_thumbs/282597539.jpg" enc_asset_id="0Bnr9nuuKkVIiuQ0JDOFAuw" itemRef="/alvin-dev/asset/64031">
 		<film copyable="0" duration="30.8" published="0" pshare="0" isWide="1">
@@ -78692,7 +78647,9 @@ overview]]></text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0c8rsGPjkhvA" numScene="1" title="Outdoor - Campsite" thumbnail="/stock_thumbs/274511649.jpg" enc_asset_id="0okes0O5FujQiuQ0JDOFAuw" itemRef="/go-prod/asset/274511649">
 		<film copyable="0" duration="2.5" published="0" pshare="0" isWide="1">
@@ -79814,7 +79771,9 @@ overview]]></text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0f3HQfMNeZp0" numScene="1" title="Park - Autumn" thumbnail="/stock_thumbs/292997907.jpg" enc_asset_id="0M5LaJ4SsCjCybOqn9az0aQ" itemRef="/alvin-dev/asset/66408">
 		<film copyable="0" duration="49.5" published="0" pshare="0" isWide="1">
@@ -80634,7 +80593,7 @@ overview]]></text>
 			</scene>
 		</film>
 		<category-list>
-			<subcat>1b</subcat>
+			<category>starters</category>
 		</category-list>
 	</starter>
 	<starter id="0Jz1QD7pidxw" numScene="1" title="Pirate - Join our crew" thumbnail="/stock_thumbs/290873592.jpg" enc_asset_id="0MAHXMj-0_-C5Z_k8TyB-CA" itemRef="/alvin-dev/asset/65782">
@@ -80767,7 +80726,7 @@ overview]]></text>
 			</scene>
 		</film>
 		<category-list>
-			<subcat>1b</subcat>
+			<category>starters</category>
 		</category-list>
 	</starter>
 	<starter id="0gH0FG_LVVPc" numScene="1" title="Pirate - Leading the crew" thumbnail="/stock_thumbs/290231345.jpg" enc_asset_id="0_W7yA5OHLiHGbLd1u6tbAw" itemRef="/alvin-dev/asset/65506">
@@ -80947,7 +80906,7 @@ overview]]></text>
 			</scene>
 		</film>
 		<category-list>
-			<subcat>1b</subcat>
+			<category>starters</category>
 		</category-list>
 	</starter>
 	<starter id="0DchJap_pc54" numScene="1" title="Pirate - List" thumbnail="/stock_thumbs/290873589.jpg" enc_asset_id="0EbkndeCkRyUiuQ0JDOFAuw" itemRef="/alvin-dev/asset/65778">
@@ -81133,7 +81092,9 @@ overview]]></text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="085Avy5B6kVc" numScene="1" title="Pirate - Lost" thumbnail="/stock_thumbs/290873594.jpg" enc_asset_id="0MAHXMj-0_-BqxVOBTmUCag" itemRef="/alvin-dev/asset/65785">
 		<film copyable="0" duration="5.0" published="0" pshare="0" isWide="1">
@@ -81228,7 +81189,9 @@ overview]]></text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0AkK_h-aCcMU" numScene="1" title="Pirate - Navigation" thumbnail="/stock_thumbs/292137735.jpg" enc_asset_id="0yZ-XfzGDcqLGbLd1u6tbAw" itemRef="/alvin-dev/asset/65931">
 		<film copyable="0" duration="3.5" published="0" pshare="0" isWide="1">
@@ -81395,7 +81358,7 @@ overview]]></text>
 			</scene>
 		</film>
 		<category-list>
-			<subcat>1b</subcat>
+			<category>starters</category>
 		</category-list>
 	</starter>
 	<starter id="0DOJVNytv1Bc" numScene="1" title="Pirate - Pirate desk" thumbnail="/stock_thumbs/290873590.jpg" enc_asset_id="0MAHXMj-0_-DMS39-jgv7mQ" itemRef="/alvin-dev/asset/65779">
@@ -81649,7 +81612,9 @@ overview]]></text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0KTm84wwjTnw" numScene="1" title="Pirate - Smooth sailing" thumbnail="/stock_thumbs/290873624.jpg" enc_asset_id="0cdlSCpX4PidqxVOBTmUCag" itemRef="/alvin-dev/asset/65813">
 		<film copyable="0" duration="3.5" published="0" pshare="0" isWide="1">
@@ -81748,7 +81713,9 @@ overview]]></text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0-iA7JGUYI4k" numScene="1" title="Pirate - Stormy night" thumbnail="/stock_thumbs/290873595.jpg" enc_asset_id="0MAHXMj-0_-DGbLd1u6tbAw" itemRef="/alvin-dev/asset/65786">
 		<film copyable="0" duration="88.8" published="0" pshare="0" isWide="1">
@@ -81837,7 +81804,7 @@ overview]]></text>
 			</scene>
 		</film>
 		<category-list>
-			<subcat>1b</subcat>
+			<category>starters</category>
 		</category-list>
 	</starter>
 	<starter id="0pivk5xcN8fQ" numScene="1" title="Pirate - Stormy night" thumbnail="/stock_thumbs/290231337.jpg" enc_asset_id="085aGjd5EtZCybOqn9az0aQ" itemRef="/alvin-dev/asset/65495">
@@ -81943,7 +81910,9 @@ overview]]></text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0V9RhnWQ-7oo" numScene="1" title="Pirate - Sword fight on the deck" thumbnail="/stock_thumbs/290231338.jpg" enc_asset_id="085aGjd5EtZBrwxStLYRCSg" itemRef="/alvin-dev/asset/65496">
 		<film copyable="0" duration="88.8" published="0" pshare="0" isWide="1">
@@ -82111,7 +82080,7 @@ overview]]></text>
 			</scene>
 		</film>
 		<category-list>
-			<subcat>1b</subcat>
+			<category>starters</category>
 		</category-list>
 	</starter>
 	<starter id="0WQJ-zAMQIZQ" numScene="1" title="Pirate - Talent wanted" thumbnail="/stock_thumbs/290873591.jpg" enc_asset_id="0MAHXMj-0_-AtNdXDmM8OWQ" itemRef="/alvin-dev/asset/65780">
@@ -82403,7 +82372,7 @@ $100,000</text>
 			</scene>
 		</film>
 		<category-list>
-			<subcat>1b</subcat>
+			<category>starters</category>
 		</category-list>
 	</starter>
 	<starter id="0cRgTbcNMiQA" numScene="1" title="Pirate - Title" thumbnail="/stock_thumbs/290873622.jpg" enc_asset_id="0cdlSCpX4Pie5Z_k8TyB-CA" itemRef="/alvin-dev/asset/65811">
@@ -82605,7 +82574,7 @@ $100,000</text>
 			</scene>
 		</film>
 		<category-list>
-			<subcat>1a</subcat>
+			<category>starters</category>
 		</category-list>
 	</starter>
 	<starter id="0MbHm6NMO13s" numScene="1" title="Pirate - Treasure island" thumbnail="/stock_thumbs/290231339.jpg" enc_asset_id="085aGjd5EtZAiuQ0JDOFAuw" itemRef="/alvin-dev/asset/65497">
@@ -82794,7 +82763,7 @@ $100,000</text>
 			</scene>
 		</film>
 		<category-list>
-			<subcat>1b</subcat>
+			<category>starters</category>
 		</category-list>
 	</starter>
 	<starter id="05xaIcJra_aU" numScene="1" title="Pirate - Treasure map" thumbnail="/stock_thumbs/290873623.jpg" enc_asset_id="0cdlSCpX4PifTEEJSpuZAGA" itemRef="/alvin-dev/asset/65812">
@@ -83093,7 +83062,7 @@ $100,000</text>
 			</scene>
 		</film>
 		<category-list>
-			<subcat>1b</subcat>
+			<category>starters</category>
 		</category-list>
 	</starter>
 	<starter id="0UOJRbqUqmLY" numScene="1" title="Pirate - Walking the plank" thumbnail="/stock_thumbs/290231341.jpg" enc_asset_id="0_W7yA5OHLiEtNdXDmM8OWQ" itemRef="/alvin-dev/asset/65501">
@@ -83259,7 +83228,7 @@ $100,000</text>
 			</scene>
 		</film>
 		<category-list>
-			<subcat>1b</subcat>
+			<category>starters</category>
 		</category-list>
 	</starter>
 	<starter id="0Fw9GMCstr1g" numScene="1" title="Politics - Big Stage" thumbnail="/stock_thumbs/274502684.jpg" enc_asset_id="0UlhIVuAQSS5qxVOBTmUCag" itemRef="/go-prod/asset/274502684">
@@ -88633,7 +88602,9 @@ $100,000</text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0qSelJuTZ_4Y" numScene="1" title="Register" thumbnail="/stock_thumbs/257676854.jpg" enc_asset_id="0aGmaEetXeO9qxVOBTmUCag" itemRef="/go-prod/asset/257676854">
 		<film copyable="0" duration="7.8" published="0" pshare="0" isWide="1">
@@ -91259,7 +91230,9 @@ $100,000</text>
 				</effectAsset>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0N2NMFkvOzKg" numScene="1" title="Server room - Neat" thumbnail="/stock_thumbs/298071830.jpg" enc_asset_id="0TSwYmdaWc-zMS39-jgv7mQ" itemRef="/alvin-dev/asset/67333">
 		<film copyable="0" duration="65.9" published="0" pshare="0" isWide="1">
@@ -91442,7 +91415,9 @@ $100,000</text>
 				</effectAsset>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0rVOdjaedlmM" numScene="1" title="Shipping dock" thumbnail="/stock_thumbs/297380687.jpg" enc_asset_id="0UOXh5Ty4KDWybOqn9az0aQ" itemRef="/alvin-dev/asset/68099">
 		<film copyable="0" duration="35.0" published="0" pshare="0" isWide="1">
@@ -99791,7 +99766,9 @@ $100,000</text>
 				</effectAsset>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="07ir3Cl68MuY" numScene="1" title="Ski racing - Finish" thumbnail="/stock_thumbs/304242134.jpg" enc_asset_id="0uUsBPOupFa1qxVOBTmUCag" itemRef="/alvin-dev/asset/69017">
 		<film copyable="0" duration="5.5" published="0" pshare="0" isWide="1">
@@ -99996,7 +99973,9 @@ $100,000</text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0s_cACeflTcM" numScene="1" title="Ski racing - Start" thumbnail="/stock_thumbs/304242132.jpg" enc_asset_id="0uUsBPOupFa25Z_k8TyB-CA" itemRef="/alvin-dev/asset/69015">
 		<film copyable="0" duration="2.5" published="0" pshare="0" isWide="1">
@@ -100109,7 +100088,9 @@ $100,000</text>
 				</effectAsset>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0rxwq9EXcxrw" numScene="1" title="Ski school" thumbnail="/stock_thumbs/304242129.jpg" enc_asset_id="0vce1MOnH5CQiuQ0JDOFAuw" itemRef="/alvin-dev/asset/69012">
 		<film copyable="0" duration="27.3" published="0" pshare="0" isWide="1">
@@ -105403,7 +105384,9 @@ $100,000</text>
 				</effectAsset>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0NdthvacDIOQ" numScene="1" title="Stay safe" thumbnail="/stock_thumbs/274717350.jpg" enc_asset_id="0gEFuahtVrwzMS39-jgv7mQ" itemRef="/go-prod/asset/274717350">
 		<film copyable="0" duration="4.6" published="0" pshare="0" isWide="1">
@@ -113052,7 +113035,9 @@ awareness]]></text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="07die8RKXfpU" numScene="1" title="Text - Introduce" thumbnail="/stock_thumbs/274504884.jpg" enc_asset_id="0vLHwSK5fvgFqxVOBTmUCag" itemRef="/go-prod/asset/274504884">
 		<film copyable="0" duration="4.3" published="0" pshare="0" isWide="1">
@@ -113135,7 +113120,9 @@ awareness]]></text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0TSM1Ygl5PTA" numScene="1" title="Text - Introduce" thumbnail="/stock_thumbs/271198647.jpg" enc_asset_id="0yxitZDP8-leybOqn9az0aQ" itemRef="/go-prod/asset/271198647">
 		<film copyable="0" duration="300.0" published="0" pshare="0" isWide="1">
@@ -113232,7 +113219,9 @@ awareness]]></text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0qKoZ3UhXdp4" numScene="1" title="Text - Introduce" thumbnail="/stock_thumbs/274505407.jpg" enc_asset_id="00vQU0RoiXjKybOqn9az0aQ" itemRef="/go-prod/asset/274505407">
 		<film copyable="0" duration="4.8" published="0" pshare="0" isWide="1">
@@ -113428,7 +113417,9 @@ awareness]]></text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0NyxoUVhzHec" numScene="1" title="Text - List" thumbnail="/stock_thumbs/274505422.jpg" enc_asset_id="0FfWRU1J6Ln25Z_k8TyB-CA" itemRef="/go-prod/asset/274505422">
 		<film copyable="0" duration="4.0" published="0" pshare="0" isWide="1">
@@ -113593,7 +113584,9 @@ title or text here</text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0XwuCadnpo74" numScene="1" title="Text - List" thumbnail="/stock_thumbs/267747007.jpg" enc_asset_id="0y9T-jKRZRWyybOqn9az0aQ" itemRef="/go-prod/asset/267747007">
 		<film copyable="0" duration="304.8" published="0" pshare="0" isWide="1">
@@ -113703,7 +113696,9 @@ title or text here</text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0HPDllPg6Ofc" numScene="1" title="Text - List" thumbnail="/stock_thumbs/269451127.jpg" enc_asset_id="08h6mhJvMGoCybOqn9az0aQ" itemRef="/go-prod/asset/269451127">
 		<film copyable="0" duration="300.0" published="0" pshare="0" isWide="1">
@@ -113791,7 +113786,9 @@ your message here]]></text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0cbKaaWj3Cqo" numScene="1" title="Text - List" thumbnail="/stock_thumbs/269451151.jpg" enc_asset_id="0C8jUgnJcqcYtNdXDmM8OWQ" itemRef="/go-prod/asset/269451151">
 		<film copyable="0" duration="304.8" published="0" pshare="0" isWide="1">
@@ -113887,7 +113884,9 @@ your message here]]></text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0XQxGgj6QVZE" numScene="1" title="Text - List x 3" thumbnail="/stock_thumbs/274505080.jpg" enc_asset_id="0f2NQjKeGS5TMS39-jgv7mQ" itemRef="/go-prod/asset/274505080">
 		<film copyable="0" duration="304.8" published="0" pshare="0" isWide="1">
@@ -114029,7 +114028,9 @@ your message here]]></text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="04YN6XYplR5c" numScene="1" title="Text - List x 3" thumbnail="/stock_thumbs/267746863.jpg" enc_asset_id="0U3kD_kLdP3TTEEJSpuZAGA" itemRef="/go-prod/asset/267746863">
 		<film copyable="0" duration="304.8" published="0" pshare="0" isWide="1">
@@ -114166,7 +114167,9 @@ your message here]]></text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0JBlRGlIxrSE" numScene="1" title="Text - List x 3" thumbnail="/stock_thumbs/274505376.jpg" enc_asset_id="04Lu_xeEM2ifZBgS1od14mg" itemRef="/go-prod/asset/274505376">
 		<film copyable="0" duration="304.8" published="0" pshare="0" isWide="1">
@@ -114304,7 +114307,9 @@ your message here]]></text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0jOcEVo3kPWI" numScene="1" title="Text - List x 3" thumbnail="/stock_thumbs/274505165.jpg" enc_asset_id="0KZHXAqyj4X7GbLd1u6tbAw" itemRef="/go-prod/asset/274505165">
 		<film copyable="0" duration="300.0" published="0" pshare="0" isWide="1">
@@ -114458,7 +114463,9 @@ your message here]]></text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0TOj_gz1KLpo" numScene="1" title="Text - List x 3" thumbnail="/stock_thumbs/267746850.jpg" enc_asset_id="0legFQ2BeeCTMS39-jgv7mQ" itemRef="/go-prod/asset/267746850">
 		<film copyable="0" duration="300.0" published="0" pshare="0" isWide="1">
@@ -114584,7 +114591,9 @@ your message here]]></text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0YqOjSJeembA" numScene="1" title="Text - List x 3" thumbnail="/stock_thumbs/267744656.jpg" enc_asset_id="0RROI_CYsrYTZBgS1od14mg" itemRef="/go-prod/asset/267744656">
 		<film copyable="0" duration="40.3" published="0" pshare="0" isWide="1">
@@ -114771,7 +114780,9 @@ your message here]]></text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0RVoOVglGacA" numScene="1" title="Text - List x 3" thumbnail="/stock_thumbs/274504918.jpg" enc_asset_id="00-XCUHULyV5rwxStLYRCSg" itemRef="/go-prod/asset/274504918">
 		<film copyable="0" duration="300.0" published="0" pshare="0" isWide="1">
@@ -114908,7 +114919,9 @@ your message here]]></text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0l8ENT_Sgm6w" numScene="1" title="Text - List x 3" thumbnail="/stock_thumbs/267746838.jpg" enc_asset_id="0RIjpFV4YRn1rwxStLYRCSg" itemRef="/go-prod/asset/267746838">
 		<film copyable="0" duration="300.0" published="0" pshare="0" isWide="1">
@@ -115051,7 +115064,9 @@ your message here]]></text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0RQt2DDif4Us" numScene="1" title="Text - List x 3" thumbnail="/stock_thumbs/267754038.jpg" enc_asset_id="0-viLiAl-zwJrwxStLYRCSg" itemRef="/go-prod/asset/267754038">
 		<film copyable="0" duration="14.3" published="0" pshare="0" isWide="1">
@@ -115213,7 +115228,9 @@ your message here]]></text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0h9II295u1ro" numScene="1" title="Text - List x 4" thumbnail="/stock_thumbs/267747181.jpg" enc_asset_id="0sh0WqPSsFI8tNdXDmM8OWQ" itemRef="/go-prod/asset/267747181">
 		<film copyable="0" duration="300.0" published="0" pshare="0" isWide="1">
@@ -115413,7 +115430,9 @@ your message here]]></text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0onawmYRp_b0" numScene="1" title="Text - List x 4" thumbnail="/stock_thumbs/271198713.jpg" enc_asset_id="04BSUMfVuzPzTEEJSpuZAGA" itemRef="/go-prod/asset/271198713">
 		<film copyable="0" duration="304.8" published="0" pshare="0" isWide="1">
@@ -115568,7 +115587,9 @@ your message here]]></text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0FogZiWVJOvs" numScene="1" title="Text - List x 4" thumbnail="/stock_thumbs/271198682.jpg" enc_asset_id="065pdB6AEg1u5Z_k8TyB-CA" itemRef="/go-prod/asset/271198682">
 		<film copyable="0" duration="300.0" published="0" pshare="0" isWide="1">
@@ -115711,7 +115732,9 @@ your message here]]></text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0qyCmVSbs2t0" numScene="1" title="Text - List x 4" thumbnail="/stock_thumbs/271204031.jpg" enc_asset_id="0zZxl3mpkFfwtNdXDmM8OWQ" itemRef="/go-prod/asset/271204031">
 		<film copyable="0" duration="300.0" published="0" pshare="0" isWide="1">
@@ -115865,7 +115888,9 @@ your message here]]></text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0Z5KgLCCEjMU" numScene="1" title="Text - List x 4" thumbnail="/stock_thumbs/271204020.jpg" enc_asset_id="0woWMvKH-3efMS39-jgv7mQ" itemRef="/go-prod/asset/271204020">
 		<film copyable="0" duration="19.0" published="0" pshare="0" isWide="1">
@@ -116051,7 +116076,9 @@ your message here]]></text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0tjQR3vMQMBI" numScene="1" title="Text - Movie Classic" thumbnail="/stock_thumbs/274513744.jpg" enc_asset_id="02aGHFCbCs9FqxVOBTmUCag" itemRef="/go-prod/asset/274513744">
 		<film copyable="0" duration="3.5" published="0" pshare="0" isWide="1">
@@ -116465,7 +116492,9 @@ Here</text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0uhXFH_3ZAPw" numScene="1" title="Text - Paragraph" thumbnail="/stock_thumbs/267747144.jpg" enc_asset_id="0YXxT2fPqgmZqxVOBTmUCag" itemRef="/go-prod/asset/267747144">
 		<film copyable="0" duration="304.8" published="0" pshare="0" isWide="1">
@@ -116554,7 +116583,9 @@ Here</text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0mKCShtiOyTQ" numScene="1" title="Text - Paragraph" thumbnail="/stock_thumbs/274505132.jpg" enc_asset_id="0zXgTNZAiu5m5Z_k8TyB-CA" itemRef="/go-prod/asset/274505132">
 		<film copyable="0" duration="57.3" published="0" pshare="0" isWide="1">
@@ -116634,7 +116665,9 @@ Here</text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0edmV00ecIp0" numScene="1" title="Text - Paragraph" thumbnail="/stock_thumbs/274505435.jpg" enc_asset_id="02ALP-oxWvd3GbLd1u6tbAw" itemRef="/go-prod/asset/274505435">
 		<film copyable="0" duration="57.3" published="0" pshare="0" isWide="1">
@@ -116715,7 +116748,9 @@ Here</text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="05UoGpkAdt_4" numScene="1" title="Text - Paragraph x 2" thumbnail="/stock_thumbs/274505155.jpg" enc_asset_id="0PV5QVoaKBVzGbLd1u6tbAw" itemRef="/go-prod/asset/274505155">
 		<film copyable="0" duration="304.8" published="0" pshare="0" isWide="1">
@@ -116839,7 +116874,9 @@ Here</text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="01_-pOe_BJf4" numScene="1" title="Text - Paragraph x 2" thumbnail="/stock_thumbs/274505444.jpg" enc_asset_id="0EeCyJxAor0FqxVOBTmUCag" itemRef="/go-prod/asset/274505444">
 		<film copyable="0" duration="304.8" published="0" pshare="0" isWide="1">
@@ -116962,7 +116999,9 @@ Here</text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0rc_HEoEZjys" numScene="1" title="Text - Paragraph x 3" thumbnail="/stock_thumbs/267746959.jpg" enc_asset_id="0Gq5ib7lE-nsiuQ0JDOFAuw" itemRef="/go-prod/asset/267746959">
 		<film copyable="0" duration="53.1" published="0" pshare="0" isWide="1">
@@ -117124,7 +117163,9 @@ Here</text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0NEQtz2fMZlU" numScene="1" title="Text - Paragraph x 3" thumbnail="/stock_thumbs/267747169.jpg" enc_asset_id="0eTqP-GNxnx8iuQ0JDOFAuw" itemRef="/go-prod/asset/267747169">
 		<film copyable="0" duration="49.0" published="0" pshare="0" isWide="1">
@@ -117286,7 +117327,9 @@ Here</text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="04omkBXSZ9V4" numScene="1" title="Text - Politics Democratic" thumbnail="/stock_thumbs/274502770.jpg" enc_asset_id="0tFAd69itvKbMS39-jgv7mQ" itemRef="/go-prod/asset/274502770">
 		<film copyable="0" duration="9.8" published="0" pshare="0" isWide="1">
@@ -117509,7 +117552,9 @@ Here</text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0sYe9eqsxGgc" numScene="1" title="Text - Quote" thumbnail="/stock_thumbs/267747075.jpg" enc_asset_id="0YRo9AALV2_fGbLd1u6tbAw" itemRef="/go-prod/asset/267747075">
 		<film copyable="0" duration="304.8" published="0" pshare="0" isWide="1">
@@ -117600,7 +117645,9 @@ Here</text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="0EGDHZjKlxOE" numScene="1" title="Thanksgiving" thumbnail="/stock_thumbs/283861622.jpg" enc_asset_id="0ff1hCOcnr0u5Z_k8TyB-CA" itemRef="/alvin-dev/asset/64162">
 		<film copyable="0" duration="8.0" published="0" pshare="0" isWide="1">
@@ -118762,7 +118809,9 @@ THANKSGIVING</text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="01b8eEJdzn30" numScene="1" title="Trade Show - Booth" thumbnail="/stock_thumbs/280389729.jpg" enc_asset_id="0Hi37q6Z4baAiuQ0JDOFAuw" itemRef="/alvin-dev/asset/63468">
 		<film copyable="0" duration="22.5" published="0" pshare="0" isWide="1">
@@ -130124,7 +130173,9 @@ Product Showcase]]></text>
 				</aTranList>
 			</scene>
 		</film>
-		<category-list />
+		<category-list>
+			<category>starters</category>
+		</category-list>
 	</starter>
 	<starter id="09dgs0xtRxyM" numScene="1" title="Winter Sale" thumbnail="/stock_thumbs/292997916.jpg" enc_asset_id="0m8fgl7vVez3ZBgS1od14mg" itemRef="/alvin-dev/asset/66416">
 		<film copyable="0" duration="4.5" published="0" pshare="0" isWide="1">

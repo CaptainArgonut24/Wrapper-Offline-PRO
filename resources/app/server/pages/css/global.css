@@ -186,7 +186,8 @@ header dropdowns
 	margin: 10px 0;
 }
 /* character upload */
-form[action="/api/char/upload"] { display: none }
+form[action="/api/char/upload"],
+form[action="/api/movie/upload"] { display: none }
 
 /**
 tabs
