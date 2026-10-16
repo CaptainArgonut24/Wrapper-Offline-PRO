@@ -61,6 +61,7 @@ const createWindow = () => {
 	});
 	// use it in external scripts
 	process.env.MAIN_WINDOW_ID = mainWindow.id;
+	mainWindow.maximize();
 
 	mainWindow.webContents.on("new-window", (event, url, frameName) => {
 		if (frameName != "wndstudio" ||
