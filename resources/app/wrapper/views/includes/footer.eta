@@ -3,9 +3,9 @@
 		<a>v<%= it.env.WRAPPER_VER %></a>
 		<a href="/settings">Settings</a>
 		<a href="/FAQ">FAQ</a>
-		<a href="https://discord.gg/yhGAetN">Main Wrapper Offline Discord</a>
-		<a href="https://discord.gg/yhGAetN">Wrapper Offline: Pro Discord</a>
-		<a href="https://discord.gg/yhGAetN">Flash Theams Discord</a>
+		<a href="https://discord.gg/wrapper-offline-699004329998417932">Main Wrapper Offline Discord</a>
+		<a href="https://forms.gle/s8ecJvoKSeW2S2fT9">Bug Report</a>
+		<a href="https://discord.gg/flashthemes">Flash Themes Discord</a>
 	</nav>
 
 	<nav id="foot-right"></nav>
