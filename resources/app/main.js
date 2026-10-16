@@ -62,6 +62,17 @@ const createWindow = () => {
 	// use it in external scripts
 	process.env.MAIN_WINDOW_ID = mainWindow.id;
 
+	mainWindow.webContents.on("new-window", (event, url, frameName) => {
+		if (frameName != "wndstudio" ||
+			!/^http:\/\/localhost(?::\d+)?\/go\/character_creator(?:\/|[?#])/.test(url)) {
+			return;
+		}
+		event.preventDefault();
+		mainWindow.loadURL(url).catch(error => {
+			console.error("Unable to open the character editor:", error);
+		});
+	});
+
 	// initialize stuff
 	// clear the menu bar
 	Menu.setApplicationMenu(Menu.buildFromTemplate([]));
