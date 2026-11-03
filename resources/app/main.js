@@ -56,18 +56,98 @@ app.commandLine.appendSwitch("ppapi-flash-path", path.join(__dirname, pluginName
 app.commandLine.appendSwitch("ppapi-flash-version", "32.0.0.371");
 
 let mainWindow;
-let browserWindow;
-let browserWindowReady = false;
-let pendingBrowserUrls = [];
-function openBrowserTabInWindow(url, discordConfirmed, title) {
-	if (!browserWindowReady || !browserWindow || browserWindow.isDestroyed()) {
-		pendingBrowserUrls.push({ url, discordConfirmed, title });
+let browserPrivacyAccepted = false;
+function isDiscordUrl(value) {
+	try {
+		const hostname = new URL(value).hostname.toLowerCase();
+		return hostname == "discord.gg" || hostname == "discord.com" || hostname.endsWith(".discord.com");
+	} catch (error) {
+		return false;
+	}
+}
+function isAllowedBrowserUrl(value) {
+	try {
+		return ["http:", "https:"].includes(new URL(value).protocol);
+	} catch (error) {
+		return false;
+	}
+}
+function confirmBrowserPrivacy(owner) {
+	if (browserPrivacyAccepted) return true;
+	const options = {
+		type: "info",
+		title: "Built-in Browser",
+		message: "Website data is stored locally",
+		detail: "Websites opened in these windows may save cookies and other site data in a separate local profile for this Wrapper installation. Wrapper does not upload or share this data.",
+		buttons: ["Continue", "Cancel"],
+		defaultId: 0,
+		cancelId: 1
+	};
+	const result = owner ?
+		dialog.showMessageBoxSync(owner, options) :
+		dialog.showMessageBoxSync(options);
+	browserPrivacyAccepted = result == 0;
+	return browserPrivacyAccepted;
+}
+function openPlainBrowserWindow(url, title, discordConfirmed = false) {
+	if (!isAllowedBrowserUrl(url)) {
+		console.error("Refusing to open a non-HTTP browser URL:", url);
 		return;
 	}
-	browserWindow.webContents.executeJavaScript(
-		`window.openBrowserTab(${JSON.stringify(url)}, ${discordConfirmed}, ${JSON.stringify(title)})`
-	).catch(error => {
-		console.error("Unable to open a browser tab:", error);
+	if (!confirmBrowserPrivacy(mainWindow)) return;
+	if (isDiscordUrl(url) && !discordConfirmed) {
+		const options = {
+			type: "warning",
+			title: "Open Discord",
+			message: "You are opening a Discord page in Wrapper's built-in browser. Continue?",
+			buttons: ["Continue", "Cancel"],
+			defaultId: 1,
+			cancelId: 1
+		};
+		const result = mainWindow ?
+			dialog.showMessageBoxSync(mainWindow, options) :
+			dialog.showMessageBoxSync(options);
+		if (result != 0) return;
+	}
+
+	const browserWindow = new BrowserWindow({
+		width: 1200,
+		height: 800,
+		title: title || new URL(url).hostname,
+		icon: path.join(__dirname, "./server/favicon.ico"),
+		parent: mainWindow,
+		webPreferences: {
+			partition: browserPartition,
+			contextIsolation: true,
+			nodeIntegration: false,
+			webviewTag: false,
+			plugins: true
+		}
+	});
+	browserWindow.webContents.on("will-navigate", (event, targetUrl) => {
+		if (!isAllowedBrowserUrl(targetUrl)) {
+			event.preventDefault();
+			return;
+		}
+		if (isDiscordUrl(targetUrl)) {
+			const result = dialog.showMessageBoxSync(browserWindow, {
+				type: "warning",
+				title: "Open Discord",
+				message: "You are opening a Discord page in Wrapper's built-in browser. Continue?",
+				buttons: ["Continue", "Cancel"],
+				defaultId: 1,
+				cancelId: 1
+			});
+			if (result != 0) event.preventDefault();
+		}
+	});
+	browserWindow.webContents.on("new-window", (event, targetUrl) => {
+		event.preventDefault();
+		openPlainBrowserWindow(targetUrl, "", false);
+	});
+	browserWindow.loadURL(url).catch(error => {
+		console.error("Unable to open the built-in browser window:", error);
+		browserWindow.close();
 	});
 }
 function setupBrowserDownloads() {
@@ -122,56 +202,39 @@ const createWindow = () => {
 		if (target.protocol == "http:" &&
 			target.hostname == "localhost" &&
 			target.port == String(env.SERVER_PORT) &&
-			(target.pathname == "/browser" || target.pathname == "/player")) {
+			(target.pathname == "/browser" || target.pathname == "/player" || target.pathname == "/chrome")) {
 			event.preventDefault();
+			if (target.pathname == "/chrome") {
+				openPlainBrowserWindow("https://www.google.com/", "Wrapper Browser");
+				return;
+			}
 			const isPlayer = target.pathname == "/player";
-			if (!isPlayer && browserWindow && !browserWindow.isDestroyed()) {
-				browserWindow.show();
-				browserWindow.focus();
+			if (!isPlayer) {
 				const startUrl = target.searchParams.get("startUrl");
 				if (startUrl) {
-					const discordConfirmed = target.searchParams.get("discordConfirmed") == "1";
-					const title = target.searchParams.get("startTitle") || "";
-					openBrowserTabInWindow(startUrl, discordConfirmed, title);
+					openPlainBrowserWindow(
+						startUrl,
+						target.searchParams.get("startTitle") || "",
+						target.searchParams.get("discordConfirmed") == "1"
+					);
 				}
 				return;
 			}
 			const newWindow = new BrowserWindow({
 				width: 1200,
 				height: 800,
-				title: isPlayer ? "Video Player - Wrapper: Offline" : "Wrapper Browser",
+				title: "Video Player - Wrapper: Offline",
 				icon: path.join(__dirname, "./server/favicon.ico"),
 				parent: mainWindow,
 				webPreferences: {
 					contextIsolation: true,
-					webviewTag: !isPlayer,
-					plugins: isPlayer
+					webviewTag: false,
+					plugins: true
 				}
 			});
-			if (!isPlayer) {
-				browserWindow = newWindow;
-				browserWindowReady = false;
-				pendingBrowserUrls = [];
-				newWindow.webContents.once("did-finish-load", () => {
-					browserWindowReady = true;
-					for (const pending of pendingBrowserUrls) {
-						openBrowserTabInWindow(pending.url, pending.discordConfirmed, pending.title);
-					}
-					pendingBrowserUrls = [];
-				});
-			}
 			newWindow.loadURL(target.href).catch(error => {
-				console.error(`Unable to open the ${isPlayer ? "video player" : "built-in browser"}:`, error);
+				console.error("Unable to open the video player:", error);
 			});
-			if (!isPlayer) {
-				newWindow.on("closed", () => {
-					if (browserWindow == newWindow) {
-						browserWindow = null;
-						browserWindowReady = false;
-						pendingBrowserUrls = [];
-					}
-				});
-			}
 			return;
 		}
 		if (frameName != "wndstudio" ||
