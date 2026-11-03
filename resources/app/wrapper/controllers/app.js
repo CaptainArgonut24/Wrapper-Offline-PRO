@@ -32,7 +32,8 @@ group
 	.add(reqIsStudio)
 	.route("GET", "/browser", (req, res) => {
 		res.render("browser", {
-			browserPartition: process.env.BROWSER_PARTITION
+			browserPartition: process.env.BROWSER_PARTITION,
+			browserInstallId: process.env.BROWSER_INSTALL_ID
 		});
 	})
 	// video list

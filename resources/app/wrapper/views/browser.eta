@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="dark">
 	<head>
 		<meta charset="UTF-8"/>
 		<link rel="icon" href="/favicon.ico" type="image/png"/>
@@ -9,7 +9,7 @@
 		<script src="/pages/js/global.js"></script>
 	</head>
 
-	<body data-browser-partition="<%= it.browserPartition %>">
+	<body data-browser-partition="<%= it.browserPartition %>" data-browser-install-id="<%= it.browserInstallId %>">
 		<header class="browser-header">
 			<a href="/" aria-label="Return to Wrapper"><h1><img id="logo" src="/pages/img/logo.svg" alt="Wrapper: Offline"/></h1></a>
 			<strong>Built-in Browser</strong>
@@ -42,6 +42,14 @@
 			</div>
 			<p id="browser-status" role="status" aria-live="polite"></p>
 		</main>
+		<dialog id="browser-privacy-warning" aria-labelledby="browser-privacy-title">
+			<h2 id="browser-privacy-title">Local Browser Data</h2>
+			<p>Your browsing history, searches, bookmarks, and saved passwords are stored locally on this computer for this Wrapper installation. They are not uploaded or shared by Wrapper.</p>
+			<div class="browser-privacy-actions">
+				<button id="browser-privacy-continue" type="button">Continue</button>
+				<button id="browser-privacy-cancel" type="button">Cancel</button>
+			</div>
+		</dialog>
 		<script src="/pages/js/browser.js"></script>
 	</body>
 </html>

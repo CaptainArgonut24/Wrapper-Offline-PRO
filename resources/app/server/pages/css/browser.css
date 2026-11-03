@@ -195,6 +195,45 @@ body {
 	min-height: 22px;
 	padding: 2px 10px;
 }
+#browser-privacy-warning {
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: 10px;
+	box-shadow: var(--shadow);
+	color: var(--text);
+	max-width: min(480px, calc(100vw - 32px));
+	padding: 24px;
+	width: 100%;
+}
+#browser-privacy-warning::backdrop {
+	background: rgba(0, 0, 0, .68);
+}
+#browser-privacy-title {
+	font-size: 20px;
+	margin: 0 0 12px;
+}
+#browser-privacy-warning p {
+	color: var(--muted);
+	margin: 0 0 22px;
+}
+.browser-privacy-actions {
+	display: flex;
+	gap: 8px;
+	justify-content: flex-end;
+}
+.browser-privacy-actions button {
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: 6px;
+	color: var(--text);
+	cursor: pointer;
+	padding: 8px 14px;
+}
+#browser-privacy-continue {
+	background: var(--primary);
+	border-color: var(--primary);
+	color: #fff;
+}
 @media (max-width: 700px) {
 	.browser-header strong {
 		display: none;

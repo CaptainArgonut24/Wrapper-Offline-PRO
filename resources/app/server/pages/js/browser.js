@@ -1,9 +1,22 @@
 (() => {
+	const installId = document.body.dataset.browserInstallId;
 	const STORAGE = {
-		bookmarks: "WRAPPER_BROWSER_BOOKMARKS",
-		history: "WRAPPER_BROWSER_HISTORY",
-		searches: "WRAPPER_BROWSER_SEARCHES"
+		bookmarks: `WRAPPER_BROWSER_${installId}_BOOKMARKS`,
+		history: `WRAPPER_BROWSER_${installId}_HISTORY`,
+		searches: `WRAPPER_BROWSER_${installId}_SEARCHES`
 	};
+	const DEFAULT_TABS = [
+		{ title: "Google Search", url: "https://www.google.com/" },
+		{ title: "Web Broweser", url: "https://forms.gle/s8ecJvoKSeW2S2fT9" },
+		{ title: "Main Wrapper Offline Discord", url: "https://discord.gg/wrapper-offline-699004329998417932" },
+		{ title: "Flash Themes Discord", url: "https://discord.gg/flashthemes" },
+		{ title: "Bug Report", url: "https://forms.gle/s8ecJvoKSeW2S2fT9" }
+	];
+	const browserParams = new URLSearchParams(window.location.search);
+	const requestedUrl = browserParams.get("startUrl");
+	const requestedTitle = browserParams.get("startTitle");
+	const requestedDiscordConfirmed = browserParams.get("discordConfirmed") == "1";
+	const privacyWarning = document.getElementById("browser-privacy-warning");
 	const tabsElement = document.getElementById("browser-tabs");
 	const webviewsElement = document.getElementById("browser-webviews");
 	const address = document.getElementById("browser-address");
@@ -17,6 +30,8 @@
 	let activeTabId = null;
 	let nextTabId = 0;
 	let sidebarMode = "";
+	let browsingAllowed = false;
+	let pendingBrowserUrls = [];
 
 	function readSaved(key) {
 		try {
@@ -58,6 +73,15 @@
 		return browserTabs.find(tab => tab.id == activeTabId);
 	}
 
+	function isDiscordUrl(value) {
+		try {
+			const hostname = new URL(value).hostname.toLowerCase();
+			return hostname == "discord.gg" || hostname == "discord.com" || hostname.endsWith(".discord.com");
+		} catch (error) {
+			return false;
+		}
+	}
+
 	function normalizeAddress(value) {
 		const input = value.trim();
 		if (!input) return null;
@@ -84,6 +108,15 @@
 			searches = searches.slice(0, 200);
 			saveSaved(STORAGE.searches, searches);
 			return `https://www.google.com/search?q=${encodeURIComponent(input)}`;
+		}
+	}
+
+	function getSafeHttpUrl(value) {
+		try {
+			const url = new URL(value);
+			return ["http:", "https:"].includes(url.protocol) ? url.href : null;
+		} catch (error) {
+			return null;
 		}
 	}
 
@@ -127,14 +160,34 @@
 		}
 	}
 
+	function loadTab(tab) {
+		if (!tab || tab.loaded || !tab.url) return true;
+		if (!browsingAllowed) return false;
+		if (isDiscordUrl(tab.url)) {
+			if (!tab.discordConfirmed &&
+				!window.confirm("You are opening a Discord page in Wrapper's built-in browser. Continue?")) {
+				return false;
+			}
+			tab.discordConfirmed = true;
+		}
+		tab.loaded = true;
+		tab.view.loadURL(tab.url);
+		return true;
+	}
+
 	function activateTab(tabId) {
+		const previousTabId = activeTabId;
 		activeTabId = tabId;
 		for (const tab of browserTabs) tab.view.hidden = tab.id != activeTabId;
+		if (!loadTab(getActiveTab())) {
+			activeTabId = previousTabId;
+			for (const tab of browserTabs) tab.view.hidden = tab.id != activeTabId;
+		}
 		renderTabs();
 		updateNavigation();
 	}
 
-	function createTab(initialUrl) {
+	function createTab(initialUrl, title, options = {}) {
 		const id = ++nextTabId;
 		const view = document.createElement("webview");
 		view.setAttribute("partition", document.body.dataset.browserPartition);
@@ -142,7 +195,14 @@
 		view.setAttribute("allowpopups", "");
 		view.setAttribute("aria-label", "Website");
 		view.hidden = true;
-		const tab = { id, title: "New tab", url: "", view };
+		const tab = {
+			id,
+			title: title || "New tab",
+			url: initialUrl || "",
+			discordConfirmed: options.discordConfirmed === true,
+			loaded: false,
+			view
+		};
 		browserTabs.push(tab);
 		webviewsElement.append(view);
 
@@ -170,7 +230,18 @@
 		});
 		view.addEventListener("will-navigate", event => {
 			try {
-				if (!["http:", "https:"].includes(new URL(event.url).protocol)) event.preventDefault();
+				const url = new URL(event.url);
+				if (!["http:", "https:"].includes(url.protocol)) {
+					event.preventDefault();
+				} else if (isDiscordUrl(event.url) && !tab.discordConfirmed) {
+					if (!window.confirm("You are opening a Discord page in Wrapper's built-in browser. Continue?")) {
+						event.preventDefault();
+					} else {
+						tab.discordConfirmed = true;
+					}
+				} else if (!isDiscordUrl(event.url)) {
+					tab.discordConfirmed = false;
+				}
 			} catch (error) {
 				event.preventDefault();
 			}
@@ -178,11 +249,10 @@
 		view.addEventListener("new-window", event => {
 			event.preventDefault();
 			const url = normalizeAddress(event.url);
-			if (url) createTab(url);
+			if (url) openBrowserTab(url);
 		});
 
-		activateTab(id);
-		if (initialUrl) view.loadURL(initialUrl);
+		if (options.select !== false) activateTab(id);
 		renderTabs();
 		return tab;
 	}
@@ -262,11 +332,67 @@
 			return;
 		}
 		tab.url = url;
+		tab.loaded = false;
+		tab.discordConfirmed = false;
 		address.value = url;
-		tab.view.loadURL(url);
+		loadTab(tab);
 	}
 
-	document.getElementById("browser-new-tab").addEventListener("click", () => createTab("https://www.google.com/"));
+	function openBrowserTab(value, discordConfirmed = false, title = "") {
+		const url = normalizeAddress(value);
+		if (!url || !/^https?:$/.test(new URL(url).protocol)) {
+			status.textContent = "Only HTTP and HTTPS websites can be opened in the browser.";
+			return;
+		}
+		if (!browsingAllowed) {
+			pendingBrowserUrls.push({ url, discordConfirmed, title });
+			return;
+		}
+		createTab(url, title || new URL(url).hostname, { discordConfirmed });
+	}
+
+	window.openBrowserTab = openBrowserTab;
+
+	function enterBrowser() {
+		browsingAllowed = true;
+		privacyWarning.close();
+
+		const startUrl = requestedUrl ? getSafeHttpUrl(requestedUrl) : null;
+		if (requestedUrl && !startUrl) {
+			status.textContent = "Only HTTP and HTTPS websites can be opened in the browser.";
+		}
+		let selectedTabId = null;
+		let firstMatchingTabId = null;
+		for (const tabInfo of DEFAULT_TABS) {
+			const tab = createTab(tabInfo.url, tabInfo.title, { select: false });
+			if (startUrl && tabInfo.url == startUrl) {
+				if (!firstMatchingTabId) firstMatchingTabId = tab.id;
+				if (requestedTitle && tabInfo.title == requestedTitle) selectedTabId = tab.id;
+			}
+		}
+		if (!selectedTabId) selectedTabId = firstMatchingTabId;
+
+		if (startUrl && !DEFAULT_TABS.some(tab => tab.url == startUrl)) {
+			const initialTab = createTab(startUrl, new URL(startUrl).hostname, {
+				select: false,
+				discordConfirmed: requestedDiscordConfirmed
+			});
+			selectedTabId = initialTab.id;
+		} else if (startUrl && isDiscordUrl(startUrl) && requestedDiscordConfirmed) {
+			const initialTab = browserTabs.find(tab => tab.url == startUrl);
+			if (initialTab) initialTab.discordConfirmed = true;
+		}
+
+		if (!selectedTabId) selectedTabId = browserTabs[0].id;
+		activateTab(selectedTabId);
+
+		for (const pending of pendingBrowserUrls) {
+			openBrowserTab(pending.url, pending.discordConfirmed, pending.title);
+		}
+		pendingBrowserUrls = [];
+	}
+
+	document.getElementById("browser-new-tab").addEventListener("click", () => createTab("", "New tab"));
 	document.getElementById("browser-navigation").addEventListener("submit", event => {
 		event.preventDefault();
 		navigate(address.value);
@@ -322,5 +448,11 @@
 		}
 	});
 
-	createTab("https://www.google.com/");
+	document.getElementById("browser-privacy-continue").addEventListener("click", enterBrowser);
+	document.getElementById("browser-privacy-cancel").addEventListener("click", () => window.close());
+	privacyWarning.addEventListener("cancel", event => {
+		event.preventDefault();
+		window.close();
+	});
+	privacyWarning.showModal();
 })();

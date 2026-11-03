@@ -19,6 +19,7 @@ const installId = crypto.createHash("sha256")
 	.slice(0, 16);
 const browserPartition = `persist:wrapper-browser-${installId}`;
 process.env.BROWSER_PARTITION = browserPartition;
+process.env.BROWSER_INSTALL_ID = installId;
 
 /**
  * initialization
@@ -55,6 +56,20 @@ app.commandLine.appendSwitch("ppapi-flash-path", path.join(__dirname, pluginName
 app.commandLine.appendSwitch("ppapi-flash-version", "32.0.0.371");
 
 let mainWindow;
+let browserWindow;
+let browserWindowReady = false;
+let pendingBrowserUrls = [];
+function openBrowserTabInWindow(url, discordConfirmed, title) {
+	if (!browserWindowReady || !browserWindow || browserWindow.isDestroyed()) {
+		pendingBrowserUrls.push({ url, discordConfirmed, title });
+		return;
+	}
+	browserWindow.webContents.executeJavaScript(
+		`window.openBrowserTab(${JSON.stringify(url)}, ${discordConfirmed}, ${JSON.stringify(title)})`
+	).catch(error => {
+		console.error("Unable to open a browser tab:", error);
+	});
+}
 function setupBrowserDownloads() {
 	const browserSession = session.fromPartition(browserPartition);
 	browserSession.on("will-download", (event, item, webContents) => {
@@ -110,7 +125,18 @@ const createWindow = () => {
 			(target.pathname == "/browser" || target.pathname == "/player")) {
 			event.preventDefault();
 			const isPlayer = target.pathname == "/player";
-			const browserWindow = new BrowserWindow({
+			if (!isPlayer && browserWindow && !browserWindow.isDestroyed()) {
+				browserWindow.show();
+				browserWindow.focus();
+				const startUrl = target.searchParams.get("startUrl");
+				if (startUrl) {
+					const discordConfirmed = target.searchParams.get("discordConfirmed") == "1";
+					const title = target.searchParams.get("startTitle") || "";
+					openBrowserTabInWindow(startUrl, discordConfirmed, title);
+				}
+				return;
+			}
+			const newWindow = new BrowserWindow({
 				width: 1200,
 				height: 800,
 				title: isPlayer ? "Video Player - Wrapper: Offline" : "Wrapper Browser",
@@ -122,9 +148,30 @@ const createWindow = () => {
 					plugins: isPlayer
 				}
 			});
-			browserWindow.loadURL(target.href).catch(error => {
+			if (!isPlayer) {
+				browserWindow = newWindow;
+				browserWindowReady = false;
+				pendingBrowserUrls = [];
+				newWindow.webContents.once("did-finish-load", () => {
+					browserWindowReady = true;
+					for (const pending of pendingBrowserUrls) {
+						openBrowserTabInWindow(pending.url, pending.discordConfirmed, pending.title);
+					}
+					pendingBrowserUrls = [];
+				});
+			}
+			newWindow.loadURL(target.href).catch(error => {
 				console.error(`Unable to open the ${isPlayer ? "video player" : "built-in browser"}:`, error);
 			});
+			if (!isPlayer) {
+				newWindow.on("closed", () => {
+					if (browserWindow == newWindow) {
+						browserWindow = null;
+						browserWindowReady = false;
+						pendingBrowserUrls = [];
+					}
+				});
+			}
 			return;
 		}
 		if (frameName != "wndstudio" ||

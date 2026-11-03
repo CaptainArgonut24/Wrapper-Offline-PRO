@@ -19,6 +19,7 @@
 	</head>
 
 	<body style="margin:0">
+		<a id="studio-exit-button" href="/" title="Exit GoFull and return to the main page">EXIT</a>
 		<main>
 			<nav id="importer">
 				<nav id="import_head">
