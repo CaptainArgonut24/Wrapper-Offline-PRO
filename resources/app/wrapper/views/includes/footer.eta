@@ -4,7 +4,6 @@
 		<a href="/settings">Settings</a>
 		<a href="/FAQ">FAQ</a>
 		<a href="https://www.google.com/" data-browser-link>Google Search</a>
-		<a href="" data-browser-link data-chromium-browser>Web Browser</a>
 		<a href="https://discord.gg/wrapper-offline-699004329998417932" data-browser-link data-discord-link>Main Wrapper Offline Discord</a>
 		<a href="https://discord.gg/flashthemes" data-browser-link data-discord-link>Flash Themes Discord</a>
 		<a href="https://forms.gle/s8ecJvoKSeW2S2fT9" data-browser-link>Bug Report</a>
