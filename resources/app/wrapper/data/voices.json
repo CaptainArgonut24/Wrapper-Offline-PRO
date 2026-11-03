@@ -7173,6 +7173,150 @@
 			"arg": [6, 1, 16],
 			"source": "vocalware",
 			"desc": "Troll"
+		},
+		"eric_readloud": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "ivona",
+			"arg": "eric",
+			"desc": "Eric 2 (ReadLoud)"
+		},
+		"brian_readloud": {
+			"country": "GB",
+			"language": "en",
+			"gender": "M",
+			"source": "ivona",
+			"arg": "brian",
+			"desc": "Brian 2 (ReadLoud)"
+		},
+		"joey_readloud": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "ivona",
+			"arg": "joey",
+			"desc": "Joey 2 (ReadLoud)"
+		},
+		"sally_readloud": {
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+			"source": "ivona",
+			"arg": "sally",
+			"desc": "Sally (ReadLoud)"
+		},
+		"amy_readloud": {
+			"country": "GB",
+			"language": "en",
+			"gender": "F",
+			"source": "ivona",
+			"arg": "amy",
+			"desc": "Amy 2 (ReadLoud)"
+		},
+		"jennifer_readloud": {
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+			"source": "ivona",
+			"arg": "jennifer",
+			"desc": "Jennifer 2 (ReadLoud)"
+		},
+		"amy_polly": {
+			"country": "GB",
+			"language": "en",
+			"gender": "F",
+			"source": "polly",
+			"arg": "Amy",
+			"desc": "Amy 2 (GoSpeech Polly)"
+		},
+		"emma_polly": {
+			"country": "GB",
+			"language": "en",
+			"gender": "F",
+			"source": "polly",
+			"arg": "Emma",
+			"desc": "Emma 2 (GoSpeech Polly)"
+		},
+		"brian_polly": {
+			"country": "GB",
+			"language": "en",
+			"gender": "M",
+			"source": "polly",
+			"arg": "Brian",
+			"desc": "Brian 2 (GoSpeech Polly)"
+		},
+		"justin_polly": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "polly",
+			"arg": "Justin",
+			"desc": "Justin 2 (GoSpeech Polly)"
+		},
+		"ivy_polly": {
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+			"source": "polly",
+			"arg": "Ivy",
+			"desc": "Ivy 2 (GoSpeech Polly)"
+		},
+		"kendra_polly": {
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+			"source": "polly",
+			"arg": "Kendra",
+			"desc": "Kendra 2 (GoSpeech Polly)"
+		},
+		"kimberly_polly": {
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+			"source": "polly",
+			"arg": "Kimberly",
+			"desc": "Kimberly 2 (GoSpeech Polly)"
+		},
+		"salli_polly": {
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+			"source": "polly",
+			"arg": "Salli",
+			"desc": "Salli 2 (GoSpeech Polly)"
+		},
+		"geraint_polly": {
+			"country": "GB",
+			"language": "en",
+			"gender": "M",
+			"source": "polly",
+			"arg": "Geraint",
+			"desc": "Geraint 2 (GoSpeech Polly)"
+		},
+		"nicole_polly": {
+			"country": "AU",
+			"language": "en",
+			"gender": "F",
+			"source": "polly",
+			"arg": "Nicole",
+			"desc": "Nicole 2 (GoSpeech Polly)"
+		},
+		"russell_polly": {
+			"country": "AU",
+			"language": "en",
+			"gender": "M",
+			"source": "polly",
+			"arg": "Russell",
+			"desc": "Russell 2 (GoSpeech Polly)"
+		},
+		"joey_polly": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "polly",
+			"arg": "Joey",
+			"desc": "Joey 2 (GoSpeech Polly)"
 		}
 	},
 	"languages": {
