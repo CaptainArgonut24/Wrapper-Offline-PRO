@@ -6,6 +6,35 @@
 		<link rel="stylesheet" type="text/css" href="/pages/css/modern-normalize.css">
 		<link rel="stylesheet" type="text/css" href="/pages/css/global.css">
 		<link rel="stylesheet" type="text/css" href="/pages/css/flash.css">
+		<% if (it.preview) { %>
+			<script>
+				let previewMovieXml = "";
+				const previewWindowName = window.name;
+				const previewWindowPrefix = "wrapper-preview:";
+				if (previewWindowName.startsWith(previewWindowPrefix)) {
+					try {
+						const previewData = JSON.parse(previewWindowName.slice(previewWindowPrefix.length));
+						if (typeof previewData.movieXml !== "string") {
+							throw new Error("Preview data is missing movie XML.");
+						}
+						previewMovieXml = previewData.movieXml;
+					} catch (error) {
+						console.error("Unable to load preview data:", error);
+					}
+				} else {
+					console.error("Unable to load preview data: preview payload was not provided.");
+				}
+				window.name = "";
+				function retrievePreviewPlayerData() {
+					const movieXml = previewMovieXml;
+					previewMovieXml = "";
+					return movieXml;
+				}
+				function hidePreviewer() {
+					window.close();
+				}
+			</script>
+		<% } %>
 	</head>
 
 	<body style="margin:0px">

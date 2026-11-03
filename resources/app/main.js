@@ -5,13 +5,20 @@
 // assign config and env.json stuff to process.env
 const env = Object.assign(process.env, require("./env"), require("./config"));
 // modules
-const { app, BrowserWindow, Menu } = require("electron");
+const { app, BrowserWindow, Menu, session, dialog } = require("electron");
+const crypto = require("crypto");
 const fs = require("fs");
 const path = require("path");
 // vars
 const assets = path.join(__dirname, env.ASSET_FOLDER);
 const cache = path.join(__dirname, env.CACHÉ_FOLDER);
 const saved = path.join(__dirname, env.SAVED_FOLDER);
+const installId = crypto.createHash("sha256")
+	.update(path.resolve(__dirname))
+	.digest("hex")
+	.slice(0, 16);
+const browserPartition = `persist:wrapper-browser-${installId}`;
+process.env.BROWSER_PARTITION = browserPartition;
 
 /**
  * initialization
@@ -48,6 +55,32 @@ app.commandLine.appendSwitch("ppapi-flash-path", path.join(__dirname, pluginName
 app.commandLine.appendSwitch("ppapi-flash-version", "32.0.0.371");
 
 let mainWindow;
+function setupBrowserDownloads() {
+	const browserSession = session.fromPartition(browserPartition);
+	browserSession.on("will-download", (event, item, webContents) => {
+		item.pause();
+		const filename = path.basename(item.getFilename());
+		const ownerContents = webContents.hostWebContents || webContents;
+		const owner = BrowserWindow.fromWebContents(ownerContents) || mainWindow;
+		const options = {
+			defaultPath: path.join(app.getPath("downloads"), filename)
+		};
+		const saveDialog = owner ?
+			dialog.showSaveDialog(owner, options) :
+			dialog.showSaveDialog(options);
+		saveDialog.then(({ canceled, filePath }) => {
+			if (canceled || !filePath) {
+				item.cancel();
+				return;
+			}
+			item.setSavePath(filePath);
+			item.resume();
+		}).catch(error => {
+			console.error("Unable to choose a browser download location:", error);
+			item.cancel();
+		});
+	});
+}
 const createWindow = () => {
 	mainWindow = new BrowserWindow({
 		width: 1200,
@@ -56,7 +89,8 @@ const createWindow = () => {
 		icon: path.join(__dirname, "./server/favicon.ico"),
 		webPreferences: {
 			plugins: true,
-			contextIsolation: true
+			contextIsolation: true,
+			webviewTag: true
 		}
 	});
 	// use it in external scripts
@@ -64,6 +98,35 @@ const createWindow = () => {
 	mainWindow.maximize();
 
 	mainWindow.webContents.on("new-window", (event, url, frameName) => {
+		let target;
+		try {
+			target = new URL(url);
+		} catch (error) {
+			return;
+		}
+		if (target.protocol == "http:" &&
+			target.hostname == "localhost" &&
+			target.port == String(env.SERVER_PORT) &&
+			(target.pathname == "/browser" || target.pathname == "/player")) {
+			event.preventDefault();
+			const isPlayer = target.pathname == "/player";
+			const browserWindow = new BrowserWindow({
+				width: 1200,
+				height: 800,
+				title: isPlayer ? "Video Player - Wrapper: Offline" : "Wrapper Browser",
+				icon: path.join(__dirname, "./server/favicon.ico"),
+				parent: mainWindow,
+				webPreferences: {
+					contextIsolation: true,
+					webviewTag: !isPlayer,
+					plugins: isPlayer
+				}
+			});
+			browserWindow.loadURL(target.href).catch(error => {
+				console.error(`Unable to open the ${isPlayer ? "video player" : "built-in browser"}:`, error);
+			});
+			return;
+		}
 		if (frameName != "wndstudio" ||
 			!/^http:\/\/localhost(?::\d+)?\/go\/character_creator(?:\/|[?#])/.test(url)) {
 			return;
@@ -84,6 +147,7 @@ const createWindow = () => {
 };
 
 app.whenReady().then(() => {
+	setupBrowserDownloads();
 	// wait for the server
 	setTimeout(createWindow, 2000);
 });

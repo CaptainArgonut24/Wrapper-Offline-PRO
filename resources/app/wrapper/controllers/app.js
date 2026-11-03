@@ -30,6 +30,11 @@ const group = new httpz.Group();
 
 group
 	.add(reqIsStudio)
+	.route("GET", "/browser", (req, res) => {
+		res.render("browser", {
+			browserPartition: process.env.BROWSER_PARTITION
+		});
+	})
 	// video list
 	.route("*", "/", (req, res) => {
 		discord("Video List");
@@ -165,6 +170,7 @@ group
 	.route("GET", "/player", async (req, res) => {
 		discord("Video Player");
 		const { IS_WIDE } = DB.select();
+		const preview = req.query["preview"] == "1";
 		let flashvars = {
 			autostart: 1,
 			isWide: IS_WIDE,
@@ -174,6 +180,14 @@ group
 			clientThemePath: CLIENT_URL + "/<client_theme>",
 		};
 		Object.assign(flashvars, req.query);
+		if (preview) {
+			Object.assign(flashvars, {
+				autostart: 1,
+				isInitFromExternal: 1,
+				isPreview: 1,
+				startFrame: req.query["startFrame"] || 0,
+			});
+		}
 		res.render("app/player", {
 			attrs: {
 				data: SWF_URL + "/player.swf",
@@ -183,6 +197,7 @@ group
 				flashvars,
 				allowScriptAccess: "always",
 			},
+			preview,
 			object: toObjectString
 		});
 	});

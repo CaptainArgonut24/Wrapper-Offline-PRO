@@ -50,6 +50,13 @@
 				<a class="close-button" onclick="hidePreviewer()">×</a>
 			</div>
 		</div>
+		<dialog id="studio-preview-confirmation" aria-labelledby="studio-preview-message">
+			<p id="studio-preview-message">Do you want to watch a preview? Any unsaved work will not be shown.</p>
+			<div class="studio-preview-actions">
+				<button id="studio-preview-ok" type="button">OK</button>
+				<button id="studio-preview-cancel" type="button">Cancel</button>
+			</div>
+		</dialog>
 	</body>
 
 	<script src="/pages/js/importer.js"></script>

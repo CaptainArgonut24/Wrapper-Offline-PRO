@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<link rel="icon" href="/favicon.ico" type="image/png"/>
+		<title>Browser - Wrapper: Offline</title>
+		<link rel="stylesheet" type="text/css" href="/pages/css/global.css">
+		<link rel="stylesheet" type="text/css" href="/pages/css/browser.css">
+		<script src="/pages/js/global.js"></script>
+	</head>
+
+	<body data-browser-partition="<%= it.browserPartition %>">
+		<header class="browser-header">
+			<a href="/" aria-label="Return to Wrapper"><h1><img id="logo" src="/pages/img/logo.svg" alt="Wrapper: Offline"/></h1></a>
+			<strong>Built-in Browser</strong>
+		</header>
+		<main id="browser-app">
+			<div class="browser-tabs-row">
+				<div id="browser-tabs" role="tablist" aria-label="Browser tabs"></div>
+				<button id="browser-new-tab" type="button" aria-label="New tab" title="New tab">+</button>
+			</div>
+			<form id="browser-navigation">
+				<button id="browser-back" type="button" title="Back" aria-label="Back">←</button>
+				<button id="browser-forward" type="button" title="Forward" aria-label="Forward">→</button>
+				<button id="browser-refresh" type="button" title="Refresh" aria-label="Refresh">↻</button>
+				<input id="browser-address" type="text" inputmode="url" autocomplete="off" spellcheck="false" aria-label="Address or search"/>
+				<button id="browser-go" type="submit">Go</button>
+				<button id="browser-bookmark" type="button" title="Bookmark this page" aria-label="Bookmark this page">☆</button>
+				<button id="browser-bookmarks-toggle" type="button">Bookmarks</button>
+				<button id="browser-history-toggle" type="button">History</button>
+			</form>
+			<div class="browser-content">
+				<aside id="browser-sidebar" hidden>
+					<div class="browser-sidebar-heading">
+						<h2 id="browser-sidebar-title"></h2>
+						<button id="browser-sidebar-close" type="button" aria-label="Close panel">×</button>
+					</div>
+					<div id="browser-sidebar-content"></div>
+					<button id="browser-clear-history" type="button" hidden>Clear history</button>
+				</aside>
+				<div id="browser-webviews"></div>
+			</div>
+			<p id="browser-status" role="status" aria-live="polite"></p>
+		</main>
+		<script src="/pages/js/browser.js"></script>
+	</body>
+</html>

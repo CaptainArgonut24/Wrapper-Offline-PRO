@@ -6,6 +6,7 @@ const studio = $("#obj");
  * studio functions
  */
 const tutorialReload = (new URLSearchParams(window.location.search)).get("tutorial");
+const movieId = (new URLSearchParams(window.location.search)).get("movieId");
 interactiveTutorial = {
 	neverDisplay: function() {
 		return tutorialReload ? false : true;
@@ -40,25 +41,38 @@ function hideImporter() {
 }
 
 let globalXml = "";
+let pendingPreview = null;
+const previewConfirmation = document.getElementById("studio-preview-confirmation");
 
 function initPreviewPlayer(dataXmlStr, startFrame) {
-	globalXml = dataXmlStr;
-	hideImporter();
-	// update flashvars
-	const flashvars = new URLSearchParams({
-		apiserver: "/",
-		isEmbed: 1,
-		tlang: "en_US",
-		isInitFromExternal: 1,
-		startFrame: startFrame,
-		autostart: 1,
-		isPreview: 1,
-		storePath: STORE_URL + "/<store>",
-		clientThemePath: CLIENT_URL + "/<client_theme>",
-	}).toString();
-	previewer.querySelector("object param[name='flashvars']").setAttribute("value", flashvars);
-	previewObj.setAttribute("data", PLAYER_URL);
-	document.body.classList.add("in_preview");
+	pendingPreview = { movieXml: dataXmlStr, startFrame };
+	previewConfirmation.showModal();
+	document.getElementById("studio-preview-cancel").focus();
+}
+function cancelStudioPreview() {
+	pendingPreview = null;
+	previewConfirmation.close();
+}
+function openStudioPreview() {
+	if (!pendingPreview) return;
+
+	if (movieId) {
+		window.open(`/player?movieId=${encodeURIComponent(movieId)}`, "_blank");
+		pendingPreview = null;
+		previewConfirmation.close();
+		return;
+	}
+
+	const previewWindow = window.open("about:blank", "_blank");
+	if (!previewWindow) {
+		alert("The preview window could not be opened. Please allow pop-ups and try again.");
+		return;
+	}
+
+	previewWindow.name = "wrapper-preview:" + JSON.stringify(pendingPreview);
+	previewWindow.location.href = `/player?preview=1&startFrame=${encodeURIComponent(pendingPreview.startFrame)}`;
+	pendingPreview = null;
+	previewConfirmation.close();
 }
 function retrievePreviewPlayerData() {
 	const movieXml = globalXml.slice();
@@ -69,3 +83,9 @@ function hidePreviewer() {
 	previewObj.setAttribute("data", "");
 	document.body.classList.remove("in_preview");
 }
+
+document.getElementById("studio-preview-ok").addEventListener("click", openStudioPreview);
+document.getElementById("studio-preview-cancel").addEventListener("click", cancelStudioPreview);
+previewConfirmation.addEventListener("cancel", () => {
+	pendingPreview = null;
+});

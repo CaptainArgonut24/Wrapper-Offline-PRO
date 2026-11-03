@@ -124,6 +124,53 @@ body.in_preview main {
 body.in_preview #previewer {
 	display: block;
 }
+#studio-preview-confirmation {
+	border: 0;
+	border-radius: 6px;
+	box-shadow: 0 8px 32px #0005;
+	color: #474747;
+	max-width: min(440px, calc(100vw - 32px));
+	padding: 24px;
+	width: 100%;
+}
+#studio-preview-confirmation::backdrop {
+	background: #0008;
+}
+#studio-preview-message {
+	margin: 0 0 24px;
+}
+.studio-preview-actions {
+	display: flex;
+	gap: 8px;
+	justify-content: flex-end;
+}
+.studio-preview-actions button {
+	border: 1px solid #bbb;
+	border-radius: 4px;
+	cursor: pointer;
+	min-width: 80px;
+	padding: 8px 16px;
+}
+#studio-preview-ok {
+	background: #475bda;
+	border-color: #475bda;
+	color: #fff;
+}
+html.studio-dark #studio-preview-confirmation {
+	background: var(--surface);
+	border: 1px solid var(--border);
+	color: var(--text);
+}
+html.studio-dark .studio-preview-actions button {
+	background: var(--surface-raised);
+	border-color: var(--border);
+	color: var(--text);
+}
+html.studio-dark #studio-preview-ok {
+	background: var(--primary);
+	border-color: var(--primary);
+	color: #fff;
+}
 
 /**
 importer
