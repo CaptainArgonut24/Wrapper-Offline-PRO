@@ -445,6 +445,18 @@ select:focus {
 		gap: 10px;
 	}
 }
+@media (min-width: 761px) and (max-width: 920px) {
+	header {
+		align-items: flex-start;
+		flex-direction: column;
+		height: auto;
+		padding: 10px 16px;
+	}
+	#headbuttons {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
 
 /**
 font importing

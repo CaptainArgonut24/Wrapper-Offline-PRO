@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<link rel="icon" href="/favicon.ico" type="image/png"/>
+		<title>Home - Wrapper: Offline</title>
+		<meta name="description" content="Create and manage your videos with Wrapper: Offline."/>
+		<link rel="stylesheet" type="text/css" href="/pages/css/global.css">
+		<link rel="stylesheet" type="text/css" href="/pages/css/home.css">
+	</head>
+
+	<body>
+		<%~ includeFile("./includes/header", { env: it.env }) %>
+
+		<main class="home-main">
+			<section class="home-hero" aria-labelledby="home-title">
+				<div class="home-copy">
+					<p class="home-eyebrow">YOUR CREATIVE WORKSPACE</p>
+					<h1 id="home-title">Good stories start here.</h1>
+					<p class="home-intro">Create a new animation or jump back into a video you already started. Your tools and projects are ready when you are.</p>
+					<div class="home-actions">
+						<a class="home-primary" href="/create">Create a video <span aria-hidden="true">→</span></a>
+						<a class="home-secondary" href="/videos">Browse my videos</a>
+					</div>
+				</div>
+				<div class="home-art" aria-hidden="true">
+					<div class="home-art-orbit"></div>
+					<div class="home-art-card">
+						<span class="home-art-label">A NEW STORY</span>
+						<span class="home-art-play">▶</span>
+						<span class="home-art-caption">Ready when you are.</span>
+					</div>
+					<div class="home-art-spark home-art-spark-one"></div>
+					<div class="home-art-spark home-art-spark-two"></div>
+				</div>
+			</section>
+
+			<section class="home-shortcuts" aria-label="Quick links">
+				<a class="home-shortcut" href="/videos">
+					<span class="home-shortcut-icon" aria-hidden="true">▶</span>
+					<span>
+						<strong>My videos</strong>
+						<small>Browse, edit, and organize your projects.</small>
+					</span>
+					<span class="home-shortcut-arrow" aria-hidden="true">→</span>
+				</a>
+				<a class="home-shortcut" href="/create?filter=cc">
+					<span class="home-shortcut-icon home-shortcut-icon-alt" aria-hidden="true">✦</span>
+					<span>
+						<strong>Create a character</strong>
+						<small>Build a character for your next animation.</small>
+					</span>
+					<span class="home-shortcut-arrow" aria-hidden="true">→</span>
+				</a>
+			</section>
+
+			<p class="home-note">A familiar animation workspace, running locally on your computer.</p>
+		</main>
+
+		<%~ includeFile("./includes/footer", { env: it.env }) %>
+	</body>
+</html>

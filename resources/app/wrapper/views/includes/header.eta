@@ -3,6 +3,7 @@
 		<h1 style="margin:0"><img id="logo" src="/pages/img/logo.svg" alt="Wrapper: Offline"/></h1>
 	</a>
 	<nav id="headbuttons">
+		<a href="/videos" class="button_small">MY VIDEOS</a>
 		<a class="button_small" onclick="document.getElementById('file').click()">UPLOAD A CHARACTER</a>
 		<a class="button_small" onclick="document.getElementById('movie-file').click()">UPLOAD A MOVIE</a>
 		<a href="/create?filter=cc" class="button_small">CREATE A CHARACTER</a>

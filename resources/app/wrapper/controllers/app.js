@@ -36,8 +36,13 @@ group
 			browserInstallId: process.env.BROWSER_INSTALL_ID
 		});
 	})
+	// home
+	.route("GET", "/", (req, res) => {
+		discord("Home");
+		res.render("home", {});
+	})
 	// video list
-	.route("*", "/", (req, res) => {
+	.route("GET", "/videos", (req, res) => {
 		discord("Video List");
 		res.render("list", {});
 	})
