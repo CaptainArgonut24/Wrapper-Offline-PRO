@@ -5,10 +5,12 @@
 // assign config and env.json stuff to process.env
 const env = Object.assign(process.env, require("./env"), require("./config"));
 // modules
-const { app, BrowserWindow, Menu, session, dialog } = require("electron");
+const { app, BrowserWindow, Menu, session, dialog, shell } = require("electron");
 const crypto = require("crypto");
 const fs = require("fs");
 const path = require("path");
+const database = require("./data/database");
+const { getBrowserPartition } = require("./utils/browser");
 // vars
 const assets = path.join(__dirname, env.ASSET_FOLDER);
 const cache = path.join(__dirname, env.CACHÉ_FOLDER);
@@ -17,8 +19,6 @@ const installId = crypto.createHash("sha256")
 	.update(path.resolve(__dirname))
 	.digest("hex")
 	.slice(0, 16);
-const browserPartition = `persist:wrapper-browser-${installId}`;
-process.env.BROWSER_PARTITION = browserPartition;
 process.env.BROWSER_INSTALL_ID = installId;
 
 /**
@@ -28,6 +28,7 @@ process.env.BROWSER_INSTALL_ID = installId;
 if (!fs.existsSync(assets)) fs.mkdirSync(assets);
 if (!fs.existsSync(cache)) fs.mkdirSync(cache);
 if (!fs.existsSync(saved)) fs.mkdirSync(saved);
+const settings = new database(true);
 // start discord rpc
 const discord = require("./utils/discord");
 // start the server
@@ -89,7 +90,12 @@ function confirmBrowserPrivacy(owner) {
 	browserPrivacyAccepted = result == 0;
 	return browserPrivacyAccepted;
 }
-function openPlainBrowserWindow(url, title, discordConfirmed = false) {
+function openPlainBrowserWindow(
+	url,
+	title,
+	discordConfirmed = false,
+	browserPartition = getBrowserPartition(installId, settings.select().LINK_BROWSER_PROFILE)
+) {
 	if (!isAllowedBrowserUrl(url)) {
 		console.error("Refusing to open a non-HTTP browser URL:", url);
 		return;
@@ -110,6 +116,7 @@ function openPlainBrowserWindow(url, title, discordConfirmed = false) {
 		if (result != 0) return;
 	}
 
+	setupBrowserDownloads(browserPartition);
 	const browserWindow = new BrowserWindow({
 		width: 1200,
 		height: 800,
@@ -143,14 +150,17 @@ function openPlainBrowserWindow(url, title, discordConfirmed = false) {
 	});
 	browserWindow.webContents.on("new-window", (event, targetUrl) => {
 		event.preventDefault();
-		openPlainBrowserWindow(targetUrl, "", false);
+		openPlainBrowserWindow(targetUrl, "", false, browserPartition);
 	});
 	browserWindow.loadURL(url).catch(error => {
 		console.error("Unable to open the built-in browser window:", error);
 		browserWindow.close();
 	});
 }
-function setupBrowserDownloads() {
+const browserDownloadPartitions = new Set();
+function setupBrowserDownloads(browserPartition) {
+	if (browserDownloadPartitions.has(browserPartition)) return;
+	browserDownloadPartitions.add(browserPartition);
 	const browserSession = session.fromPartition(browserPartition);
 	browserSession.on("will-download", (event, item, webContents) => {
 		item.pause();
@@ -202,8 +212,33 @@ const createWindow = () => {
 		if (target.protocol == "http:" &&
 			target.hostname == "localhost" &&
 			target.port == String(env.SERVER_PORT) &&
-			(target.pathname == "/browser" || target.pathname == "/player" || target.pathname == "/chrome")) {
+			(target.pathname == "/browser" || target.pathname == "/player" ||
+				target.pathname == "/chrome" || target.pathname == "/open-link")) {
 			event.preventDefault();
+			if (target.pathname == "/open-link") {
+				const linkUrl = target.searchParams.get("url");
+				if (!isAllowedBrowserUrl(linkUrl)) {
+					console.error("Refusing to open a non-HTTP link:", linkUrl);
+					return;
+				}
+				if (settings.select().LINK_BROWSER != "wrapper") {
+					shell.openExternal(linkUrl).catch(error => {
+						console.error("Unable to open the system default browser:", error);
+					});
+					return;
+				}
+				const profilePartition = getBrowserPartition(
+					installId,
+					settings.select().LINK_BROWSER_PROFILE
+				);
+				openPlainBrowserWindow(
+					linkUrl,
+					target.searchParams.get("title") || "",
+					target.searchParams.get("discordConfirmed") == "1",
+					profilePartition
+				);
+				return;
+			}
 			if (target.pathname == "/chrome") {
 				openPlainBrowserWindow("https://www.google.com/", "Wrapper Browser");
 				return;
@@ -215,7 +250,8 @@ const createWindow = () => {
 					openPlainBrowserWindow(
 						startUrl,
 						target.searchParams.get("startTitle") || "",
-						target.searchParams.get("discordConfirmed") == "1"
+						target.searchParams.get("discordConfirmed") == "1",
+						getBrowserPartition(installId, settings.select().LINK_BROWSER_PROFILE)
 					);
 				}
 				return;
@@ -257,7 +293,7 @@ const createWindow = () => {
 };
 
 app.whenReady().then(() => {
-	setupBrowserDownloads();
+	setupBrowserDownloads(getBrowserPartition(installId, settings.select().LINK_BROWSER_PROFILE));
 	// wait for the server
 	setTimeout(createWindow, 2000);
 });

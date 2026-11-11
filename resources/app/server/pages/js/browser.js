@@ -1,9 +1,11 @@
 (() => {
 	const installId = document.body.dataset.browserInstallId;
+	const profileId = document.body.dataset.browserProfileId;
+	const profileSuffix = profileId && profileId != "default" ? `_${profileId}` : "";
 	const STORAGE = {
-		bookmarks: `WRAPPER_BROWSER_${installId}_BOOKMARKS`,
-		history: `WRAPPER_BROWSER_${installId}_HISTORY`,
-		searches: `WRAPPER_BROWSER_${installId}_SEARCHES`
+		bookmarks: `WRAPPER_BROWSER_${installId}${profileSuffix}_BOOKMARKS`,
+		history: `WRAPPER_BROWSER_${installId}${profileSuffix}_HISTORY`,
+		searches: `WRAPPER_BROWSER_${installId}${profileSuffix}_SEARCHES`
 	};
 	const DEFAULT_TABS = [
 		{ title: "Google Search", url: "https://www.google.com/" },

@@ -14,6 +14,8 @@ module.exports = class GoDatabase {
 				SHOW_WAVEFORMS: true, // Forces waveforms to be off in the videomaker.
 				DEFAULT_WATERMARK: "twoLines", // Default watermark (if the GA watermark is chosen).
 				IS_WIDE: "1", // Sets the video player to 16:9
+				LINK_BROWSER: "system", // Browser used for the footer links.
+				LINK_BROWSER_PROFILE: "Default", // Separate profile for the built-in browser.
 				GOEXPORT_PATH: "",
 				GOEXPORT_PYTHON: "python"
 			};

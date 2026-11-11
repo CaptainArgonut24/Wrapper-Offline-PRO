@@ -15,17 +15,13 @@
 	document.querySelectorAll("footer a[data-browser-link]").forEach(link => {
 		link.addEventListener("click", event => {
 			event.preventDefault();
-			if (link.hasAttribute("data-chromium-browser")) {
-				window.open(new URL("/chrome", window.location.origin).href, "_blank");
-				return;
-			}
 			if (link.hasAttribute("data-discord-link") &&
-				!window.confirm("Discord will open in Wrapper's built-in browser. Continue?")) {
+				!window.confirm("Discord will open in the selected browser. Continue?")) {
 				return;
 			}
-			const browserUrl = new URL("/browser", window.location.origin);
-			browserUrl.searchParams.set("startUrl", link.href);
-			browserUrl.searchParams.set("startTitle", link.textContent.trim());
+			const browserUrl = new URL("/open-link", window.location.origin);
+			browserUrl.searchParams.set("url", link.href);
+			browserUrl.searchParams.set("title", link.textContent.trim());
 			if (link.hasAttribute("data-discord-link")) {
 				browserUrl.searchParams.set("discordConfirmed", "1");
 			}

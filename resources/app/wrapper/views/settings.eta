@@ -77,6 +77,23 @@
 						</section>
 						<section class="setting-card">
 							<div>
+								<h3>Footer link browser</h3>
+								<p>Open Google Search, Discord, and Bug Report in your system default browser or Wrapper's built-in browser.</p>
+							</div>
+							<select class="setting" id="LINK_BROWSER">
+								<option value="system">System default browser</option>
+								<option value="wrapper">Wrapper built-in browser</option>
+							</select>
+						</section>
+						<section class="setting-card">
+							<div>
+								<h3>Built-in browser profile</h3>
+								<p>Use a profile name to keep this browser's saved data separate. The system default browser uses its own default profile.</p>
+							</div>
+							<input class="setting" type="text" id="LINK_BROWSER_PROFILE" maxlength="40" pattern="[a-zA-Z0-9_-][a-zA-Z0-9 _-]{0,39}" placeholder="Default" required/>
+						</section>
+						<section class="setting-card">
+							<div>
 								<h3>Default theme</h3>
 								<p>Choose the theme used by “Start with your default theme” on the video creation page.</p>
 							</div>

@@ -10,6 +10,7 @@ require("../../utils/discord")
 const { SWF_URL, STORE_URL, CLIENT_URL } = process.env;
 // stuff
 const database = require("../../data/database"), DB = new database(true);
+const { getBrowserProfileKey, getBrowserPartition } = require("../../utils/browser");
 const reqIsStudio = require("../middlewares/req.isStudio");
 function toAttrString(table) {
 	return typeof (table) == "object" ? new URLSearchParams(table).toString() : table.replace(/"/g, "\\\"");
@@ -31,9 +32,11 @@ const group = new httpz.Group();
 group
 	.add(reqIsStudio)
 	.route("GET", "/browser", (req, res) => {
+		const profileName = DB.select().LINK_BROWSER_PROFILE;
 		res.render("browser", {
-			browserPartition: process.env.BROWSER_PARTITION,
-			browserInstallId: process.env.BROWSER_INSTALL_ID
+			browserPartition: getBrowserPartition(process.env.BROWSER_INSTALL_ID, profileName),
+			browserInstallId: process.env.BROWSER_INSTALL_ID,
+			browserProfileId: getBrowserProfileKey(profileName)
 		});
 	})
 	// home

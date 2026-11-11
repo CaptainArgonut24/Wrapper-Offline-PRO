@@ -30,8 +30,24 @@ group
 		// check if the setting exists
 		res.assert(setting in db, 400, { status: "error" });
 
-		db[setting] = value;
-		DB.save(db);
+		if (setting == "LINK_BROWSER" && !["system", "wrapper"].includes(value)) {
+			res.statusCode = 400;
+			res.json({ status: "error", message: "Invalid browser selection." });
+			return;
+		}
+		if (setting == "LINK_BROWSER_PROFILE" &&
+			(typeof value != "string" || !/^[a-zA-Z0-9_-][a-zA-Z0-9 _-]{0,39}$/.test(value.trim()))) {
+			res.statusCode = 400;
+			res.json({ status: "error", message: "Profile names must be 1-40 letters, numbers, spaces, underscores, or hyphens." });
+			return;
+		}
+
+		db[setting] = setting == "LINK_BROWSER_PROFILE" ? value.trim() : value;
+		if (!DB.save(db)) {
+			res.statusCode = 500;
+			res.json({ status: "error" });
+			return;
+		}
 		res.json({ status: "ok" });
 	});
 

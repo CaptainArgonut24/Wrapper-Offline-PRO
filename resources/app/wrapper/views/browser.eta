@@ -9,7 +9,7 @@
 		<script src="/pages/js/global.js"></script>
 	</head>
 
-	<body data-browser-partition="<%= it.browserPartition %>" data-browser-install-id="<%= it.browserInstallId %>">
+	<body data-browser-partition="<%= it.browserPartition %>" data-browser-install-id="<%= it.browserInstallId %>" data-browser-profile-id="<%= it.browserProfileId %>">
 		<header class="browser-header">
 			<a href="/" aria-label="Return to Wrapper"><h1><img id="logo" src="/pages/img/logo.svg" alt="Wrapper: Offline"/></h1></a>
 			<strong>Built-in Browser</strong>
