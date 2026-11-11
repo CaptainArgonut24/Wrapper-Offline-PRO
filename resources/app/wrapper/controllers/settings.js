@@ -3,6 +3,8 @@
  */
 // modules
 const httpz = require("@octanuary/httpz")
+const fs = require("fs");
+const path = require("path");
 // stuff
 const database = require("../../data/database"), DB = new database(true);
 
@@ -38,6 +40,20 @@ group
 		if (setting == "VIDEO_MAKER_SWF" && !["go_full", "go_full_DarkMode"].includes(value)) {
 			res.statusCode = 400;
 			res.json({ status: "error", message: "Invalid video maker selection." });
+			return;
+		}
+		if (setting == "APPLIO_CORE_PATH" && value) {
+			if (typeof value != "string" || !path.isAbsolute(value) ||
+				path.extname(value).toLowerCase() != ".py" || !fs.existsSync(value)) {
+				res.statusCode = 400;
+				res.json({ status: "error", message: "Choose an existing absolute path to Applio's core.py file." });
+				return;
+			}
+		}
+		if (setting == "APPLIO_PYTHON" &&
+			(typeof value != "string" || !value.trim() || value.length > 260)) {
+			res.statusCode = 400;
+			res.json({ status: "error", message: "Enter the Python executable or command used by Applio." });
 			return;
 		}
 		if (setting == "LINK_BROWSER_PROFILE" &&

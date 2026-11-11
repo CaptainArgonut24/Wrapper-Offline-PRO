@@ -103,6 +103,14 @@
 			<section class="faq-section" aria-labelledby="faq-settings">
 				<h2 id="faq-settings">Settings and exporting</h2>
 				<details>
+					<summary>How do I add a custom TTS voice?</summary>
+					<p>Install Applio separately, then open <strong>Settings → Custom Voices</strong> and set the paths to its <code>core.py</code> and Python executable. Import an RVC <code>.pth</code> model, optionally include its matching <code>.index</code>, choose an existing source TTS voice, and confirm you have permission to use the model.</p>
+				</details>
+				<details>
+					<summary>Are custom TTS voices fully offline?</summary>
+					<p>No. Wrapper uses the selected existing TTS provider to create source speech, then runs the RVC conversion locally through Applio. Site, source, and ECF fields in a voice definition are saved as notes/attribution; Wrapper does not download the linked site or interpret an ECF format.</p>
+				</details>
+				<details>
 					<summary>What does Video Layout change?</summary>
 					<p>Video Layout changes how projects are arranged in My Videos. Choose vertical cards or horizontal rows in Settings.</p>
 				</details>

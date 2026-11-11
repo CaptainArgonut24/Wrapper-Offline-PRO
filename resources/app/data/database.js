@@ -17,12 +17,14 @@ module.exports = class GoDatabase {
 				VIDEO_MAKER_SWF: "go_full", // Selects the video maker interface.
 				LINK_BROWSER: "system", // Browser used for the footer links.
 				LINK_BROWSER_PROFILE: "Default", // Separate profile for the built-in browser.
+				APPLIO_CORE_PATH: "",
+				APPLIO_PYTHON: "python",
 				GOEXPORT_PATH: "",
 				GOEXPORT_PYTHON: "python"
 			};
 		} else {
 			this.path = path.join(folder, "database.json");
-			baseDb = { assets: [], movies: [] };
+			baseDb = { assets: [], movies: [], customVoices: [] };
 		}
 		// create the file if it doesn't exist
 		if (!fs.existsSync(this.path)) {
@@ -37,12 +39,10 @@ module.exports = class GoDatabase {
 		}
 		this.#refresh();
 		let changed = false;
-		if (isSettings) {
-			for (const [key, value] of Object.entries(baseDb)) {
-				if (!(key in this.json)) {
-					this.json[key] = value;
-					changed = true;
-				}
+		for (const [key, value] of Object.entries(baseDb)) {
+			if (!(key in this.json)) {
+				this.json[key] = value;
+				changed = true;
 			}
 		}
 		if (changed && !this.save(this.json)) {

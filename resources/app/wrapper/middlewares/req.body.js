@@ -10,11 +10,16 @@ const httpz = require("@octanuary/httpz")
  */
 module.exports = async function reqBody(req, res, next) {
 	req.body = {};
+	const isCustomVoiceImport = req.method == "POST" &&
+		req.url.split("?")[0] == "/api/tts/custom-voices/import";
 	if (req.method == "POST")
-		await new Promise((resolve, reject) =>
-			new formidable.IncomingForm().parse(req, async (e, f, files) => {
-				req.body = f;
-				req.files = files;
+		await new Promise(resolve =>
+			new formidable.IncomingForm(isCustomVoiceImport ? {
+				maxFileSize: 2 * 1024 * 1024 * 1024
+			} : {}).parse(req, (error, fields, files) => {
+				req.body = fields || {};
+				req.files = files || {};
+				if (error && isCustomVoiceImport) req.bodyParsingError = error;
 				resolve();
 			}
 		));
