@@ -4,7 +4,9 @@
 
 #importer {
 	background: var(--surface);
+	border-right: 1px solid var(--border);
 	color: var(--text);
+	box-shadow: 0 12px 32px rgba(27, 39, 61, .14);
 }
 
 /**
@@ -40,7 +42,7 @@ importer hints
 	/* style */
 	background: var(--surface-raised);
 	border-bottom: 1px solid var(--border);
-	color: #fff;
+	color: var(--text);
 	/* layout */
 	margin-bottom: 10px;
 	min-height: 54px;
@@ -55,16 +57,16 @@ importer hints
 	color: #fff;
 	cursor: pointer;
 	display: inline-block;
-	font-size: 14px;
-	font-weight: bold;
-	text-transform: uppercase;
+	font: inherit;
+	font-size: 13px;
+	font-weight: 700;
 	padding: 9px 16px;
 	margin: 8px;
+	transition: background-color var(--transition), transform var(--transition);
 }
 .import-button:hover {
 	background-color: var(--primary-hover);
 }
-#import_head>h3 { margin: 6px }
 #importer form { display: none }
 
 #importer-help {
@@ -301,7 +303,7 @@ importer hints
 	font-size: 13px;
 	padding: 16px;
 }
-html.studio-dark .library-list {
+html.dark .library-list {
 	box-shadow: 0 12px 32px rgba(0, 0, 0, .2);
 }
 .library-preview[hidden] {
@@ -388,18 +390,16 @@ object.library-preview-media {
 	min-height: 320px;
 	width: min(960px, 100%);
 }
-html.studio-dark #import_head {
+html.dark #import_head {
 	background: var(--surface-raised);
 	color: var(--text);
 }
-html.dark .importer_hint:not(.drag_hint),
-html.studio-dark .importer_hint:not(.drag_hint) {
+html.dark .importer_hint:not(.drag_hint) {
 	background: #362f1f;
 	border-color: #5c5032;
 	color: #f2dc9b;
 }
-html.dark .importer_hint.drag_hint,
-html.studio-dark .importer_hint.drag_hint {
+html.dark .importer_hint.drag_hint {
 	background: rgba(116, 132, 255, .12);
 	border-color: #7484ff;
 	color: #bdc6ff;

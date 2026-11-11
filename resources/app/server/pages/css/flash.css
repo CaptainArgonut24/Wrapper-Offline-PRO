@@ -5,30 +5,29 @@ this css has flash page styling
 /**
 general stuff
 **/
-html, body { /* disable dark mode */
-	background-color: #eee;
-	color: #474747 !important;
-}
-html.studio-dark,
-html.studio-dark body {
-	--page: #111722;
-	--surface: #1a2230;
-	--surface-raised: #202a3a;
-	--surface-muted: #252f40;
-	--text: #e8edf5;
-	--muted: #a0adbf;
-	--border: #303b4d;
-	--header: #171e2b;
-	--primary: #7484ff;
-	--primary-hover: #6575ec;
+html, body {
 	background-color: var(--page);
-	color: var(--text) !important;
-	color-scheme: dark;
+	color: var(--text);
 }
 main { display: flex; padding: 0 }
 .close-button:hover { 
 	cursor: pointer; 
 	color: var(--primary); 
+}
+.close-button {
+	background: transparent;
+	border: 0;
+	border-radius: 8px;
+	color: var(--muted);
+	font: inherit;
+	font-size: 22px;
+	line-height: 1;
+	margin: 6px;
+	padding: 6px 10px;
+}
+.close-button:focus-visible {
+	outline: 2px solid var(--primary);
+	outline-offset: 2px;
 }
 
 /**
@@ -46,9 +45,11 @@ previewer
 	display: none;
 }
 #preview_window {
-	background: #fff;
-	border-radius: 4px;
-	box-shadow: 0 5px 15px #0004;
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: 12px;
+	box-shadow: var(--shadow);
+	color: var(--text);
 	position: absolute;
 	left: 50%;
 	top: 50%;
@@ -56,26 +57,14 @@ previewer
 	width: 700px;
 	height: 488px;
 }
-html.studio-dark #preview_window {
-	background: var(--surface);
-	border: 1px solid var(--border);
-	box-shadow: 0 20px 60px rgba(0, 0, 0, .48);
-	color: var(--text);
-}
 .preview_head {
-	background: #f0f0f0;
-	border-bottom: 1px solid #c0c0c0;
-	border-radius: 4px 4px 0 0;
+	background: var(--surface-raised);
+	border-bottom: 1px solid var(--border);
+	border-radius: 12px 12px 0 0;
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 12px;
 	padding: 14px 30px 10px;
-}
-html.studio-dark .preview_head,
-html.studio-dark .preview_foot {
-	background: var(--surface-raised);
-	border-color: var(--border);
-	color: var(--text);
 }
 .preview_head h2 {
 	font-size: 20px;
@@ -89,21 +78,16 @@ html.studio-dark .preview_foot {
 	color: #d85e27;
 	cursor: pointer;
 }
-html.studio-dark .preview_head #preview_close {
-	color: var(--muted);
-}
-html.studio-dark .preview_head #preview_close:hover {
-	color: var(--primary);
-}
 #preview_player {
 	outline: 0!important;
 	display: block;
 	margin: auto;
 }
 .preview_foot {
-	background: #f0f0f0;
-	border-top: 1px solid #c0c0c0;
-	border-radius: 0 0 4px 4px;
+	background: var(--surface-raised);
+	border-top: 1px solid var(--border);
+	border-radius: 0 0 12px 12px;
+	color: var(--text);
 	text-align: right;
 	margin-top: 12px;
 	padding: 4px 30px 6px;
@@ -124,10 +108,11 @@ body.in_preview #previewer {
 	display: block;
 }
 #studio-preview-confirmation {
-	border: 0;
-	border-radius: 6px;
-	box-shadow: 0 8px 32px #0005;
-	color: #474747;
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: 12px;
+	box-shadow: var(--shadow);
+	color: var(--text);
 	max-width: min(440px, calc(100vw - 32px));
 	padding: 24px;
 	width: 100%;
@@ -144,28 +129,16 @@ body.in_preview #previewer {
 	justify-content: flex-end;
 }
 .studio-preview-actions button {
-	border: 1px solid #bbb;
-	border-radius: 4px;
+	background: var(--surface-raised);
+	border: 1px solid var(--border);
+	border-radius: 8px;
+	color: var(--text);
 	cursor: pointer;
+	font: inherit;
 	min-width: 80px;
 	padding: 8px 16px;
 }
 #studio-preview-ok {
-	background: #475bda;
-	border-color: #475bda;
-	color: #fff;
-}
-html.studio-dark #studio-preview-confirmation {
-	background: var(--surface);
-	border: 1px solid var(--border);
-	color: var(--text);
-}
-html.studio-dark .studio-preview-actions button {
-	background: var(--surface-raised);
-	border-color: var(--border);
-	color: var(--text);
-}
-html.studio-dark #studio-preview-ok {
 	background: var(--primary);
 	border-color: var(--primary);
 	color: #fff;

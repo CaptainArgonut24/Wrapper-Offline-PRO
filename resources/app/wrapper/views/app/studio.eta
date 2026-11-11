@@ -1,4 +1,4 @@
-<html class="studio-dark">
+<html>
 	<head>
 		<meta charset="UTF-8" />
 		<link rel="icon" href="/favicon.ico" type="image/png" />
@@ -22,8 +22,8 @@
 		<main>
 			<nav id="importer">
 				<nav id="import_head">
-					<button id="import-toggle" onclick="document.getElementById('importer-files').click()" class="import-button">UPLOAD FILES</button>
-					<h3 class="close-button" onclick="hideImporter()">✖</h3>
+					<button id="import-toggle" onclick="document.getElementById('importer-files').click()" class="import-button">Upload files</button>
+					<button class="close-button" type="button" aria-label="Close file importer" onclick="hideImporter()">×</button>
 					<form>
 						<input id="importer-files" type="file" name="file" title="Upload Files" accept=".mp3,.wav,.ogg,.wma,.swf,.gif,.png,.jpg,.mp4" style="display:none" />
 					</form>

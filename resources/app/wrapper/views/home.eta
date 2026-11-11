@@ -7,6 +7,8 @@
 		<meta name="description" content="Create and manage your videos with Wrapper: Offline."/>
 		<link rel="stylesheet" type="text/css" href="/pages/css/global.css">
 		<link rel="stylesheet" type="text/css" href="/pages/css/home.css">
+		<script src="/pages/js/jquery.js"></script>
+		<script src="/pages/js/global.js"></script>
 	</head>
 
 	<body>
@@ -15,46 +17,67 @@
 		<main class="home-main">
 			<section class="home-hero" aria-labelledby="home-title">
 				<div class="home-copy">
-					<p class="home-eyebrow">YOUR CREATIVE WORKSPACE</p>
-					<h1 id="home-title">Good stories start here.</h1>
-					<p class="home-intro">Create a new animation or jump back into a video you already started. Your tools and projects are ready when you are.</p>
+					<p class="home-eyebrow"><span aria-hidden="true"></span> YOUR CREATIVE WORKSPACE</p>
+					<h1 id="home-title">Make a little <span>movie magic.</span></h1>
+					<p class="home-intro">Bring characters to life, build a scene, and tell your story. Your animation studio is ready when you are.</p>
 					<div class="home-actions">
-						<a class="home-primary" href="/create">Create a video <span aria-hidden="true">→</span></a>
-						<a class="home-secondary" href="/videos">Browse my videos</a>
+						<a class="home-primary" href="/create">Start creating <span aria-hidden="true">→</span></a>
+						<a class="home-secondary" href="/videos">Open my videos</a>
 					</div>
+					<p class="home-local-note"><span aria-hidden="true">✦</span> Your creative space, running locally on your computer.</p>
 				</div>
-				<div class="home-art" aria-hidden="true">
-					<div class="home-art-orbit"></div>
-					<div class="home-art-card">
-						<span class="home-art-label">A NEW STORY</span>
-						<span class="home-art-play">▶</span>
-						<span class="home-art-caption">Ready when you are.</span>
+				<div class="home-art">
+					<div class="home-art-glow" aria-hidden="true"></div>
+					<div class="home-art-frame">
+						<img src="/pages/img/home_bg_v2.jpg" alt="A preview of Wrapper's character creator and video editor"/>
+						<div class="home-art-caption">
+							<span class="home-art-caption-icon" aria-hidden="true">▶</span>
+							<span><strong>Your next story</strong><small>Starts with an idea</small></span>
+						</div>
 					</div>
-					<div class="home-art-spark home-art-spark-one"></div>
-					<div class="home-art-spark home-art-spark-two"></div>
+					<span class="home-art-chip home-art-chip-top">CREATE</span>
+					<span class="home-art-chip home-art-chip-bottom">ANIMATE <span aria-hidden="true">✦</span></span>
 				</div>
 			</section>
 
-			<section class="home-shortcuts" aria-label="Quick links">
-				<a class="home-shortcut" href="/videos">
-					<span class="home-shortcut-icon" aria-hidden="true">▶</span>
-					<span>
-						<strong>My videos</strong>
-						<small>Browse, edit, and organize your projects.</small>
-					</span>
-					<span class="home-shortcut-arrow" aria-hidden="true">→</span>
-				</a>
-				<a class="home-shortcut" href="/create?filter=cc">
-					<span class="home-shortcut-icon home-shortcut-icon-alt" aria-hidden="true">✦</span>
-					<span>
-						<strong>Create a character</strong>
-						<small>Build a character for your next animation.</small>
-					</span>
-					<span class="home-shortcut-arrow" aria-hidden="true">→</span>
-				</a>
+			<section class="home-start" aria-labelledby="home-start-title">
+				<div class="home-section-heading">
+					<div>
+						<p class="home-section-kicker">MAKE IT YOURS</p>
+						<h2 id="home-start-title">Where would you like to start?</h2>
+					</div>
+					<a href="/videos">View all my videos <span aria-hidden="true">→</span></a>
+				</div>
+				<div class="home-shortcuts">
+					<a class="home-shortcut home-shortcut-theme" href="/create">
+						<span class="home-shortcut-image"><img src="/pages/img/themes/custom.jpg" alt=""/></span>
+						<span class="home-shortcut-content">
+							<small>01 / CREATE</small>
+							<strong>Choose a theme</strong>
+							<span>Find a world for your next story.</span>
+						</span>
+						<span class="home-shortcut-arrow" aria-hidden="true">↗</span>
+					</a>
+					<a class="home-shortcut home-shortcut-character" href="/create?filter=cc">
+						<span class="home-shortcut-image"><img src="/pages/img/themes/anime.jpg" alt=""/></span>
+						<span class="home-shortcut-content">
+							<small>02 / CHARACTER</small>
+							<strong>Create a character</strong>
+							<span>Design someone unforgettable.</span>
+						</span>
+						<span class="home-shortcut-arrow" aria-hidden="true">↗</span>
+					</a>
+					<a class="home-shortcut home-shortcut-library" href="/videos">
+						<span class="home-shortcut-library-icon" aria-hidden="true">▶</span>
+						<span class="home-shortcut-content">
+							<small>03 / YOUR LIBRARY</small>
+							<strong>Back to your videos</strong>
+							<span>Pick up where you left off.</span>
+						</span>
+						<span class="home-shortcut-arrow" aria-hidden="true">↗</span>
+					</a>
+				</div>
 			</section>
-
-			<p class="home-note">A familiar animation workspace, running locally on your computer.</p>
 		</main>
 
 		<%~ includeFile("./includes/footer", { env: it.env }) %>

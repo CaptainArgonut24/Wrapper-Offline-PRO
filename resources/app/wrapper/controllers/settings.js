@@ -35,6 +35,11 @@ group
 			res.json({ status: "error", message: "Invalid browser selection." });
 			return;
 		}
+		if (setting == "VIDEO_MAKER_SWF" && !["go_full", "go_full_DarkMode"].includes(value)) {
+			res.statusCode = 400;
+			res.json({ status: "error", message: "Invalid video maker selection." });
+			return;
+		}
 		if (setting == "LINK_BROWSER_PROFILE" &&
 			(typeof value != "string" || !/^[a-zA-Z0-9_-][a-zA-Z0-9 _-]{0,39}$/.test(value.trim()))) {
 			res.statusCode = 400;

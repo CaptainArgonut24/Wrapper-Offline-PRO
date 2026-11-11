@@ -7,6 +7,7 @@
 		<meta name="description" content="Frequently asked questions about Wrapper: Offline"/>
 		<link rel="stylesheet" type="text/css" href="/pages/css/global.css">
 		<link rel="stylesheet" type="text/css" href="/pages/css/faq.css">
+		<script src="/pages/js/jquery.js"></script>
 		<script src="/pages/js/global.js"></script>
 	</head>
 
@@ -38,6 +39,18 @@
 					<p>Use the search box on the video list to search by part or all of a video's name or ID. Search applies to the selected view: My Videos or Archive.</p>
 				</details>
 				<details>
+					<summary>How do I continue editing a saved video?</summary>
+					<p>Open <strong>My Videos</strong> and select the edit action on the video you want to continue. You can also search by its title or ID first.</p>
+				</details>
+				<details>
+					<summary>How can I preview or download a video project?</summary>
+					<p>Use the preview action on a video card to watch it. Use the download action to save a Wrapper project ZIP that you can keep as a backup or import again later.</p>
+				</details>
+				<details>
+					<summary>How do I sort my video list?</summary>
+					<p>Use the <strong>Sort by</strong> menu to order videos by recently modified, oldest modified, or title. Your selected sort order is remembered on this device.</p>
+				</details>
+				<details>
 					<summary>Can I copy a video's ID?</summary>
 					<p>Yes. Select <strong>Copy</strong> beside the ID on its video card. The ID is copied to your clipboard.</p>
 				</details>
@@ -54,8 +67,36 @@
 					<p>Select <strong>Upload a Char</strong> in the header and choose a supported character file. To upload audio, images, or other supported assets, use the uploader in Settings.</p>
 				</details>
 				<details>
+					<summary>What kinds of assets can I import?</summary>
+					<p>The editor's file importer accepts common audio files (including MP3, WAV, OGG, WMA, and FLAC), images and SWF files, and MP4 video. After choosing a file, select how to use it when the importer offers categories.</p>
+				</details>
+				<details>
+					<summary>How do I organize files I uploaded?</summary>
+					<p>Open <strong>Settings → Your Library</strong> to search and filter uploaded assets. Select an asset to preview or download it, or use the uploader there to add more files.</p>
+				</details>
+				<details>
 					<summary>Can I hide themes I don't use?</summary>
 					<p>Yes. In <strong>Settings → Video Workspace</strong>, use Theme Visibility to choose which themes appear on the creation page. All themes are enabled by default.</p>
+				</details>
+			</section>
+
+			<section class="faq-section" aria-labelledby="faq-editor">
+				<h2 id="faq-editor">Using the video maker</h2>
+				<details>
+					<summary>Can I choose the video maker's appearance?</summary>
+					<p>Yes. In <strong>Settings → Features</strong>, choose <strong>Regular</strong> or <strong>Dark mode</strong> under Video maker interface. This selects which GoAnimate video-maker interface opens.</p>
+				</details>
+				<details>
+					<summary>How do I change the default theme for a new video?</summary>
+					<p>Choose a <strong>Default theme</strong> in Settings. On the creation page, select <strong>Start with your default theme</strong> to open the video maker with that theme.</p>
+				</details>
+				<details>
+					<summary>Can I change the video's aspect ratio?</summary>
+					<p>Yes. Change <strong>Video aspect ratio</strong> in Settings to use 14:9 or 16:9 as the default for the video maker and player.</p>
+				</details>
+				<details>
+					<summary>What does Show audio waveforms do?</summary>
+					<p>This setting controls whether detailed audio waveforms are generated in the editor. Turning them off can improve responsiveness on slower computers.</p>
 				</details>
 			</section>
 
@@ -72,6 +113,14 @@
 				<details>
 					<summary>Where are my projects and exports stored?</summary>
 					<p>Wrapper stores project data in its configured local save folder. GoExported MP4 files are placed in the <code>Exports</code> subfolder there.</p>
+				</details>
+				<details>
+					<summary>How do I turn on dark mode?</summary>
+					<p>Open <strong>Settings → Appearance</strong> and enable <strong>Dark mode</strong>. Wrapper remembers this choice on this device and applies it to supported pages.</p>
+				</details>
+				<details>
+					<summary>Can I change which browser opens web links?</summary>
+					<p>In <strong>Settings → Features</strong>, choose your system default browser or Wrapper's built-in browser for the Google Search, Discord, and Bug Report footer links. The built-in browser also lets you set a profile name to keep its browsing data separate.</p>
 				</details>
 			</section>
 		</main>

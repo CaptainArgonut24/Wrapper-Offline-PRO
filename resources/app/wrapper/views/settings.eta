@@ -77,6 +77,16 @@
 						</section>
 						<section class="setting-card">
 							<div>
+								<h3>Video maker interface</h3>
+								<p>Choose which GoAnimate video-maker interface opens for new and existing videos.</p>
+							</div>
+							<select class="setting" id="VIDEO_MAKER_SWF">
+								<option value="go_full">Regular</option>
+								<option value="go_full_DarkMode">Dark mode</option>
+							</select>
+						</section>
+						<section class="setting-card">
+							<div>
 								<h3>Footer link browser</h3>
 								<p>Open Google Search, Discord, and Bug Report in your system default browser or Wrapper's built-in browser.</p>
 							</div>

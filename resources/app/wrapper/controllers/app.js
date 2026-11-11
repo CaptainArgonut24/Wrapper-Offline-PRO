@@ -143,7 +143,7 @@ group
 	})
 	.route("GET", "/go_full", async (req, res) => {
 		discord("Video Maker");
-		const { IS_WIDE } = DB.select();
+		const { IS_WIDE, VIDEO_MAKER_SWF } = DB.select();
 		let flashvars = {
 			appCode: "go",
 			collab: 0,
@@ -166,7 +166,7 @@ group
 		Object.assign(flashvars, req.query);
 		res.render("app/studio", {
 			attrs: {
-				data: SWF_URL + "/go_full.swf",
+				data: SWF_URL + `/${VIDEO_MAKER_SWF == "go_full_DarkMode" ? "go_full_DarkMode.swf" : "go_full.swf"}`,
 				type: "application/x-shockwave-flash", width: "100%", height: "100%",
 			},
 			params: {
