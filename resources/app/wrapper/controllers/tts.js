@@ -55,7 +55,7 @@ function voiceListXml() {
 	const voices = getVoiceMap();
 	const languages = {};
 	for (const [id, voice] of Object.entries(voices)) {
-		const language = voice.language;
+		const language = voice.custom ? "custom" : voice.language;
 		languages[language] = languages[language] || [];
 		languages[language].push(
 			`<voice id="${xmlEscape(id)}" desc="${xmlEscape(voice.desc)}" sex="${xmlEscape(voice.gender)}" demo-url="" country="${xmlEscape(voice.country)}" plus="N"/>`
@@ -63,7 +63,7 @@ function voiceListXml() {
 	}
 	return `${process.env.XML_HEADER}<voices>${
 		Object.keys(languages).sort().map(language => {
-			const label = info.languages[language] || language;
+			const label = language == "custom" ? "Custom Voice" : info.languages[language] || language;
 			return `<language id="${xmlEscape(language)}" desc="${xmlEscape(label)}">${languages[language].join("")}</language>`;
 		}).join("")
 	}</voices>`;
