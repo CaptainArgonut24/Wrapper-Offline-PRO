@@ -90,3 +90,33 @@ describe("Asset", () => {
 	});
 });
 
+describe("Video navigation", () => {
+	it("redirects the studio close path to the video list", (done) => {
+		request(server.server)
+			.get("/dashboard/videos")
+			.end((e, res) => {
+				if (e) {
+					return done(e);
+				}
+
+				assert.equal(res.status, 302);
+				assert.equal(res.headers.location, "/videos");
+				done();
+			});
+	});
+
+	it("redirects the trailing-slash studio close path after a POST", (done) => {
+		request(server.server)
+			.post("/dashboard/videos/")
+			.end((e, res) => {
+				if (e) {
+					return done(e);
+				}
+
+				assert.equal(res.status, 302);
+				assert.equal(res.headers.location, "/videos");
+				done();
+			});
+	});
+});
+

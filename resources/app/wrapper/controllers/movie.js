@@ -268,8 +268,8 @@ group
 	})
 
 	// redirect
-	.route("GET", "/dashboard/videos", (res) => {
-		res.redirect(`/`);
+	.route("*", /\/dashboard\/videos\/?$/, (req, res) => {
+		res.redirect(`/videos`);
 	})
 	// save
 	//  #movies

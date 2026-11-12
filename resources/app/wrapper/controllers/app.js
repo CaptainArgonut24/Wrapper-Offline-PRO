@@ -152,7 +152,7 @@ group
 			isLogin: "Y",
 			isWide: IS_WIDE,
 			lid: 0,
-			nextUrl: "/",
+			nextUrl: "/videos",
 			page: "",
 			retut: 1,
 			siteId: "go",
